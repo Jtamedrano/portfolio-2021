@@ -1,22 +1,14 @@
 import React from 'react';
 import logo from '../img/logo.png';
 
+import '../styles/header.scss';
+
 const TopNav = () => {
   return (
-    <header className="flex w-screen h-16 items-stretch">
-      <div className="flex-initial flex justify-center items-center pl-4 pr-4 bg-red-600 text-white">
-        Menu
+    <header>
+      <div className="header-logo-container">
+        <img src={logo} alt="jm initials" />
       </div>
-      <div className="flex flex-auto justify-center items-start">
-        <div className="w-auto h-full">
-          <img
-            className="w-auto h-full"
-            src={logo}
-            alt="jm initials in cursive"
-          />
-        </div>
-      </div>
-      <div className="flex-initial"></div>
     </header>
   );
 };

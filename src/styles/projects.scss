@@ -1,0 +1,27 @@
+@use 'colors' as c;
+
+.project-item {
+  width: 80vw;
+  overflow: hidden;
+  background-color: c.$navy-blue;
+  border-radius: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  #{&}-image-wrapper {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  #{&}-text-wrapper {
+    color: c.$gray;
+  }
+}

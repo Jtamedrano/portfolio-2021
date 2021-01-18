@@ -1,0 +1,23 @@
+@use 'colors' as c;
+
+header {
+  max-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: c.$dark-blue;
+}
+
+.header-logo-container {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}

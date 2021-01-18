@@ -1,0 +1,8 @@
+.master-heading {
+  display: flex;
+  flex-direction: column;
+
+  #{&}-author {
+    text-align: right;
+  }
+}
