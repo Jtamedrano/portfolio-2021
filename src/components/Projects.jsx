@@ -9,28 +9,16 @@ import {
 import ProjectItem from './ProjectItem';
 import { projects } from '../data';
 import '../styles/projects.scss';
+import Menu from './Menu';
 
 export const Projects = () => {
   let { path, url } = useRouteMatch();
   return (
     <>
-      <h2>Projects</h2>
-
-      <nav>
-        <ul>
-          {projects.map((item, i) => (
-            <li key={`navItem-${i + 1}`}>
-              <NavLink
-                to={`${url}/${item.name.replaceAll(' ', '-').toLowerCase()}`}
-              >
-                {item.name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <div>
+      <Menu />
+      <div className="page-container">
+        <h2>Projects</h2>
+        <ProjectNav url={url} />
         <Switch>
           <Route path={`${path}/:projectName`}>
             <ProjectItem />
@@ -45,3 +33,19 @@ export const Projects = () => {
     </>
   );
 };
+
+const ProjectNav = ({ url }) => (
+  <nav>
+    <ul>
+      {projects.map((item, i) => (
+        <li key={`navItem-${i + 1}`}>
+          <NavLink
+            to={`${url}/${item.name.replaceAll(' ', '-').toLowerCase()}`}
+          >
+            {item.name}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
