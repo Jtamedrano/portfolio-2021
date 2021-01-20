@@ -18,7 +18,12 @@ export const Projects = () => {
   return (
     <div className="page-container">
       <Menu />
-      <div className="container project-container">
+      <motion.div
+        className="container project-container"
+        initial={{ x: '100vw' }}
+        animate={{ x: 0 }}
+        transition={{ type: 'spring', delay: 0.2, duration: 0.8 }}
+      >
         <div className="project-topbar">
           <h2 className="page-main-header">Projects</h2>
           <ProjectNav url={url} />
@@ -33,7 +38,7 @@ export const Projects = () => {
             render={(props) => <Redirect to="/projects/basic-todo-app" />}
           />
         </Switch>
-      </div>
+      </motion.div>
     </div>
   );
 };

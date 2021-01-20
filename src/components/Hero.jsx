@@ -12,7 +12,12 @@ const Hero = () => {
       <Menu />
       <div className="container">
         <div id="welcome">
-          <div className="heading-container">
+          <motion.div
+            className="heading-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <h1 className="master-heading">
               <span className="master-heading-one">The Magic Of</span>
               <span className="master-heading-two">Full Stack Web Dev</span>
@@ -20,13 +25,13 @@ const Hero = () => {
                 - with Jesse Medrano
               </span>
             </h1>
-          </div>
+          </motion.div>
         </div>
         <Particles
           id="particles-js"
           className="particles-js"
           params={{
-            fps_limit: 28,
+            fps_limit: 30,
             particles: {
               number: {
                 value: 100,
