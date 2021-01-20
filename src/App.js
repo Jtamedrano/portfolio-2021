@@ -1,34 +1,22 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import Hero from './components/Hero';
 import { Projects } from './components/Projects';
 import TopNav from './components/TopNav';
 
 function App() {
   return (
-    <Router>
+    <>
+      <TopNav />
       <Switch>
-        <Route
-          exact
-          path="/"
-          render={(props) => (
-            <>
-              <TopNav />
-              <div className="page-container">
-                <Hero />
-              </div>
-            </>
-          )}
-        />
+        <Route exact path="/">
+          <Hero />
+        </Route>
         <Route path="/projects">
-          <>
-            <TopNav />
-            <div className="page-container">
-              <Projects />
-            </div>
-          </>
+          <Projects />
         </Route>
       </Switch>
-    </Router>
+    </>
   );
 }
 

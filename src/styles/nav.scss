@@ -1,26 +1,26 @@
+@use 'colors' as c;
+
 .circle-nav {
   height: 100%;
   position: absolute;
   top: 0px;
-  left: 10px;
-  right: 80%;
+  left: 0px;
+  right: 75%;
+  padding-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  z-index: 1000;
+  z-index: 100;
 
   & a {
     text-decoration: none;
     color: unset;
     font-size: 1rem;
-    transition: all 1s ease-in-out;
 
-    &:hover {
-      font-size: 1.5rem;
-    }
     &.active {
       font-weight: 600;
+      color: c.$orange;
     }
   }
 }

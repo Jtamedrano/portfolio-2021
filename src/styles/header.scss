@@ -1,12 +1,15 @@
 @use 'colors' as c;
 
 header {
+  position: absolute;
+  width: 100vw;
   max-height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: c.$dark-blue;
-  box-shadow: 1px 0 3px #0a0a0a;
+  box-shadow: 0px -1px 0.5em 0.25em #0a0a0ab9;
+  z-index: 9999;
 }
 
 .header-logo-container {

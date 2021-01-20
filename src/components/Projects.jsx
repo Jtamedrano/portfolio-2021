@@ -10,15 +10,19 @@ import ProjectItem from './ProjectItem';
 import { projects } from '../data';
 import '../styles/projects.scss';
 import Menu from './Menu';
+import { motion } from 'framer-motion';
 
 export const Projects = () => {
   let { path, url } = useRouteMatch();
+
   return (
-    <>
+    <div className="page-container">
       <Menu />
-      <div className="page-container">
-        <h2>Projects</h2>
-        <ProjectNav url={url} />
+      <div className="container project-container">
+        <div className="project-topbar">
+          <h2 className="page-main-header">Projects</h2>
+          <ProjectNav url={url} />
+        </div>
         <Switch>
           <Route path={`${path}/:projectName`}>
             <ProjectItem />
@@ -30,12 +34,12 @@ export const Projects = () => {
           />
         </Switch>
       </div>
-    </>
+    </div>
   );
 };
 
 const ProjectNav = ({ url }) => (
-  <nav>
+  <nav className="topbar">
     <ul>
       {projects.map((item, i) => (
         <li key={`navItem-${i + 1}`}>
