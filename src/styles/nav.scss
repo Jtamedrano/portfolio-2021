@@ -17,10 +17,12 @@
     text-decoration: none;
     color: unset;
     font-size: 1rem;
+    color: c.$white;
 
     &.active {
       font-weight: 600;
-      color: c.$orange;
+      color: c.$red-light;
+      text-shadow: 0 0 1px black;
     }
   }
 }

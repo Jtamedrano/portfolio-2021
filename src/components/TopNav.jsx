@@ -11,7 +11,7 @@ const TopNav = () => {
         className="header-logo-container"
         initial={{ x: '-100vw', opactity: 0 }}
         animate={{ x: 0, opactity: 1 }}
-        transition={{ duration: 2, delay: 0.5 }}
+        transition={{ type: 'spring', duration: 2, delay: 0.5 }}
       >
         <img src={logo} alt="jm initials" />
       </motion.div>

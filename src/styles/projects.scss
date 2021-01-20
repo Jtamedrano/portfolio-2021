@@ -14,7 +14,7 @@
 
 .topbar {
   margin-top: 1em;
-  background-color: c.$dark-blue;
+  background-color: rgba(40, 40, 40, 1);
   width: 32em;
   padding: 1em 0.5em;
   border-radius: 10px;
@@ -30,16 +30,16 @@
     }
 
     a {
-      color: c.$gray;
+      color: c.$white;
       text-decoration: none;
       position: relative;
 
       &.active {
-        color: c.$orange;
+        color: c.$red-light;
       }
       &.active::before {
         content: '';
-        border: 1px solid c.$gray;
+        border: 1px solid;
         position: absolute;
         bottom: -3px;
         left: 0;
@@ -54,7 +54,7 @@
   padding: 1em;
   width: 80vw;
   overflow: hidden;
-  background-color: c.$navy-blue;
+  background-color: c.$red-dark;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
@@ -69,8 +69,8 @@
     align-items: center;
     justify-content: center;
     font-size: 3em;
-    color: c.$gray;
-    text-shadow: 1px 1px 3px c.$dark-blue;
+    // color: c.$gray;
+    // text-shadow: 1px 1px 3px c.$dark-blue;
   }
 
   #{&}-content {
@@ -101,8 +101,13 @@
     flex-basis: 50%;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    li {
+      list-style: none;
+      margin-bottom: 0.5em;
+    }
     a {
-      color: c.$gray;
+      color: c.$white;
     }
   }
 
@@ -110,7 +115,7 @@
     flex-basis: 20%;
     margin-bottom: 1em;
     font-size: 1em;
-    color: c.$gray;
+    // color: c.$gray;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
