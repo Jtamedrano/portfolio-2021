@@ -1,5 +1,4 @@
-import { AnimatePresence } from 'framer-motion';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Hero from './components/Hero';
 import { Projects } from './components/Projects';
 import TopNav from './components/TopNav';
