@@ -37,13 +37,13 @@ const NavLinkStyle = styled.div`
 const NavList = () => (
   <ul className="nav-links">
     <li>
-      <a href="#">About Me</a>
+      <a href="#aboutMe">About Me</a>
     </li>
     <li>
-      <a href="#">Projects</a>
+      <a href="#projects">Projects</a>
     </li>
     <li>
-      <a href="#">Contact Me</a>
+      <a href="#contactForm">Contact Me</a>
     </li>
   </ul>
 );
