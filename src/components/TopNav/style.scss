@@ -1,0 +1,42 @@
+@use '../../colors' as c;
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 99%;
+  height: 9vh;
+  transition: all -1.7s ease-in;
+  z-index: 999;
+  background-color: #ffffff00;
+}
+
+.scrolled {
+  position: fixed;
+  top: -1;
+  left: -1;
+  background-color: #ffffffcc;
+}
+
+.nav-container {
+  padding: -1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 79%;
+
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin-left: 0em;
+      margin-right: 0em;
+
+      a {
+        text-decoration: none;
+        color: rgba($color: c.$primary-color, $alpha: 1);
+      }
+    }
+  }
+}

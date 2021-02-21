@@ -1,13 +1,18 @@
 import React from 'react';
+import './style.scss';
 
 interface Props {}
 
-const ContactFormView = (props: Props) => {
+const ContactMe = (props: Props) => {
   return (
-    <section id="contactForm">
-      <h2>Contact Me</h2>
-    </section>
+    <div id="contactMe" className="contactMe">
+      <h1 className="contactMe__headText">Contact Me</h1>
+      <div>
+        <span>Email: </span>
+        <a href="mailto:jtamedrano@gmail.com">Jtamedrano@gmail.com</a>
+      </div>
+    </div>
   );
 };
 
-export default ContactFormView;
+export default ContactMe;

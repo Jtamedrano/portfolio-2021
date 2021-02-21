@@ -7,10 +7,9 @@ import ContactForm from './components/ContactForm';
 function App() {
   return (
     <div className="app-container">
-      <TopNav />
-      <HeroView />
-      <div className="scroll-reminder">
-        <p>Scroll Down</p>
+      <div id="bg">
+        <TopNav />
+        <HeroView />
       </div>
       <AboutMe />
       <Projects />
