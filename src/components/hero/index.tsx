@@ -26,9 +26,9 @@ const HeroView = (props: Props) => {
           </div>
         </section>
       </div>
-      <div>
-        <ParticlesBg type="cobweb" color={'#555555'} bg={true} />
-      </div>
+      {/* <div>
+        <ParticlesBg type="ball" bg={true} />
+      </div> */}
     </>
   );
 };

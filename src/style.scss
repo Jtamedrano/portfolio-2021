@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
 p,
@@ -22,7 +22,12 @@ a,
 li,
 div,
 span {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  margin: 0.5em 0;
+}
+
+div {
+  margin: 0;
 }
 
 main {
@@ -60,4 +65,9 @@ body > #bg {
   height: 100vh;
   width: 100%;
   background-color: c.$primary-color;
+  margin: 0;
+}
+
+.app-container {
+  margin: 0;
 }
