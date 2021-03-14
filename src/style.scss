@@ -34,6 +34,7 @@ div {
 main {
   width: 100vw;
   overflow: hidden;
+  position: relative;
 }
 
 .flex-center-center {
@@ -71,4 +72,14 @@ body > #bg {
 
 .app-container {
   margin: 0;
+}
+
+.black-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #00000088;
 }

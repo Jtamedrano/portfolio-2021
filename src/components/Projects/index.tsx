@@ -1,13 +1,6 @@
-import React from "react";
+import Project from "./Project";
 import "./style.scss";
 interface Props {}
-
-const projectsNames = [
-  "Amazon Clone",
-  "African Market",
-  "Water My Plant",
-  "Basic Todo",
-];
 
 const projectInfo = [
   {
@@ -53,46 +46,9 @@ const Projects = (props: Props) => {
       {/* {!!projectsNames &&
         projectsNames.map((project, i) => <p key={`P-${i}`}>{project}</p>)} */}
       {!!projectInfo &&
-        projectInfo.map((project, i) => {
-          const rootClass = project.name.replace(" ", "");
-          return (
-            <div
-              id={`projectSummary${project.id}`}
-              key={`projectSummary${project.id}`}
-              className={`projectSummary ${rootClass}`}
-            >
-              <div className="projectSummary_imageContainer">Gallary</div>
-              <div className="projectSummary_text">
-                <h3>{project.name}</h3>
-                <div className="projectSummary_linkRack">
-                  <a href={project.link} className="project-btn">
-                    Project
-                  </a>
-                  <a href={project.git} className="gitHub-btn">
-                    Github
-                  </a>
-                </div>
-                <div>{project.quickDescription}</div>
-                <div>
-                  {!!project.tech && (
-                    <p>
-                      Built with{" "}
-                      {project.tech.map((tech, i) => (
-                        <span key={`tech-span-${project.name}-${i + 1}`}>
-                          {tech}
-                          {i === project.tech.length - 1 ? "." : ", "}
-                        </span>
-                      ))}
-                    </p>
-                  )}
-                </div>
-                <p className="projectDisclaimer">
-                  {!!project.additionalComment && project.additionalComment}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+        projectInfo.map((project) => (
+          <Project key={`projectSummary${project.id}`} project={project} />
+        ))}
     </section>
   );
 };
