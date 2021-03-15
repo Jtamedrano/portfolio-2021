@@ -20,7 +20,9 @@ const HeroView = (props: Props) => {
               </p>
             </div>
             <div className="hero-cta-btn">
-              <button>View My Work</button>
+              <button onClick={(e) => window.location.replace("/#projects")}>
+                View My Work
+              </button>
             </div>
           </div>
         </section>

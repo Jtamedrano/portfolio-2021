@@ -88,6 +88,15 @@ h2 {
       transition: background-color 0.3s ease-in-out;
       &:hover {
         background-color: rgb(40, 41, 41);
+        cursor: pointer;
+      }
+    }
+
+    .gitHub-btn-disabled {
+      opacity: 50%;
+      &:hover {
+        background-color: rgb(56, 58, 58);
+        cursor: pointer;
       }
     }
   }

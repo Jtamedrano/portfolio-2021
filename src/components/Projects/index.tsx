@@ -7,7 +7,6 @@ const projectInfo = [
     id: 1,
     name: "Symplee.app",
     link: "https://www.symplee.app",
-    git: "https://github.com/WEBPT166-AFRICAN-MARKET",
     quickDescription:
       "A start up app, geared toword redesigning tools for conusmers and business",
     tech: [
@@ -20,6 +19,7 @@ const projectInfo = [
     ],
     additionalComment:
       "Disclaimer: App is still in prototype phase and any code shown is property of symplee chat",
+    images: ["symplee.png"],
   },
   {
     id: 2,
@@ -29,13 +29,16 @@ const projectInfo = [
     quickDescription:
       "A e-commerce site meant to look and feel like shopping from amazon.",
     tech: ["React", "Redux", "Google Firebase"],
+    images: ["amazon-clone.png"],
   },
   {
     id: 3,
     name: "Basic Todo App",
-    link: "",
-    git: "https://github.com/Build-Week-Med-Cabinet3/UI",
-    quickDescription: "A sample medicinal cannabis search app.",
+    link: "https://react-todo-git-jesse-medrano-jtamedrano.vercel.app/",
+    git: "https://github.com/Jtamedrano/React-Todo",
+    quickDescription:
+      "A not so basic todo app. All todos are stored in local storage so you can get back to remembering what you had to do when you get back.",
+    images: ["todo-home.png"],
   },
 ];
 

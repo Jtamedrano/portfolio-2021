@@ -6,10 +6,11 @@ interface ProjectView {
     id: number;
     name: string;
     link: string;
-    git: string;
+    git?: string;
     quickDescription: string;
     tech?: string[];
     additionalComment?: string;
+    images?: string[];
   };
 }
 
@@ -19,6 +20,13 @@ const Project = ({ project }: ProjectView) => {
 
   const handleGallaryClick = (e: MouseEvent) => {
     e.preventDefault();
+    if (
+      !!context.setImageArray &&
+      !!project.images &&
+      project.images.length > 0
+    ) {
+      context.setImageArray(project.images);
+    }
     if (!!context.setModalState) context.setModalState(true);
   };
 
@@ -39,9 +47,15 @@ const Project = ({ project }: ProjectView) => {
           <a href={project.link} className="project-btn">
             Project
           </a>
-          <a href={project.git} className="gitHub-btn">
-            Github
-          </a>
+          {!!project.git ? (
+            <a href={project.git} className="gitHub-btn">
+              Github
+            </a>
+          ) : (
+            <span className="gitHub-btn gitHub-btn-disabled">
+              Private GitHub Repo
+            </span>
+          )}
         </div>
         <div>{project.quickDescription}</div>
         <div>
