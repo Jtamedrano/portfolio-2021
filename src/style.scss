@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
 p,
@@ -22,12 +22,19 @@ a,
 li,
 div,
 span {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 0.5em 0;
+}
+
+div {
+  margin: 0;
 }
 
 main {
   width: 100vw;
   overflow: hidden;
+  position: relative;
 }
 
 .flex-center-center {
@@ -38,7 +45,6 @@ main {
 }
 
 .container {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -60,4 +66,22 @@ body > #bg {
   height: 100vh;
   width: 100%;
   background-color: c.$primary-color;
+  margin: 0;
+}
+
+.app-container {
+  margin: 0;
+}
+
+.black-overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  background: #00000088;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
