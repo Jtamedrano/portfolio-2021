@@ -1,10 +1,8 @@
-import { FC } from "react";
-
 interface GallaryViewProps {
   images: string[];
 }
 
-const Gallary = ({ images }: GallaryViewProps) => {
+const Gallary = ({ images }: GallaryViewProps): JSX.Element => {
   console.log(images);
   return (
     <>
