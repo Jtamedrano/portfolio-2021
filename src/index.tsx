@@ -3,6 +3,9 @@ import App from "./App";
 import PageContextProvider from "./PageContextProvider";
 // import reportWebVitals from './reportWebVitals';
 import "./style.scss";
+import ReactGA from "react-ga";
+ReactGA.initialize("G-CLGVVPNP09");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <PageContextProvider>
