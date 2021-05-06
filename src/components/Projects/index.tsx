@@ -1,5 +1,5 @@
+import { Grid, makeStyles, Theme, Typography } from "@material-ui/core";
 import Project from "./Project";
-import "./style.scss";
 interface Props {}
 
 const projectInfo = [
@@ -24,7 +24,7 @@ const projectInfo = [
   {
     id: 2,
     name: "Amazon Clone",
-    link: "clone-7b00a.web.app/",
+    link: "http://clone-7b00a.web.app/",
     git: "https://github.com/Jtamedrano/amazon-clone",
     quickDescription:
       "A e-commerce site meant to look and feel like shopping from amazon.",
@@ -42,16 +42,37 @@ const projectInfo = [
   },
 ];
 
+const useStyles = makeStyles((theme: Theme) => ({
+  projects: {
+    flexGrow: 1,
+  },
+  heading: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(3),
+  },
+}));
+
 const Projects = (props: Props) => {
+  const classes = useStyles();
   return (
     <section id="projects" className="projects">
-      <h2>Projects</h2>
+      <Typography variant="h3" className={classes.heading}>
+        Projects
+      </Typography>
       {/* {!!projectsNames &&
         projectsNames.map((project, i) => <p key={`P-${i}`}>{project}</p>)} */}
-      {!!projectInfo &&
-        projectInfo.map((project) => (
-          <Project key={`projectSummary${project.id}`} project={project} />
-        ))}
+      <Grid
+        container
+        className={classes.projects}
+        justify="center"
+        spacing={3}
+        alignItems="stretch"
+      >
+        {!!projectInfo &&
+          projectInfo.map((project) => (
+            <Project key={`projectSummary${project.id}`} project={project} />
+          ))}
+      </Grid>
     </section>
   );
 };

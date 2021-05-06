@@ -1,3 +1,5 @@
+import {} from "@material-ui/core";
+
 interface NavBarProps {
   children: JSX.Element | JSX.Element[] | undefined;
   className?: string;
@@ -5,7 +7,7 @@ interface NavBarProps {
 
 const NavBar = ({
   children,
-  className = 'navbar',
+  className = "navbar",
 }: NavBarProps): JSX.Element => {
   return (
     <nav className={className}>
