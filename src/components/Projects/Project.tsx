@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   media: {
     height: 140,
+    backgroundPosition: "top",
   },
   cardBody: {
     flexGrow: 1,
