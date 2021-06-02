@@ -12,7 +12,6 @@ import { firebaseConfig } from "./firebase";
 const fbApp = firebase.initializeApp(firebaseConfig);
 fbApp.analytics().logEvent("page_view");
 
-console.log(firebaseConfig.apiKey);
 const theme = createMuiTheme({
   palette: createPalette({
     type: "dark",
