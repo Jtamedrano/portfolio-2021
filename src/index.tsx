@@ -7,8 +7,8 @@ import ReactGA from "react-ga";
 import { ThemeProvider } from "styled-components";
 import { createMuiTheme } from "@material-ui/core";
 import createPalette from "@material-ui/core/styles/createPalette";
-ReactGA.initialize("UA-CLGVVPNP0-9");
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize("G-LB67BRCKN4");
+ReactGA.pageview("/Home");
 
 const theme = createMuiTheme({
   palette: createPalette({
