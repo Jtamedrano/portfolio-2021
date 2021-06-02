@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 // hooks
-import useDimensions from '../../utils/useDimensions';
+import useDimensions from "../../utils/useDimensions";
 // components
-import NavBar from '../custom_comp_library/Nav/NavBar';
-import Burger from '../custom_comp_library/Menu/Burger';
-import CollapseMenu from '../custom_comp_library/Menu/CollapseMenu';
+import NavBar from "../custom_comp_library/Nav/NavBar";
+import Burger from "../custom_comp_library/Menu/Burger";
+import CollapseMenu from "../custom_comp_library/Menu/CollapseMenu";
 // imgs
-import logo from '../../img/logo-01.svg';
+import logo from "../../img/logo-01.svg";
 // styles
-import './style.scss';
+import "./style.scss";
 
 interface Props {}
 
@@ -68,19 +68,19 @@ const TopNav = (props: Props) => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
   });
 
-  let navbarClasses = ['navbar'];
+  let navbarClasses = ["navbar"];
   if (scrolled) {
-    navbarClasses.push('scrolled');
+    navbarClasses.push("scrolled");
   }
   return (
-    <NavBar className={navbarClasses.join(' ')}>
+    <NavBar className={navbarClasses.join(" ")}>
       <div className="logo-wrapper">
         <img src={logo} className="logo" alt="initals JM" />
       </div>
-      <div className="nav-links-wrapper" style={{ display: 'flex' }}>
+      <div className="nav-links-wrapper" style={{ display: "flex" }}>
         {width <= 768 ? (
           <>
             <Burger open={open} setOpen={setOpen} />

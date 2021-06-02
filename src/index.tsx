@@ -4,13 +4,24 @@ import PageContextProvider from "./PageContextProvider";
 // import reportWebVitals from './reportWebVitals';
 import "./style.scss";
 import ReactGA from "react-ga";
+import { ThemeProvider } from "styled-components";
+import { createMuiTheme } from "@material-ui/core";
+import createPalette from "@material-ui/core/styles/createPalette";
 ReactGA.initialize("G-CLGVVPNP09");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+const theme = createMuiTheme({
+  palette: createPalette({
+    type: "dark",
+  }),
+});
+
 ReactDOM.render(
-  <PageContextProvider>
-    <App />
-  </PageContextProvider>,
+  <ThemeProvider theme={theme}>
+    <PageContextProvider>
+      <App />
+    </PageContextProvider>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 

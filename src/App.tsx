@@ -6,13 +6,20 @@ import ContactForm from "./components/ContactForm";
 import { FC, useContext } from "react";
 import { PageContext } from "./PageContextProvider";
 import BlackOverlay from "./components/BlackOverlay";
-import { Container } from "@material-ui/core";
+import { Container, Box, makeStyles, Theme } from "@material-ui/core";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  main: {
+    backgroundColor: theme.palette.background.default,
+  },
+}));
 
 const App: FC = (props) => {
+  const classes = useStyles();
   const context = useContext(PageContext);
   return (
     <>
-      <div className="app-container">
+      <Box className={classes.main}>
         <Container>
           <div id="bg">
             <TopNav />
@@ -22,7 +29,7 @@ const App: FC = (props) => {
           <Projects />
           <ContactForm />
         </Container>
-      </div>
+      </Box>
       {!!context.modalState && <BlackOverlay />}
     </>
   );

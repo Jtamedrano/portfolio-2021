@@ -1,8 +1,26 @@
-import { Grid, makeStyles, Theme, Typography } from "@material-ui/core";
+import {
+  Grid,
+  GridSize,
+  makeStyles,
+  Theme,
+  Typography,
+} from "@material-ui/core";
 import Project from "./Project";
 interface Props {}
 
-const projectInfo = [
+export type TProject = {
+  id: number;
+  name: string;
+  link: string;
+  git?: string;
+  quickDescription: string;
+  tech?: string[];
+  additionalComment?: string;
+  images?: string[];
+  cardSize?: boolean | GridSize | undefined;
+};
+
+const projectInfo: TProject[] = [
   {
     id: 1,
     name: "Symplee.app",
@@ -20,6 +38,7 @@ const projectInfo = [
     additionalComment:
       "Disclaimer: App is still in prototype phase and any code shown is property of symplee chat",
     images: ["symplee.png"],
+    cardSize: 12,
   },
   {
     id: 2,
@@ -30,6 +49,7 @@ const projectInfo = [
       "A e-commerce site meant to look and feel like shopping from amazon.",
     tech: ["React", "Redux", "Google Firebase"],
     images: ["amazon-clone.png"],
+    cardSize: 6,
   },
   {
     id: 3,
@@ -39,6 +59,16 @@ const projectInfo = [
     quickDescription:
       "A not so basic todo app. All todos are stored in local storage so you can get back to remembering what you had to do when you get back.",
     images: ["todo-home.png"],
+    cardSize: 6,
+  },
+  {
+    id: 4,
+    name: "Richard For Corvallis",
+    link: "https://richarnoldfororegon.com/",
+    quickDescription:
+      "Political Campaign Site for a resident of Corvallis, Oregon. Includes features such as Stripe Payment system and backend database for subscription management.",
+    images: ["rich-logo.png"],
+    cardSize: "auto",
   },
 ];
 

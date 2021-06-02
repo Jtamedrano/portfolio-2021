@@ -9,19 +9,11 @@ import {
   Typography,
 } from "@material-ui/core";
 import { MouseEvent, useContext } from "react";
+import { TProject } from ".";
 import { IContext, PageContext } from "../../PageContextProvider";
 
 interface ProjectView {
-  project: {
-    id: number;
-    name: string;
-    link: string;
-    git?: string;
-    quickDescription: string;
-    tech?: string[];
-    additionalComment?: string;
-    images?: string[];
-  };
+  project: TProject;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -31,12 +23,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
   },
   media: {
-    height: 140,
-    backgroundPosition: "top",
+    backgroundSize: "contain",
+    minHeight: "300px",
+    backgroundPosition: "center",
   },
   cardBody: {
     flexGrow: 1,
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
   },
   heading: {
     marginTop: theme.spacing(1),
@@ -70,7 +63,7 @@ const Project = ({ project }: ProjectView) => {
   };
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item md={project.cardSize ? project.cardSize : 4} sm={12}>
       <Card className={classes.root}>
         <CardActionArea>
           {project.images && (
