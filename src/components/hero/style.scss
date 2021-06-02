@@ -6,7 +6,7 @@
   position: relative;
   grid-template-columns: 38.196% 61.803%;
   grid-template-rows: 100%;
-  // background: rgba(255,100,100, .2);
+  // background: rgba(255, 100, 100, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   & > #{&}__content-container {
@@ -15,11 +15,12 @@
   }
 
   #{&}__content-container #{&}-text-container {
-    background-color: #ffffffaa;
+    // background-color: #ffffffaa;
     padding: 1em 0 1em 1em;
     border-radius: 20px;
     align-self: flex-end;
     font-size: 2.5vmax;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     p {
       font-size: 1.6vmax;
     }

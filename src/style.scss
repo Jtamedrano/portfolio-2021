@@ -31,13 +31,6 @@ div {
   margin: 0;
 }
 
-main {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  background-color: #cccccc;
-}
-
 .flex-center-center {
   position: relative;
   display: flex;
@@ -51,7 +44,6 @@ main {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 90vw;
   max-width: 1080px;
 }
 
@@ -63,13 +55,6 @@ main {
   font-weight: 600;
 }
 
-body > #bg {
-  height: 100vh;
-  width: 100%;
-  background-color: c.$primary-color;
-  margin: 0;
-}
-
 .app-container {
   margin: 0;
 }
@@ -79,7 +64,7 @@ body > #bg {
   top: 0;
   width: 100vw;
   height: 100%;
-  overflow: hidden;
+  overflow: clip;
   z-index: 10;
   background: #00000088;
   display: flex;

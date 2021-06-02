@@ -21,7 +21,7 @@ const App: FC = (props) => {
     <>
       <Box className={classes.main}>
         <Container>
-          <div id="bg">
+          <div>
             <TopNav />
             <HeroView />
           </div>
