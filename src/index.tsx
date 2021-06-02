@@ -3,13 +3,16 @@ import App from "./App";
 import PageContextProvider from "./PageContextProvider";
 // import reportWebVitals from './reportWebVitals';
 import "./style.scss";
-import ReactGA from "react-ga";
 import { ThemeProvider } from "styled-components";
 import { createMuiTheme } from "@material-ui/core";
 import createPalette from "@material-ui/core/styles/createPalette";
-ReactGA.initialize("G-LB67BRCKN4");
-ReactGA.pageview("/Home");
+import firebase from "firebase";
+import { firebaseConfig } from "./firebase";
 
+const fbApp = firebase.initializeApp(firebaseConfig);
+fbApp.analytics().logEvent("page_view");
+
+console.log(firebaseConfig.apiKey);
 const theme = createMuiTheme({
   palette: createPalette({
     type: "dark",
