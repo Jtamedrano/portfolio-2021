@@ -48,7 +48,7 @@ const NavList = () => (
     </li>
     <li>
       <a
-        href="https://drive.google.com/file/d/16boSjhQdY8z9oIbTqHKeZAHt7E4lVsI0/view?usp=sharing"
+        href={process.env.REACT_APP_RESUME}
         target="blank"
       >
         Resume

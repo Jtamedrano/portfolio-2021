@@ -7,9 +7,20 @@ import { ThemeProvider } from "styled-components";
 import { createMuiTheme } from "@material-ui/core";
 import createPalette from "@material-ui/core/styles/createPalette";
 import firebase from "firebase";
-import { firebaseConfig } from "./firebase";
+// import { firebaseConfig } from "./firebase";
+import dotenv from "dotenv";
 
-const fbApp = firebase.initializeApp(firebaseConfig);
+dotenv.config();
+
+const fbApp = firebase.initializeApp({
+  authDomain: "jtamedrano-portfolio.firebaseapp.com",
+  projectId: "jtamedrano-portfolio",
+  storageBucket: "jtamedrano-portfolio.appspot.com",
+  messagingSenderId: "516026780391",
+  appId: "1:516026780391:web:da639049e820fed2867042",
+  measurementId: "G-RD6MWT4DPE",
+  apiKey: process.env.REACT_APP_GF_KEY,
+});
 fbApp.analytics().logEvent("page_view");
 
 const theme = createMuiTheme({
