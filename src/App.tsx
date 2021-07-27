@@ -1,38 +1,41 @@
-import TopNav from "./components/TopNav";
-import HeroView from "./components/hero";
-import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm";
-import { FC, useContext } from "react";
-import { PageContext } from "./PageContextProvider";
-import BlackOverlay from "./components/BlackOverlay";
-import { Container, Box, makeStyles, Theme } from "@material-ui/core";
+import React, { useState, useEffect } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-const useStyles = makeStyles((theme: Theme) => ({
-  main: {
-    backgroundColor: theme.palette.background.default,
-  },
-}));
+interface AppProps {}
 
-const App: FC = (props) => {
-  const classes = useStyles();
-  const context = useContext(PageContext);
+function App({}: AppProps) {
+  // Create the count state.
+  const [count, setCount] = useState(0);
+  // Create the counter (+1 every second).
+  useEffect(() => {
+    const timer = setTimeout(() => setCount(count + 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, setCount]);
+  // Return the App component.
   return (
-    <>
-      <Box className={classes.main}>
-        <Container>
-          <div>
-            <TopNav />
-            <HeroView />
-          </div>
-          <AboutMe />
-          <Projects />
-          <ContactForm />
-        </Container>
-      </Box>
-      {!!context.modalState && <BlackOverlay />}
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p>
+          Page has been open for <code>{count}</code> seconds.
+        </p>
+        <p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </p>
+      </header>
+    </div>
   );
-};
+}
 
 export default App;
