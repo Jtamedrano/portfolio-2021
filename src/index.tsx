@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.less';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './App';
+import './styles/index.less';
+
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root'),
+);
 
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
 // Learn more: https://snowpack.dev/concepts/hot-module-replacement
