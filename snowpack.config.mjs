@@ -14,6 +14,7 @@ export default {
         ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
       },
     ],
+    'snowpack-plugin-less',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -28,6 +29,7 @@ export default {
   },
   devOptions: {
     /* ... */
+    port: 3000,
   },
   buildOptions: {
     /* ... */
