@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Space } from 'antd';
+import { Menu, Row } from 'antd';
 import { useHistory } from 'react-router-dom';
 
 interface Props {}
@@ -12,7 +12,7 @@ const index = (props: Props) => {
   };
 
   return (
-    <Space direction="horizontal">
+    <Row className="NavBar_container">
       <div className="logo">Jesse Medrano</div>
       <Menu
         theme="dark"
@@ -29,7 +29,7 @@ const index = (props: Props) => {
           Projects
         </Menu.Item>
       </Menu>
-    </Space>
+    </Row>
   );
 };
 
