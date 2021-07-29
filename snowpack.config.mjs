@@ -29,7 +29,7 @@ export default {
   },
   devOptions: {
     /* ... */
-    port: 3000,
+    port: 3001,
   },
   buildOptions: {
     /* ... */

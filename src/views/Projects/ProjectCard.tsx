@@ -4,12 +4,21 @@ import { Card } from 'antd';
 const { Meta } = Card;
 
 interface IProjectCard {
-  title: string;
+  cardInfo: {
+    title: string;
+    image: string;
+  };
 }
 
-const ProjectCard: FC<IProjectCard> = ({ title }) => {
+const ProjectCard: FC<IProjectCard> = ({ cardInfo }) => {
+  const { image, title } = cardInfo;
+
   return (
-    <Card hoverable className="projectCard">
+    <Card
+      hoverable
+      className="projectCard"
+      cover={<img alt={`${title} logo`} src={image} />}
+    >
       <Meta title={title} />
     </Card>
   );
