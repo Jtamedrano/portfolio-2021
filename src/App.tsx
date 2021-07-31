@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 
-import { Home, AboutMe, Projects } from './views';
+import { Home, Projects } from './views';
 
 const { Header, Content } = Layout;
 
@@ -16,9 +16,8 @@ const App: FC = () => {
         <NavBar />
       </Header>
       <Content className="mainContent">
-        <div className="mainContent__background">
+        <div className="mainContent__background max-width">
           <Route exact path="/projects" component={Projects} />
-          <Route exact path="/about-me" component={AboutMe} />
           <Route exact path="/" component={Home} />
         </div>
       </Content>

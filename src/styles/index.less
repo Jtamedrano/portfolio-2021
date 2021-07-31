@@ -1,14 +1,8 @@
 @import './projectCard.less';
 @import './NavBar.less';
+@import './Home.less';
 
 .mainHeader {
-  .logo {
-    margin: auto 1em auto 0;
-    font-weight: 600;
-    font-size: 2em;
-    color: white;
-  }
-
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -18,10 +12,18 @@
   padding: '0 50px';
 
   &__background {
-    padding: 8em 24px;
+    padding: 8em 50px;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.max-width {
+  max-width: 1920px;
+  margin: 0 auto;
+  @media screen and (max-width: 425px) {
+    max-width: 400px;
   }
 }

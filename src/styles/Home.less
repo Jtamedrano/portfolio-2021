@@ -1,0 +1,30 @@
+.Home {
+  background: url('imgs/hero-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 60% 20%;
+
+  &_textContainer {
+    z-index: 1;
+    color: white;
+    grid-row: 2;
+    grid-column: 1;
+    align-self: center;
+
+    h2 {
+      font-weight: bolder;
+      font-size: 3rem;
+      line-height: 1.25em;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin: 1.5em 0 2em;
+    }
+  }
+}
