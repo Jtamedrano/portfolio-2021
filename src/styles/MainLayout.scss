@@ -4,24 +4,13 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   padding: 0;
   margin: 0;
-}
-
-body,
-#___gatsby,
-#gatsby-focus-wrapper,
-#gatsby-focus-wrapper > main {
-  height: 100vh;
-}
-
-.mainLayout {
-  padding: 0 1em;
-  display: flex;
-  flex-flow: column nowrap;
-  min-height: 100%;
-
   background: rgb(190, 245, 255);
   background: -moz-linear-gradient(
     45deg,
@@ -39,6 +28,19 @@ body,
     rgba(215, 203, 255, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bef5ff",endColorstr="#d7cbff",GradientType=1);
+}
+
+#___gatsby,
+#gatsby-focus-wrapper,
+#gatsby-focus-wrapper > main {
+  background: inherit;
+}
+
+.mainLayout {
+  padding: 0 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100%;
 
   &__header,
   &__content,

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Hero } from "../components/home";
+import { Hero, Skills } from "../components/home";
 import MainLayout from "../components/mainLayout";
 
 // markup
@@ -9,6 +9,7 @@ const IndexPage = () => {
       <title>Jesse Medrano</title>
       <MainLayout>
         <Hero />
+        <Skills />
       </MainLayout>
     </main>
   );
