@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Hero } from "../components/home";
 import MainLayout from "../components/mainLayout";
 
 // markup
@@ -7,7 +8,7 @@ const IndexPage = () => {
     <main>
       <title>Jesse Medrano</title>
       <MainLayout>
-        <h1>Jesse Medrano</h1>
+        <Hero />
       </MainLayout>
     </main>
   );

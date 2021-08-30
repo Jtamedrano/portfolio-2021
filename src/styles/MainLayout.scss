@@ -16,8 +16,12 @@ body,
   height: 100vh;
 }
 
-#gatsby-focus-wrapper > main {
+.mainLayout {
   padding: 0 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100%;
+
   background: rgb(190, 245, 255);
   background: -moz-linear-gradient(
     45deg,
@@ -35,12 +39,14 @@ body,
     rgba(215, 203, 255, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bef5ff",endColorstr="#d7cbff",GradientType=1);
-}
 
-.mainLayout {
-  display: flex;
-  flex-flow: column nowrap;
-  min-height: 100%;
+  &__header,
+  &__content,
+  &__footer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
   &__header {
     width: 100%;
@@ -76,6 +82,13 @@ body,
           font-weight: 600;
           color: black;
           text-decoration: none;
+          &[aria-current="page"] {
+            font-weight: 600;
+            text-decoration: underline;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
