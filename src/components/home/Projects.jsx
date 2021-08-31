@@ -36,11 +36,6 @@ const Projects = () => {
         <div className="projects__content max_content">
           <div className="projects__text">
             <h2>Projects</h2>
-            {/* <p>
-              Here is a list of projects and commissions. 
-			  For a more detailed
-              list, <Link to="/projects">click here</Link>
-            </p> */}
           </div>
           <div className="projects__rows">
             <Row gutter={16} className="projects__row" align="stretch">
@@ -61,20 +56,6 @@ const Projects = () => {
                 description="Corporate Landing Page for New Evolution Digital, a Software Development Freelance Partnership."
               />
             </Row>
-            {/* <Row gutter={16} className="projects__row">
-              <ProjectCard
-                title="E-Commerce"
-                description="Project Description Here"
-              />
-              <ProjectCard
-                title="Real Estate Broker"
-                description="Project Description Here"
-              />
-              <ProjectCard
-                title="Sales CRM"
-                description="Project Description Here"
-              />
-            </Row> */}
           </div>
         </div>
       </div>

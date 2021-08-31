@@ -12,8 +12,6 @@ const NavMenu = () => {
     <nav>
       <ul>
         <NavItem label="Projects" to="#projects" />
-        {/* 
-        <NavItem label="Blog" to="/blog" /> */}
         <NavItem label="Contact" to="#contact" />
       </ul>
     </nav>

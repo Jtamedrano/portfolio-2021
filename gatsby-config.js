@@ -9,5 +9,5 @@ module.exports = {
     siteUrl: "https://jtamedrano.com",
     title: "Jesse Medrano",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: ["gatsby-plugin-sass", "gatsby-plugin-react-helmet"],
 };
