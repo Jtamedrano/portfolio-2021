@@ -103,7 +103,7 @@
     h2 {
       font-size: 2.5rem;
       margin-top: 0.5em;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
 
     p {
@@ -159,5 +159,57 @@
     margin-bottom: 0.5em;
     text-indent: 5ch;
     line-height: 2;
+  }
+}
+
+.contact {
+  position: relative;
+  padding: 1em 0;
+
+  &__content {
+    z-index: 2;
+    width: 100%;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__body {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__form,
+  &__links {
+    padding: 2em;
+    h3 {
+      text-align: center;
+      font-size: 1.25em;
+      font-weight: 400;
+    }
+  }
+
+  &__form {
+    background-color: #dcefffc0;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(8, 35, 48, 0.507);
+    &_input {
+      width: 100%;
+    }
+
+    textarea {
+      padding: 1em 0.5em;
+    }
+  }
+
+  &__links__display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding-top: 1em;
   }
 }

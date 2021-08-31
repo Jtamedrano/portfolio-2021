@@ -11,10 +11,10 @@ const NavMenu = () => {
   return (
     <nav>
       <ul>
-        <NavItem label="Home" to="/" />
-        <NavItem label="Projects" to="/projects" />
-        <NavItem label="Blog" to="/blog" />
-        <NavItem label="Contact" to="/contact" />
+        <NavItem label="Projects" to="#projects" />
+        {/* 
+        <NavItem label="Blog" to="/blog" /> */}
+        <NavItem label="Contact" to="#contact" />
       </ul>
     </nav>
   );
