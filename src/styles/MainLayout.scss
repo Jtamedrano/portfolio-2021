@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -37,7 +38,6 @@ body {
 }
 
 .mainLayout {
-  padding: 0 1em;
   display: flex;
   flex-flow: column nowrap;
   min-height: 100%;
@@ -46,8 +46,6 @@ body {
   &__content,
   &__footer {
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
   }
 
   &__header {
@@ -105,4 +103,9 @@ body {
     flex-shrink: 1;
     text-align: center;
   }
+}
+
+.max_content {
+  max-width: 1440px;
+  margin: 0 auto;
 }

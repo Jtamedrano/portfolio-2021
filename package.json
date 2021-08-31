@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.4",
     "antd": "^4.16.13",
     "gatsby": "^3.12.1",
     "gatsby-plugin-sass": "^4.12.0",

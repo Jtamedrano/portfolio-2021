@@ -10,7 +10,7 @@ const mainClass = "mainLayout";
 const MainLayout = ({ children }) => {
   return (
     <Layout className={mainClass}>
-      <Header className={`${mainClass}__header`}>
+      <Header className={`${mainClass}__header max_content`}>
         <p>Jesse Medrano</p>
         <NavMenu />
       </Header>
