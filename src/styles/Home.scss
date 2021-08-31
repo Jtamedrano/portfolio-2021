@@ -95,9 +95,39 @@
   }
 }
 
+.projects {
+  position: relative;
+
+  &__text {
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__background {
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__row:first-of-type {
+    margin-bottom: 1em;
+  }
+
+  &__card {
+    height: 100%;
+  }
+}
+
 .about {
   position: relative;
-  margin-top: 1em auto 2em;
 
   &__background {
     padding: 1em;
