@@ -21,12 +21,13 @@ const Projects = () => {
         <div className="projects__content max_content">
           <div className="projects__text">
             <h2>Projects</h2>
-            <p>
-              Here is a list of projects and commissions. For a more detailed
+            {/* <p>
+              Here is a list of projects and commissions. 
+			  For a more detailed
               list, <Link to="/projects">click here</Link>
-            </p>
+            </p> */}
           </div>
-          <div className="rows">
+          <div className="projects__rows">
             <Row gutter={16} className="projects__row" align="stretch">
               <ProjectCard
                 title="Symplee.App"
@@ -34,14 +35,14 @@ const Projects = () => {
               />
               <ProjectCard
                 title="Richard Arnold For Oregon"
-                description="Political campaign for a position on a school board. Content Management System and Stripe included"
+                description="Political campaign for a position on a school board. Wordpress, Next, and Stripe included"
               />
               <ProjectCard
                 title="New Evolution Digital"
                 description="Corporate Landing Page for New Evolution Digital, a Software Development Freelance Partnership."
               />
             </Row>
-            <Row gutter={16} className="projects__row">
+            {/* <Row gutter={16} className="projects__row">
               <ProjectCard
                 title="E-Commerce"
                 description="Project Description Here"
@@ -54,7 +55,7 @@ const Projects = () => {
                 title="Sales CRM"
                 description="Project Description Here"
               />
-            </Row>
+            </Row> */}
           </div>
         </div>
       </div>
