@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from "antd";
-// import { Link } from "gatsby";
+import { Card } from "antd";
 const { Meta } = Card;
 
 const ProjectCard = ({ title, description, live, git }) => (
@@ -8,14 +7,14 @@ const ProjectCard = ({ title, description, live, git }) => (
     className="projects__card"
     actions={[
       live ? (
-        <a href={live} target="_blank">
+        <a href={live} target="_blank" rel="noreferrer">
           Live
         </a>
       ) : (
         <p>Live Not Available</p>
       ),
       git ? (
-        <a href={git} target="_blank">
+        <a href={git} target="_blank" rel="noreferrer">
           GitHub
         </a>
       ) : (

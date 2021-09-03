@@ -18,10 +18,18 @@ const Contact = () => {
           </div>
           <div className="contact__links">
             <div className="contact__links__display">
-              <a href="https://github.com/jtamedrano" target="_blank">
+              <a
+                href="https://github.com/jtamedrano"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <GithubOutlined /> GitHub
               </a>
-              <a href="https://linkedin.com/in/jtamedrano" target="_blank">
+              <a
+                href="https://linkedin.com/in/jtamedrano"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <LinkedinOutlined /> LinkedIn
               </a>
               <a href="mailto:jtamedrano@gmail.com">

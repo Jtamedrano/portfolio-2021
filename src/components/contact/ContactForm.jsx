@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
-import { Button, Form, Input, Result, Space } from "antd";
-import TextArea from "rc-textarea";
+import { useForm } from "@formspree/react";
+import { Button, Form, Input, Result } from "antd";
 import { EnterOutlined, SendOutlined } from "@ant-design/icons/lib/icons";
 import ButtonGroup from "antd/lib/button/button-group";
 
 const ContactForm = () => {
   //   console.log(process.env.GATSBY_FORM_API);
-  const [state, handleSubmit] = useForm(process.env.GATSBY_FORM_API);
+  const [state, handleSubmit] = useForm(
+    process.env.GATSBY_FORM_API ? process.env.GATSBY_FORM_API : "123"
+  );
   const [form] = Form.useForm();
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -84,7 +85,7 @@ const ContactForm = () => {
           }
           rules={[{ required: true, message: "A message is required" }]}
         >
-          <TextArea
+          <Input.TextArea
             className="contact__form_input"
             placeholder="A message to the creator..."
             autoSize

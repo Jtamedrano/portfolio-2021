@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Layout } from "antd";
+import { Layout } from "antd";
 import NavMenu from "./nav";
 import useMedia from "./hooks/useMedia";
 import "../styles/index.scss";
