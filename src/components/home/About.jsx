@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="about__background">
-        <div className="about__content max_content">
+        <div className="max_content about__content">
           <h2>About Me</h2>
           <p>
             Born and raised in Southern California, I have been developing for
