@@ -1,7 +1,10 @@
 import React from "react";
-import portfolio from "../../images/Web Design.png";
+import { StaticImage } from "gatsby-plugin-image";
+import useMedia from "../hooks/useMedia";
 
 const Hero = () => {
+  const isTablet = useMedia("max:width: 800px");
+
   return (
     <section className="hero max_content">
       <div className="hero__left">
@@ -13,9 +16,20 @@ const Hero = () => {
           solutions.
         </p>
       </div>
-      <div className="hero__right">
-        <img src={portfolio} alt="" width="100%" height="100%" />
-      </div>
+      {!isTablet && (
+        <div className="hero__right">
+          <div className="hero__right__img_wrapper">
+            <StaticImage
+              src="../../images/Web Design.png"
+              alt="engineer drawing robot head"
+              placeholder="tracedSVG"
+              loading="eager"
+              imgStyle={{ objectFit: "contain", width: "100%" }}
+              className="hero__right__img"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
