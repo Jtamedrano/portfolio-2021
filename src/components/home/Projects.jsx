@@ -2,8 +2,9 @@ import React from "react";
 import { Card } from "antd";
 const { Meta } = Card;
 
-const ProjectCard = ({ title, description, live, git }) => (
+const ProjectCard = ({ title, description, live, git, id }) => (
   <Card
+    id={id}
     className="projects__card"
     actions={[
       live ? (
@@ -22,7 +23,11 @@ const ProjectCard = ({ title, description, live, git }) => (
       ),
     ]}
   >
-    <Meta title={title} description={description} />
+    <Meta
+      title={title}
+      description={description}
+      className="projects__card_body"
+    />
   </Card>
 );
 
@@ -36,15 +41,21 @@ const Projects = () => {
           </div>
           <div className="projects__rows">
             <ProjectCard
-              title="Symplee.App"
-              live="https://symplee.app"
-              description="Messaging Application - Main features include Chat/Audio/Video Communication."
+              title="Family Real Estate Network"
+              live="https://frenhomes.com/"
+              description="Real Estate Brokerage Application, designed to navigate traffic to contact broker."
             />
             <ProjectCard
               live="https://richarnoldfororegon.com/"
               git="https://github.com/Jtamedrano/RICH-A-FRONTEND"
               title="Richard Arnold For Oregon"
               description="Political campaign for a position on a school board. React, Google Firebase, and Stripe included"
+            />
+            <ProjectCard
+              id="Cardalance"
+              title="Cardalance"
+              live="https://cardalance.com/"
+              description="Personal Finance and Budgeting Web Application. React.JS/Typescript Frontend and Microservice Backend using Kotlin and Spring Boot."
             />
             <ProjectCard
               title="New Evolution Digital"

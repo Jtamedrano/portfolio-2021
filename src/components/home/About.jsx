@@ -23,8 +23,7 @@ const About = () => {
           <p>
             Now, I am a software developer and some of my favorite projects have
             be Software as a Service (SaaS) type of applications from Messaging
-            Applications to Customer Relationship Management System (still
-            working this).
+            Applications to Customer Relationship Management System.
           </p>
         </div>
       </div>
