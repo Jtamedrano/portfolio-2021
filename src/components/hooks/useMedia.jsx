@@ -2,8 +2,12 @@ import React from "react";
 
 const useMedia = (props) => {
   const [state, setState] = React.useState(() => {
-    if (typeof window !== "undefined") window.matchMedia(props).matches;
+    if (typeof window !== "undefined") return window.matchMedia(props).matches;
+
+    return;
   });
+
+  console.log(state);
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {

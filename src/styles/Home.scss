@@ -68,7 +68,10 @@
     position: relative;
     flex-basis: 50%;
     height: 100%;
-    // overflow: hidden;
+    overflow: hidden;
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
     &__img_wrapper {
       height: 100%;
       width: 100%;
@@ -131,23 +134,28 @@
 
   &__rows {
     margin-top: 1.5em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: stretch;
-  }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+    width: 100%;
 
-  &__row:first-of-type {
-    margin-bottom: 1em;
+    @media screen and (max-width: 805px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
+    height: 100%;
     width: 100%;
-    flex-basis: 33%;
-    @media screen and (max-width: 800px) {
-      flex-basis: 100%;
-      margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+
+    .ant-card-body {
+      height: 100%;
     }
+  }
+  &__card_body {
+    height: 100%;
   }
 }
 
@@ -226,6 +234,7 @@
     background-color: #dcefffc0;
     border-radius: 25px;
     box-shadow: 0 0 5px rgba(8, 35, 48, 0.507);
+
     &_input {
       width: 100%;
     }
@@ -236,7 +245,7 @@
   }
 
   &__links {
-    @media screen and (max-screan: 426px) {
+    @media screen and (max-screen: 426px) {
       padding: 0.5em;
     }
   }

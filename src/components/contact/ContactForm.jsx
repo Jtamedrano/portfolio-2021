@@ -91,7 +91,7 @@ const ContactForm = () => {
             autoSize
           />
         </Form.Item>
-        <Form.Item wrapperCol={{ span: 4, offset: 10 }}>
+        <Form.Item>
           <ButtonGroup>
             <Button
               type="primary"
