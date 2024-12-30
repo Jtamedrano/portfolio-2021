@@ -4,9 +4,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex justify-between items-center max-w-7xl mx-auto py-16 px-4">
+    <section className="container flex justify-between items-center mx-auto pt-16 px-4 overflow-hidden">
       <div className="basis-1/2">
-        <p className="text-2xl font-bold text-secondary">Hello,</p>
+        <p className="text-2xl font-bold text-secondary">Hello, I&apos;m</p>
         <h1 className="text-4xl font-bold tracking-tight mb-4 text-primary uppercase">
           Jesse Medrano
         </h1>
@@ -21,21 +21,21 @@ const Hero = () => {
         </p>
         <Link
           href="/contact"
-          className="bg-accent text-white py-2 px-4 rounded-full inline-block mt-4"
+          className="bg-accent text-white py-2 px-4 rounded-full inline-block mt-4 font-semibold"
         >
           Let's Chat
         </Link>
       </div>
       <div
         className="hidden md:block"
-        style={{ width: "500px", height: "500px" }}
+        style={{ width: "600px", height: "600px" }}
       >
-        <div className="relative w-full h-full bg-slate-300 dark:bg-slate-700 rounded-full shadow-lg ring-2 ring-slate-400 dark:ring-slate-600 transition-all duration-500">
+        <div className="relative w-full h-full bg-slate-200/30 dark:bg-slate-700 rounded-full shadow-lg transition-all duration-500">
           <Image
-            src="/WebDesign.png"
-            alt="engineer drawing robot head"
-            width={500}
-            height={500}
+            src="/developer_hero_image.svg"
+            alt="software developer with laptop"
+            width={800}
+            height={800}
             style={{ objectFit: "contain" }}
           />
         </div>

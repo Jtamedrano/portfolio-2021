@@ -19,7 +19,8 @@ const NavItem: React.FC<NavItemProps> = ({
 
 const NavMenu = () => {
   return (
-    <nav className="flex justify-end items-center gap-4 px-4">
+    <nav className="container mx-auto flex justify-between items-center gap-4 px-4">
+      <div className="text-2xl font-bold text-primary">J Medrano Digital</div>
       <ul className="flex gap-4">
         <NavItem label="Home" to="/" />
         <NavItem label="Projects" to="#projects" />
