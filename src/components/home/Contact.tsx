@@ -1,10 +1,6 @@
-import {
-  GithubOutlined,
-  LinkedinOutlined,
-  MailOutlined,
-} from "@ant-design/icons/lib/icons";
 import React from "react";
 import ContactForm from "../contact/ContactForm";
+import { BiLogoGithub, BiLogoLinkedin, BiMailSend } from "react-icons/bi";
 
 const Contact = () => {
   return (
@@ -23,17 +19,17 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GithubOutlined /> GitHub
+                <BiLogoGithub /> GitHub
               </a>
               <a
                 href="https://linkedin.com/in/jtamedrano"
                 target="_blank"
                 rel="noreferrer"
               >
-                <LinkedinOutlined /> LinkedIn
+                <BiLogoLinkedin /> LinkedIn
               </a>
               <a href="mailto:jtamedrano@gmail.com">
-                <MailOutlined /> Email
+                <BiMailSend /> Email
               </a>
             </div>
           </div>
