@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <section className="container flex justify-between items-center mx-auto pt-16 px-4 overflow-hidden">
       <div className="basis-1/2">
-        <p className="text-2xl font-bold text-secondary">Hello, I&apos;m</p>
-        <h1 className="text-4xl font-bold tracking-tight mb-4 text-primary uppercase">
+        <p className="text-2xl font-bold tracking-tighter">Hello, I&apos;m</p>
+        <h1 className="text-4xl font-bold tracking-tight mb-4 uppercase text-secondary">
           Jesse Medrano
         </h1>
         <p className="text-lg font-light">
@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <Link
           href="/contact"
-          className="bg-accent text-white py-2 px-4 rounded-full inline-block mt-4 font-semibold"
+          className="bg-primary text-white py-2 px-4 rounded-full inline-block mt-4 font-semibold"
         >
           Let's Chat
         </Link>
@@ -32,7 +32,7 @@ const Hero = () => {
       >
         <div className="relative w-full h-full bg-slate-200/30 dark:bg-slate-700 rounded-full shadow-lg transition-all duration-500">
           <Image
-            src="/developer_hero_image.svg"
+            src="/dev_hero_image_transparent.png"
             alt="software developer with laptop"
             width={800}
             height={800}

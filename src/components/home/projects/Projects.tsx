@@ -36,9 +36,11 @@ const PROJECT_LIST = [
 const Projects = () => {
   return (
     <div id="projects" className="container mx-auto py-16 px-4">
-      <h2 className="text-4xl font-bold tracking-tight mb-12 text-primary">
-        Projects
-      </h2>
+      <h2 className="text-4xl font-bold tracking-tight mb-4">Projects</h2>
+      <p className="text-lg font-light mb-4">
+        Here are some highlights from my recent projects. These are public
+        websites that I&apos;ve built from scratch or revamped to improve.
+      </p>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {PROJECT_LIST.map((project, index) => (

@@ -15,7 +15,10 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className={cx("antialiased min-h-screen relative", aladin.variable)}
+        className={cx(
+          "antialiased min-h-screen relative transition-colors duration-500",
+          aladin.variable
+        )}
         style={{
           maxWidth: "100vw",
         }}

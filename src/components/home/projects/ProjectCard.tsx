@@ -11,7 +11,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   subtitle,
   desktopImage,
 }) => (
-  <div className="relative w-full rounded-md shadow-md group cursor-default transition-all duration-500">
+  <div className="relative w-full h-full rounded-md shadow-md group cursor-default transition-all duration-500">
     <div className="relative h-full transition-all duration-500 z-10 rounded-md overflow-hidden">
       <div className="absolute top-0 w-full h-full bg-black bg-opacity-85 group-hover:bg-opacity-50 transition-all duration-500">
         <img
@@ -26,8 +26,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-lg font-light mb-4">{subtitle}</p>
       </div>
     </div>
-    <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 group-hover:-bottom-12 transition-all ease-in-out duration-500">
-      <button className="bg-accent text-white py-2 px-4 rounded-full inline-flex items-center justify-center gap-2 mt-4 font-semibold">
+    <div className="rounded-b-md bg-white p-4 pt-0">
+      <button className="bg-primary text-white py-2 px-4 rounded-full inline-flex items-center justify-center gap-2 mt-4 font-semibold hover:bg-primary-600 transition-all duration-300">
         <FaEye className="inline-block" /> View
       </button>
     </div>
