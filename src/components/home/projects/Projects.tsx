@@ -1,58 +1,97 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
+import Link from "next/link";
 
 const PROJECT_LIST = [
   {
-    title: "Radical Pressure Washing",
-    subtitle: "A Web Revamp for Lead Generation",
-    describe:
-      "Radical Pressure Washing needed a more effective website to showcase their services. The old site lacked clear calls to action, had minimal service details, and wasn’t mobile-friendly. I implemented a modern design using Next.js and Strapi CMS, added before-and-after imagery, introduced simple contact methods, and included SEO optimizations. The one-month build, involving just one design session and a few minor revisions, dramatically improved both performance and user engagement.",
-    outcomes: [
-      "SEO score rose from 39 to 92",
-      "Accessibility rating jumped from 25 to 99",
-      "Completed in just one month",
-      "Zero email bounces via a direct “mailto” form solution",
-      "Client praised the rapid turnaround and immediate lead generation",
+    slug: "From Scratch",
+    title: "Startup Launch",
+    description:
+      "Designed, developed and deployed a new webpage for a startup, launched two weeks before expected deadline.",
+    desktop: "/polo-desktop.png",
+    keyPoints: [
+      "Designed a modern, visually appealing layout from concept",
+      "Developed responsive, mobile-first functionality",
+      "Created engaging copy and visuals to attract leads",
     ],
-    desktop: "radical-desktop.png",
-    live: "https://www.radicalpressurewash.com/",
+    technologies: ["React", "Next.js", "Google Api"],
   },
   {
-    title: "Radical Property Services",
-    subtitle: "Repeat customer grows their business",
-    describe: "A landing page website for a property maintenance company.",
-    desktop: "pmgmt-desktop.png",
-    live: "https://radicalpropertymgmt.com",
+    slug: "Website Upgrade",
+    title: "Landing Page Revamp",
+    description:
+      "Revamped an outdated landing page to enhance engagement with 0% bounce rate from email contact form.",
+    desktop: "/radical-desktop.png",
+    keyPoints: [
+      "Designed a modern layout aligned with brand identity",
+      "Included Content Management System Integration",
+      "Improved mobile responsiveness",
+    ],
+    technologies: ["React", "Next.js", "Strapi CMS"],
   },
   {
-    title: "Polo Massage",
-    subtitle: "A web presence for a start-up massage therapist",
-    describe: "A landing page website for a massage therapist.",
-    desktop: "polo-desktop.png",
-    live: "https://polomassage.com",
+    slug: "Enterprise Application",
+    title: "Applications for the Masses",
+    description:
+      "Worked on various apps, from webforms to complex enterprise level systems designed for thousands of users.",
+    keyPoints: [
+      "Built a robust, scalable architecture to handle complex workflows",
+      "Developed user-friendly interfaces for internal teams",
+      "Ensured security and compliance with industry standards",
+    ],
+    technologies: [
+      "Typescript",
+      "Kotlin",
+      "MySQL",
+      "MongoDB",
+      "Jenkins",
+      "etc.",
+    ],
+    desktop: "/enterprise_imagery.png",
   },
 ];
 
 const Projects = () => {
   return (
-    <div id="projects" className="container mx-auto py-16 px-4">
-      <h2 className="text-4xl font-bold tracking-tight mb-4">Projects</h2>
-      <p className="text-lg font-light mb-4">
-        Here are some highlights from my recent projects. These are public
-        websites that I&apos;ve built from scratch or revamped to improve.
-      </p>
-
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <section className="bg-slate-900">
+      <div className="py-8 bg-slate-800">
+        <div className="container mx-auto flex flex-col gap-4">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-100">
+            Projects
+          </h2>
+          <p className="text-lg font-light text-slate-300">
+            Here are some highlights from my recent projects. These are public
+            websites that I&apos;ve built from scratch or revamped to improve.
+          </p>
+        </div>
+      </div>
+      <div className="container mx-auto py-8 flex flex-col lg:flex-row gap-4">
         {PROJECT_LIST.map((project, index) => (
           <ProjectCard
             key={index}
             title={project.title}
-            subtitle={project.subtitle}
+            description={project.description}
             desktopImage={project.desktop}
+            slug={project.slug}
+            keyPoints={project.keyPoints}
+            technologies={project.technologies}
           />
         ))}
       </div>
-    </div>
+      <div className="bg-slate-800">
+        <div className="container mx-auto py-8 flex justify-between items-center">
+          <h3 className="text-2xl font-semibold text-slate-100">
+            Have a project in mind? Let&apos;s bring it to life!
+          </h3>
+          <Link
+            href="/contact"
+            className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-xl font-semibold"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 

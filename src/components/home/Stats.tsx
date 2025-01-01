@@ -7,22 +7,23 @@ interface StatItemProps {
 
 const StatItem: React.FC<StatItemProps> = ({ title, value }) => {
   return (
-    <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md text-center">
-      <h3 className="text-2xl font-bold">{title}</h3>
-      <p className="text-lg">{value}</p>
+    <div className="bg-white p-4 rounded-lg flex-1 flex flex-col gap-2">
+      <h3 className="font-bold text-slate-800">{title}</h3>
+      <p className="text-lg font-bold text-slate-600">{value}</p>
     </div>
   );
 };
 
 export const Stats = () => {
   return (
-    <section className="bg-gray-200 dark:bg-gray-800 transition-all duration-500">
-      <div className="container mx-auto px-4 py-8">
-        <h2 className="text-4xl font-bold mb-4">Stats</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <StatItem title="Enterprise Work" value="3 Years" />
-          <StatItem title="Freelance Work" value="4 Years" />
-          <StatItem title="Users Served" value="10000+" />
+    <section className="bg-gray-300">
+      <div className="container mx-auto py-8 flex flex-col gap-4">
+        <h2 className="text-3xl font-semibold text-slate-800">Current Stats</h2>
+        <div className="flex flex-col gap-4 md:flex-row md:gap-4">
+          <StatItem title="Time In Enterprise" value="3 Years" />
+          <StatItem title="Time Freelancing" value="4 Years" />
+          <StatItem title="Websites Worked On" value="7 Websites" />
+          <StatItem title="Apps Worked On" value="4 Apps" />
         </div>
       </div>
     </section>

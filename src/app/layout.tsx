@@ -23,10 +23,10 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
           maxWidth: "100vw",
         }}
       >
-        <header className="py-4 sticky top-0 bg-slate-300 dark:bg-slate-700 text-slate-800 dark:text-slate-100 shadow-md z-50 transition-all duration-500">
+        <header className="py-4 sticky top-0 z-10 bg-slate-300 shadow-md shadow-black/25">
           <NavMenu />
         </header>
-        <main className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-500">
+        <main className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100">
           {children}
         </main>
         <PageFooter />

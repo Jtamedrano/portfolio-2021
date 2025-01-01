@@ -1,19 +1,31 @@
-"use client";
+import Image from "next/image";
+import Link from "next/link";
 
 const PageFooter = () => {
-  const handleThemeToggle = () => {
-    document.body.classList.toggle("dark");
-  };
-
   return (
-    <footer className="py-4 text-center text-sm bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-slate-400 flex flex-col items-center gap-2 transition-all duration-500">
-      <button
-        className="p-2 bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-slate-50 transition-colors duration-500 rounded-md"
-        onClick={handleThemeToggle}
-      >
-        Toggle Theme
-      </button>
-      &copy; 2025 Jesse Medrano
+    <footer className="py-8">
+      <div className="container mx-auto flex justify-between">
+        <div className="flex flex-col gap-4 text-slate-700">
+          <div>
+            <Image src="/Logo.svg" alt="Logo" width={100} height={100} />
+          </div>
+          <p className="text-sm text-slate-700">&copy; 2025 Jesse Medrano</p>
+        </div>
+        <div className="flex flex-col gap-2 text-slate-700 text-center">
+          <h3 className="font-bold text-slate-700">Site Map</h3>
+          <nav className="flex flex-col gap-2 underline">
+            <Link href="#" className="hover:text-slate-300">
+              Home
+            </Link>
+            <Link href="#" className="hover:text-slate-300">
+              Services
+            </Link>
+            <Link href="#" className="hover:text-slate-300">
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </div>
     </footer>
   );
 };
