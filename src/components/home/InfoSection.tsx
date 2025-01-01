@@ -4,8 +4,8 @@ import Link from "next/link";
 export const InfoSection: React.FC = () => {
   return (
     <section className="py-8 flex justify-between self-stretch items-start">
-      <div className="container mx-auto flex items-start gap-4 flex-1">
-        <div className="flex justify-between items-center flex-1 self-stretch rounded-lg w-[632px] h-[360px]">
+      <div className="container mx-auto flex items-stretch gap-4 flex-1 px-2 lg:px-0">
+        <div className="flex justify-between items-center flex-1 rounded-lg lg:max-h-[360px]">
           <Image
             src="/webdev_journey.png"
             className="flex-1 self-stretch object-cover w-auto h-auto"
@@ -53,7 +53,7 @@ export const InfoSection: React.FC = () => {
             </p>
             <Link
               href="/contact"
-              className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold"
+              className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
             >
               Let&apos;s Chat
             </Link>

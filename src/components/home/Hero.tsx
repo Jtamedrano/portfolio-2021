@@ -25,7 +25,7 @@ const Hero = () => {
           <p className="">Ready to take your business to the next level?</p>
           <Link
             href="/contact"
-            className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold"
+            className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300"
           >
             Let's Chat
           </Link>

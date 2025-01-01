@@ -14,7 +14,10 @@ const NavItem: React.FC<NavItemProps> = ({
   className = "navItem",
 }) => (
   <li className={className}>
-    <Link href={to} className="text-lg">
+    <Link
+      href={to}
+      className="text-lg hover:text-secondary transition-colors duration-300"
+    >
       {label}
     </Link>
   </li>
