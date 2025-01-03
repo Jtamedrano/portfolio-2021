@@ -222,7 +222,7 @@ export const ContactForm = () => {
           <div>
             <button
               type="submit"
-              className="bg-secondary-400 text-secondary-900 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-500 transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-900 disabled:cursor-not-allowed"
+              className="bg-secondary-400 text-secondary-900 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-500 transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-900 disabled:cursor-not-allowed w-full lg:w-auto"
               disabled={loading}
             >
               Submit

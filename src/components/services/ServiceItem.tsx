@@ -37,15 +37,13 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
             ))}
           </ul>
         </div>
-        <div>
-          <AnalyticLink
-            href={`/contact?service=${encodedTitle}`}
-            label="Schedule"
-            className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
-            eventValue={title}
-            eventCategory="schedule_service"
-          />
-        </div>
+        <AnalyticLink
+          href={`/contact?service=${encodedTitle}`}
+          label="Schedule"
+          className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300 text-center w-full lg:w-fit"
+          eventValue={title}
+          eventCategory="schedule_service"
+        />
       </div>
     </div>
   );
