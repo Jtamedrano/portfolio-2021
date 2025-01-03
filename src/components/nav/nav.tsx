@@ -2,38 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AnalyticLink } from "../Analytics/AnalyticLink";
-
-interface NavItemProps {
-  label: string;
-  to: string;
-  className?: string;
-}
-
-const NavItem: React.FC<NavItemProps> = ({
-  label,
-  to,
-  className = "navItem",
-}) => (
-  <li className={className}>
-    <Link
-      href={to}
-      className="text-lg hover:text-secondary transition-colors duration-300"
-    >
-      {label}
-    </Link>
-  </li>
-);
+import { NavItem } from "./NavItem";
+import { MobileNav } from "./MobileNav";
+import { NAVIGATION } from "../../constants/nav";
 
 const NavMenu = () => {
   return (
     <nav className="container mx-auto flex justify-between items-center gap-4 px-4">
       <Link className="text-2xl font-bold text-primary" href="/">
+        <span className="sr-only">J Medrano Design</span>
         <Image src="/Logo.svg" alt="Logo" width={100} height={43} />
       </Link>
-      <ul className="flex gap-4 capitalize text-slate-800 items-center">
-        <NavItem label="Home" to="/" />
+      <ul className="hidden lg:flex gap-4 capitalize text-slate-800 items-center">
+        {/* <NavItem label="Home" to="/" />
         <NavItem label="Services" to="/services" />
-        <NavItem label="Contact" to="/contact" />
+        <NavItem label="Contact" to="/contact" /> */}
+        {NAVIGATION.map((navItem) => (
+          <NavItem key={navItem.label} label={navItem.label} to={navItem.to} />
+        ))}
         <li>
           <AnalyticLink
             href="tel:+19096361186"
@@ -44,6 +30,7 @@ const NavMenu = () => {
           />
         </li>
       </ul>
+      <MobileNav />
     </nav>
   );
 };
