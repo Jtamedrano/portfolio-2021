@@ -53,9 +53,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <AnalyticLink
           href={url}
           label="Visit"
-          className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-xl font-semibold hover:bg-secondary-800 transition-colors duration-300"
+          className="underline text-secondary-400 flex items-center gap-2 hover:text-secondary-500 transition-colors duration-300 w-fit"
           eventValue={title}
           eventCategory="visit_project"
+          target={isBlank ? "_blank" : undefined}
         />
       )}
     </div>

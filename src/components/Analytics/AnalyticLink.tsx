@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { logEvent } from "../../utilities/logEvent";
 
-interface AnalyticLinkProps {
+interface AnalyticLinkProps extends React.ComponentProps<typeof Link> {
   href: string;
   label: string;
   className?: string;
@@ -17,6 +17,7 @@ export const AnalyticLink: React.FC<AnalyticLinkProps> = ({
   className,
   eventValue,
   eventCategory,
+  ...rest
 }) => {
   const handleClick = () => {
     logEvent(
@@ -29,6 +30,7 @@ export const AnalyticLink: React.FC<AnalyticLinkProps> = ({
 
   return (
     <Link
+      {...rest}
       href={href}
       className={className}
       onClick={handleClick}
