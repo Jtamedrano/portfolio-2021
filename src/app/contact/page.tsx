@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { IconType } from "react-icons";
 import { MdEmail, MdPhone } from "react-icons/md";
@@ -104,7 +105,7 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({
 const BASIN_API = "https://usebasin.com/f/";
 
 const ContactPage = () => {
-  const [formState, setFormState] = React.useState(INITIAL_STATE);
+  const [formState, setFormState] = React.useState(() => INITIAL_STATE);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
 
@@ -118,8 +119,10 @@ const ContactPage = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    const formId = process.env.NEXT_PUBLIC_BASIN_FORM_ID;
     e.preventDefault();
+    const formId = process.env.NEXT_PUBLIC_BASIN_FORM_ID;
+
+    setLoading(() => true);
     await fetch(`${BASIN_API}${formId}`, {
       method: "POST",
       headers: {
@@ -132,9 +135,27 @@ const ContactPage = () => {
         setFormState(INITIAL_STATE);
       })
       .catch((e) => {
+        setError(e.message);
         alert("There was an error submitting the form. Please try again.");
       });
+
+    setLoading(() => false);
   };
+
+  React.useEffect(() => {
+    if (window.location.search) {
+      const service = new URLSearchParams(window.location.search).get(
+        "service"
+      );
+      if (service) {
+        const parsedService = decodeURIComponent(service as string);
+        setFormState((prev) => ({
+          ...prev,
+          message: `I'm interested in the "${parsedService}" service. Can you provide more information?`,
+        }));
+      }
+    }
+  }, []);
 
   return (
     <section className="relative isolated bg-slate-700 text-slate-100 flex-1 flex flex-col justify-center items-center">
@@ -185,6 +206,7 @@ const ContactPage = () => {
                   required
                   autoComplete="name"
                   handleChange={handleChange}
+                  disabled={loading}
                 />
               </div>
               <div>
@@ -197,6 +219,7 @@ const ContactPage = () => {
                   required
                   autoComplete="email"
                   handleChange={handleChange}
+                  disabled={loading}
                 />
               </div>
               <div>
@@ -209,6 +232,7 @@ const ContactPage = () => {
                   required
                   autoComplete="tel"
                   handleChange={handleChange}
+                  disabled={loading}
                 />
               </div>
               <div>
@@ -220,6 +244,7 @@ const ContactPage = () => {
                   type="text"
                   autoComplete="organization"
                   handleChange={handleChange}
+                  disabled={loading}
                 />
               </div>
               <div>
@@ -231,6 +256,7 @@ const ContactPage = () => {
                   type="url"
                   autoComplete="url"
                   handleChange={handleChange}
+                  disabled={loading}
                 />
               </div>
               <div className="sm:col-span-2">
@@ -243,13 +269,15 @@ const ContactPage = () => {
                     onChange={handleChange}
                     rows={6}
                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-secondary-400"
+                    disabled={loading}
                   />
                 </FormGroup>
               </div>
               <div>
                 <button
                   type="submit"
-                  className="bg-secondary-400 text-secondary-900 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-500 transition-colors duration-300"
+                  className="bg-secondary-400 text-secondary-900 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-500 transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-900 disabled:cursor-not-allowed"
+                  disabled={loading}
                 >
                   Submit
                 </button>

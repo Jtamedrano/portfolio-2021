@@ -1,4 +1,6 @@
+"use client";
 import cx from "classnames";
+import { useRouter } from "next/navigation";
 interface ServiceItemProps {
   className?: string;
   title: string;
@@ -16,6 +18,13 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
   title,
   onScheduleClick,
 }) => {
+  const router = useRouter();
+
+  const handleOnScheduleClick = () => {
+    router.push(`/contact?service=${title}`);
+    onScheduleClick?.();
+  };
+
   return (
     <div className={cx("flex flex-col gap-8 py-4", className)}>
       <div className="h-[300px] bg-white">
@@ -38,7 +47,7 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
         </div>
         <div>
           <button
-            onClick={onScheduleClick}
+            onClick={handleOnScheduleClick}
             className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
           >
             Schedule
