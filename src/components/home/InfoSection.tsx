@@ -12,6 +12,7 @@ export const InfoSection: React.FC = () => {
             width={632}
             height={368}
             alt="Web Development Journey"
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col gap-4 flex-1 text-slate-700">

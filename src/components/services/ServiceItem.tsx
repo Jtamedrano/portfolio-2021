@@ -1,14 +1,11 @@
-"use client";
 import cx from "classnames";
-import { useRouter } from "next/navigation";
-import { logEvent } from "../../utilities/logEvent";
+import { AnalyticLink } from "../Analytics/AnalyticLink";
 interface ServiceItemProps {
   className?: string;
   title: string;
   description: string;
   keyFeatures: string[];
   image: string;
-  onScheduleClick?: () => void;
 }
 
 export const ServiceItem: React.FC<ServiceItemProps> = ({
@@ -17,15 +14,8 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
   image,
   keyFeatures,
   title,
-  onScheduleClick,
 }) => {
-  const router = useRouter();
-
-  const handleOnScheduleClick = () => {
-    logEvent("click", "button", "schedule_service", title);
-    router.push(`/contact?service=${title}`);
-    onScheduleClick?.();
-  };
+  const encodedTitle = encodeURIComponent(title);
 
   return (
     <div className={cx("flex flex-col gap-8 py-4", className)}>
@@ -48,12 +38,13 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
           </ul>
         </div>
         <div>
-          <button
-            onClick={handleOnScheduleClick}
+          <AnalyticLink
+            href={`/contact?service=${encodedTitle}`}
+            label="Schedule"
             className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
-          >
-            Schedule
-          </button>
+            eventValue={title}
+            eventCategory="schedule_service"
+          />
         </div>
       </div>
     </div>

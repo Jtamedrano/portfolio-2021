@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { logEvent } from "../../utilities/logEvent";
+import { AnalyticLink } from "../Analytics/AnalyticLink";
 
 const Hero = () => {
   return (
@@ -26,15 +23,13 @@ const Hero = () => {
         </p>
         <div className="flex flex-col gap-2 items-start">
           <p className="">Ready to take your business to the next level?</p>
-          <Link
+          <AnalyticLink
             href="/contact"
+            label="Let's Chat"
             className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300"
-            onMouseDown={() => {
-              logEvent("click", "button", "hero-cta", "contact");
-            }}
-          >
-            Let's Chat
-          </Link>
+            eventValue="hero-cta"
+            eventCategory="contact"
+          />
         </div>
       </div>
       <div className="relative hidden md:flex flex-col justify-end items-center bg-slate-200 rounded-full shadow-lg shadow-black/25 md:min-w-[250px] md:min-h-[250px] lg:min-w-[600px] lg:min-h-[600px] z-0">
@@ -43,6 +38,8 @@ const Hero = () => {
           alt="software developer with laptop"
           width={600}
           height={600}
+          // lazy
+          loading="lazy"
           className="md:top-[50px] md:left-[0px] lg:top-[30px] lg:left-[-30px] z-10 absolute"
           style={{
             objectFit: "cover",

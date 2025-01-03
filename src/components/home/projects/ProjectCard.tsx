@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
-import { logEvent } from "../../../utilities/logEvent";
+import { AnalyticLink } from "../../Analytics/AnalyticLink";
 
 interface ProjectCardProps {
   slug: string;
@@ -33,6 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         width={400}
         height={200}
         className="object-cover w-full h-full"
+        loading="lazy"
       />
     </div>
 
@@ -49,19 +47,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </ul>
       <div className="flex flex-col gap-2">
         <h4 className="font-semibold">Technologies</h4>
-        <p className="text-slate-300">{technologies.join(", ")}</p>
+        <p className="text-slate-300">{(technologies ?? []).join(", ")}</p>
       </div>
       {url && (
-        <Link
+        <AnalyticLink
           href={url}
-          className="underline text-secondary-400 flex items-center gap-2 hover:text-secondary-500 transition-colors duration-300 w-fit"
-          target={isBlank ? "_blank" : undefined}
-          onMouseDown={() => {
-            logEvent("click", "button", "visit_project", title);
-          }}
-        >
-          Visit
-        </Link>
+          label="Visit"
+          className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-xl font-semibold hover:bg-secondary-800 transition-colors duration-300"
+          eventValue={title}
+          eventCategory="visit_project"
+        />
       )}
     </div>
   </div>

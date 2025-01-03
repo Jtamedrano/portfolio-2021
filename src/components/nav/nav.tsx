@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { logEvent } from "../utilities/logEvent";
+import { AnalyticLink } from "../Analytics/AnalyticLink";
 
 interface NavItemProps {
   label: string;
@@ -34,15 +34,15 @@ const NavMenu = () => {
         <NavItem label="Home" to="/" />
         <NavItem label="Services" to="/services" />
         <NavItem label="Contact" to="/contact" />
-        <Link
-          href="tel:+19096361186"
-          className="px-4 py-2 bg-secondary-700 text-slate-100 rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300"
-          onMouseDown={() => {
-            logEvent("click", "button", "call_now", "nav");
-          }}
-        >
-          Call Now
-        </Link>
+        <li>
+          <AnalyticLink
+            href="tel:+19096361186"
+            label="Call Now"
+            className="px-4 py-2 bg-secondary-700 text-slate-100 rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300"
+            eventValue="nav"
+            eventCategory="call_now"
+          />
+        </li>
       </ul>
     </nav>
   );

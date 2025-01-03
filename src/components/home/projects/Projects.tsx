@@ -1,7 +1,6 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
-import Link from "next/link";
-import { logEvent } from "../../../utilities/logEvent";
+import { AnalyticLink } from "../../Analytics/AnalyticLink";
 
 const PROJECT_LIST = [
   {
@@ -91,15 +90,12 @@ const Projects = () => {
           <h3 className="text-2xl font-semibold text-slate-100">
             Have a project in mind? Let&apos;s bring it to life!
           </h3>
-          <Link
+          <AnalyticLink
             href="/contact"
+            label="Get in Touch"
             className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-xl font-semibold hover:bg-secondary-800 transition-colors duration-300"
-            onMouseDown={() => {
-              logEvent("click", "button", "get_in_touch", "projects");
-            }}
-          >
-            Get in Touch
-          </Link>
+            eventValue="projects"
+          />
         </div>
       </div>
     </section>
