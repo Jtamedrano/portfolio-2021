@@ -4,13 +4,23 @@ import Link from "next/link";
 export const InfoSection: React.FC = () => {
   return (
     <section className="py-8 flex justify-between self-stretch items-start">
-      <div className="container mx-auto flex items-stretch gap-4 flex-1 px-2 lg:px-0">
-        <div className="flex justify-between items-center flex-1 rounded-lg lg:max-h-[360px]">
+      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-4 flex-1 px-2 lg:px-0">
+        <div className="hidden lg:flex justify-between items-center flex-1 rounded-lg lg:max-h-[500px]">
           <Image
             src="/webdev_journey.png"
             className="flex-1 self-stretch object-cover w-auto h-auto"
             width={632}
             height={368}
+            alt="Web Development Journey"
+            loading="lazy"
+          />
+        </div>
+        <div className="lg:hidden flex justify-center items-center max-h-[200px]">
+          <Image
+            src="/webdev_journey.png"
+            className="flex-1 self-stretch object-cover w-auto h-auto"
+            width={632}
+            height={200}
             alt="Web Development Journey"
             loading="lazy"
           />
@@ -48,13 +58,13 @@ export const InfoSection: React.FC = () => {
               ongoing support for smooth operation.
             </li>
           </ul>
-          <div className="flex flex-col gap-3 items-start">
+          <div className="flex flex-col gap-3 lg:items-start">
             <p className="text-2xl text-secondary-700 font-bold">
               Ask how you can get a free hero section redesign!
             </p>
             <Link
               href="/contact"
-              className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
+              className="text-center bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
             >
               Let&apos;s Chat
             </Link>
