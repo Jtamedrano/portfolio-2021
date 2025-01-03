@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 633.46 271.55">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 100px;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #718c65;
+      }
+
+      .cls-5 {
+        font-size: 172px;
+        letter-spacing: .04em;
+      }
+
+      .cls-4 {
+        font-family: BebasNeue-Regular, 'Bebas Neue';
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(0 151.55)"><tspan class="cls-5"><tspan x="0" y="0">J MEDRANO</tspan></tspan><tspan class="cls-1"><tspan x="209.08" y="100">D</tspan><tspan class="cls-2" x="249.68" y="100">E</tspan><tspan x="286.18" y="100">SIGN</tspan></tspan></text>
+  <rect class="cls-3" x="2.73" width="625" height="10.98"/>
+  <rect class="cls-3" x="2.73" y="211.5" width="190" height="10"/>
+  <rect class="cls-3" x="440.73" y="211.5" width="187" height="10"/>
+</svg>
