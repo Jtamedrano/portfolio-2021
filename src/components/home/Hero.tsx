@@ -4,10 +4,21 @@ import { AnalyticLink } from "../Analytics/AnalyticLink";
 
 const Hero = () => {
   return (
-    <section className="container flex justify-between items-center self-stretch mx-auto py-4 px-4 xl:px-0 gap-8 overflow-hidden">
-      <div className="leading-none text-gray-700 flex flex-col gap-4 flex-1">
+    <section className="container flex flex-col lg:flex-row justify-between items-center self-stretch mx-auto py-4 px-4 xl:px-0 gap-8 overflow-hidden">
+      <div className="lg:hidden flex justify-center items-center">
+        <Image
+          src="/dev_hero_image_transparent.png"
+          alt="software developer with laptop"
+          width={300}
+          height={300}
+          // lazy
+          loading="lazy"
+          className="object-contain"
+        />
+      </div>
+      <div className="text-center lg:text-left leading-none text-gray-700 flex flex-col gap-6 flex-1">
         <div className="flex flex-col gap-2">
-          <p className="text-2xl font-semibold tracking-tight ">
+          <p className="text-lg lg:text-2xl font-semibold tracking-tight ">
             Hello, I&apos;m Jesse Medrano
           </p>
           <h1 className=" text-3xl lg:text-5xl font-bold tracking-tight uppercase text-secondary-700">
@@ -21,8 +32,10 @@ const Hero = () => {
           designs to reliable back-end solutions. I build websites that elevate
           brands and turn visitors into customers.
         </p>
-        <div className="flex flex-col gap-2 items-start">
-          <p className="">Ready to take your business to the next level?</p>
+        <div className="flex flex-col gap-2 lg:items-start">
+          <p className="font-semibold">
+            Ready to take your business to the next level?
+          </p>
           <AnalyticLink
             href="/contact"
             label="Let's Chat"
@@ -32,7 +45,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="relative hidden md:flex flex-col justify-end items-center bg-slate-200 rounded-full shadow-lg shadow-black/25 md:min-w-[250px] md:min-h-[250px] lg:min-w-[600px] lg:min-h-[600px] z-0">
+      <div className="relative hidden lg:flex flex-col justify-end items-center bg-slate-200 rounded-full shadow-lg shadow-black/25 md:min-w-[250px] md:min-h-[250px] lg:min-w-[600px] lg:min-h-[600px] z-0">
         <Image
           src="/dev_hero_image_transparent.png"
           alt="software developer with laptop"
