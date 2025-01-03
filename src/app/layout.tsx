@@ -3,6 +3,7 @@ import cx from "classnames";
 import NavMenu from "../components/nav";
 import PageFooter from "../components/PageFooter/PageFooter";
 import "../styles/globals.css";
+import Head from "next/head";
 
 const aladin = Aladin({
   weight: "400",
@@ -10,6 +11,10 @@ const aladin = Aladin({
   preload: true,
   subsets: ["latin"],
 });
+
+export const metadata = {
+  favicon: "/favicon.ico",
+};
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (

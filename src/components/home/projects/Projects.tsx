@@ -14,7 +14,9 @@ const PROJECT_LIST = [
       "Developed responsive, mobile-first functionality",
       "Created engaging copy and visuals to attract leads",
     ],
+    url: "https://www.polomassage.com",
     technologies: ["React", "Next.js", "Google Api"],
+    isBlank: true,
   },
   {
     slug: "Website Upgrade",
@@ -27,7 +29,9 @@ const PROJECT_LIST = [
       "Included Content Management System Integration",
       "Improved mobile responsiveness",
     ],
+    url: "https://www.radicalpressurewash.com",
     technologies: ["React", "Next.js", "Strapi CMS"],
+    isBlank: true,
   },
   {
     slug: "Enterprise Application",
@@ -47,6 +51,7 @@ const PROJECT_LIST = [
       "Jenkins",
       "etc.",
     ],
+    url: "/contact?service=Enterprise%20Application",
     desktop: "/enterprise_imagery.png",
   },
 ];
@@ -75,6 +80,7 @@ const Projects = () => {
             slug={project.slug}
             keyPoints={project.keyPoints}
             technologies={project.technologies}
+            url={project.url}
           />
         ))}
       </div>
