@@ -1,6 +1,5 @@
 import Link from "next/link";
 import * as React from "react";
-import Layout from "../components/Layout";
 
 // styles
 const pageStyles = {
@@ -28,36 +27,34 @@ const codeStyles = {
 // markup
 const NotFoundPage = () => {
   return (
-    <Layout title="404: Not found">
-      <section className="flex flex-col justify-center items-center max-w-7xl mx-auto py-16 px-4 gap-4">
-        <h1 className="text-4xl font-bold tracking-tight mb-4 text-primary">
-          Page not found
-        </h1>
-        <p className="text-lg font-light text-center">
-          Sorry{" "}
-          <span role="img" aria-label="Pensive emoji">
-            😔
-          </span>{" "}
-          we couldn’t find what you were looking for.
-          <br />
-          {process.env.NODE_ENV === "development" ? (
-            <>
-              <br />
-              Try creating a page in{" "}
-              <code className="bg-[#f0f0f0] text-black p-2 rounded-md">
-                src/pages/
-              </code>
-            </>
-          ) : null}
-        </p>
-        <Link
-          href="/"
-          className="bg-accent text-white py-2 px-4 rounded-full inline-block mt-4"
-        >
-          Go home
-        </Link>
-      </section>
-    </Layout>
+    <section className="flex flex-col justify-center items-center max-w-7xl mx-auto py-16 px-4 gap-4">
+      <h1 className="text-4xl font-bold tracking-tight mb-4 text-primary">
+        Page not found
+      </h1>
+      <p className="text-lg font-light text-center">
+        Sorry{" "}
+        <span role="img" aria-label="Pensive emoji">
+          😔
+        </span>{" "}
+        we couldn’t find what you were looking for.
+        <br />
+        {process.env.NODE_ENV === "development" ? (
+          <>
+            <br />
+            Try creating a page in{" "}
+            <code className="bg-[#f0f0f0] text-black p-2 rounded-md">
+              src/pages/
+            </code>
+          </>
+        ) : null}
+      </p>
+      <Link
+        href="/"
+        className="bg-accent text-white py-2 px-4 rounded-full inline-block mt-4"
+      >
+        Go home
+      </Link>
+    </section>
   );
 };
 
