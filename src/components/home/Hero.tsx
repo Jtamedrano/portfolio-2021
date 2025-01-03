@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { logEvent } from "../../utilities/logEvent";
 
 const Hero = () => {
   return (
@@ -26,6 +29,9 @@ const Hero = () => {
           <Link
             href="/contact"
             className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300"
+            onMouseDown={() => {
+              logEvent("click", "button", "hero-cta", "contact");
+            }}
           >
             Let's Chat
           </Link>

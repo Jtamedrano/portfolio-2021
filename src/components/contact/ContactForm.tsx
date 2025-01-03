@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { logEvent } from "../../utilities/logEvent";
 
 interface FormGroupProps {
   name: string;
@@ -91,6 +92,7 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    logEvent("submit", "form", "contact_form", formState.email);
     const formId = process.env.NEXT_PUBLIC_BASIN_FORM_ID;
 
     setLoading(() => true);

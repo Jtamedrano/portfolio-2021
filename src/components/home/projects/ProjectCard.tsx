@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { FaEye } from "react-icons/fa6";
+import { logEvent } from "../../../utilities/logEvent";
 
 interface ProjectCardProps {
   slug: string;
@@ -54,6 +56,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           href={url}
           className="underline text-secondary-400 flex items-center gap-2 hover:text-secondary-500 transition-colors duration-300 w-fit"
           target={isBlank ? "_blank" : undefined}
+          onMouseDown={() => {
+            logEvent("click", "button", "visit_project", title);
+          }}
         >
           Visit
         </Link>

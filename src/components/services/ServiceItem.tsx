@@ -1,6 +1,7 @@
 "use client";
 import cx from "classnames";
 import { useRouter } from "next/navigation";
+import { logEvent } from "../../utilities/logEvent";
 interface ServiceItemProps {
   className?: string;
   title: string;
@@ -21,6 +22,7 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
   const router = useRouter();
 
   const handleOnScheduleClick = () => {
+    logEvent("click", "button", "schedule_service", title);
     router.push(`/contact?service=${title}`);
     onScheduleClick?.();
   };
