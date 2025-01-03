@@ -16,7 +16,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
     <html lang="en">
       <body
         className={cx(
-          "antialiased min-h-screen relative transition-colors duration-500",
+          "antialiased min-h-screen relative transition-colors duration-500 flex flex-col",
           aladin.variable
         )}
         style={{
@@ -26,7 +26,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         <header className="py-4 sticky top-0 z-10 bg-slate-300 shadow-md shadow-black/25">
           <NavMenu />
         </header>
-        <main className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+        <main className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex-1 flex flex-col">
           {children}
         </main>
         <PageFooter />
