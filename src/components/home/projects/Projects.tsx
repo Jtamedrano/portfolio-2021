@@ -81,6 +81,7 @@ const Projects = () => {
             keyPoints={project.keyPoints}
             technologies={project.technologies}
             url={project.url}
+            isBlank={project.isBlank}
           />
         ))}
       </div>
