@@ -104,6 +104,14 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({
 
 const BASIN_API = "https://usebasin.com/f/";
 
+export const metadata = {
+  title: "Contact | J Medrano Design",
+  description:
+    "Get in touch with J Medrano Design to discuss your web development project. Fill out the form or contact us at (909) 636-1186 or email us at jtamedrano@gmail.com to get started.",
+  keywords:
+    "web design, web development, digital marketing, web design agency, web development agency, web design company, web development company, web design services, web development services, digital marketing services, web design Inland Empire, web development Inland Empire",
+};
+
 const ContactPage = () => {
   const [formState, setFormState] = React.useState(() => INITIAL_STATE);
   const [loading, setLoading] = React.useState(false);
