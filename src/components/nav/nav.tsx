@@ -14,9 +14,6 @@ const NavMenu = () => {
         <Image src="/Logo.svg" alt="Logo" width={100} height={43} />
       </Link>
       <ul className="hidden lg:flex gap-4 capitalize text-slate-800 items-center">
-        {/* <NavItem label="Home" to="/" />
-        <NavItem label="Services" to="/services" />
-        <NavItem label="Contact" to="/contact" /> */}
         {NAVIGATION.map((navItem) => (
           <NavItem key={navItem.label} label={navItem.label} to={navItem.to} />
         ))}
