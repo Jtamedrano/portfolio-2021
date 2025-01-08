@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jtamedrano.com/sitemap.xml
+Sitemap: https://www.jtamedrano.com/sitemap.xml
