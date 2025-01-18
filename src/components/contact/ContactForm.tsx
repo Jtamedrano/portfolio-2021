@@ -23,14 +23,39 @@ interface FormFieldProps
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const INITIAL_STATE = {
+interface FormState {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  companyName: string;
+  website: string;
+  message: string;
+  services: string[];
+  budget: string;
+}
+
+const INITIAL_STATE: FormState = {
   name: "",
   email: "",
   phoneNumber: "",
   companyName: "",
   website: "",
   message: "",
+  services: [],
+  budget: "",
 };
+
+const services = [
+  "Consultation",
+  "Web Design",
+  "Web Development",
+  "E-Commerce",
+  "Digital Marketing",
+  "SEO",
+  "Enterprise Solutions",
+  "Automated Workflows",
+  "Other",
+];
 
 const FormGroup: React.FC<React.PropsWithChildren<FormGroupProps>> = ({
   name,
@@ -82,7 +107,9 @@ export const ContactForm = () => {
   const [error, setError] = React.useState(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setFormState({
       ...formState,
@@ -136,6 +163,9 @@ export const ContactForm = () => {
       className="relative px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-xl lg:mx-0 lg:mx-w-lg">
+        <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl text-secondary-200 mb-4">
+          Request a free quote
+        </h2>
         {error && (
           <div className="bg-red-100 text-red-900 p-4 rounded-lg mb-4">
             {error}
@@ -206,11 +236,58 @@ export const ContactForm = () => {
             />
           </div>
           <div className="sm:col-span-2">
+            <FormGroup name="budget" label="Budget">
+              <select
+                value={formState.budget}
+                name="budget"
+                required
+                onChange={handleChange}
+                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-secondary-400"
+                disabled={loading}
+              >
+                <option value="">Select a budget range</option>
+                <option value="Less than $1,000">$1,000 or less</option>
+                <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                <option value="$10,000 - $20,000">$10,000 - $20,000</option>
+                <option value="$20,000+">$20,000+</option>
+              </select>
+            </FormGroup>
+          </div>
+          <div className="sm:col-span-2">
+            <FormGroup name="services" label="Services">
+              <div className="grid grid-cols-2 gap-4">
+                {services.map((service) => (
+                  <label key={service} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value={service}
+                      checked={formState.services.includes(service)}
+                      onChange={(e) => {
+                        const { checked, value } = e.target;
+                        setFormState((prev) => ({
+                          ...prev,
+                          services: checked
+                            ? [...prev.services, value]
+                            : prev.services.filter((s) => s !== value),
+                        }));
+                      }}
+                      className="rounded text-secondary-400 focus:ring-2 focus:ring-secondary-400"
+                      disabled={loading}
+                    />
+                    <span className="ml-2">{service}</span>
+                  </label>
+                ))}
+              </div>
+            </FormGroup>
+          </div>
+          <div className="sm:col-span-2">
             <FormGroup name="message" label="Message">
               <textarea
                 value={formState.message}
                 name="message"
-                placeholder="Message"
+                placeholder="I'm in need of a new website for my business. Can you provide more information?"
                 required
                 onChange={handleChange}
                 rows={6}
@@ -219,10 +296,10 @@ export const ContactForm = () => {
               />
             </FormGroup>
           </div>
-          <div>
+          <div className="sm:col-span-2 flex justify-end items-center">
             <button
               type="submit"
-              className="bg-secondary-400 text-secondary-900 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-500 transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-900 disabled:cursor-not-allowed w-full lg:w-auto"
+              className="bg-secondary-400 text-secondary-900 text-lg lg:text-base py-2 px-4 inline-block rounded-full font-semibold hover:bg-secondary-300 transition-colors duration-300 disabled:bg-gray-300 disabled:text-gray-900 disabled:cursor-not-allowed w-full"
               disabled={loading}
             >
               Submit

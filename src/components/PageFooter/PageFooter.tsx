@@ -4,7 +4,7 @@ import Link from "next/link";
 const PageFooter = () => {
   return (
     <footer className="py-8 bg-slate-100">
-      <div className="container mx-auto flex justify-between px-2 lg:px-0">
+      <div className="container mx-auto flex justify-between px-2">
         <div className="flex flex-col gap-4 text-slate-700">
           <div>
             <Image src="/Logo.svg" alt="Logo" width={100} height={100} />

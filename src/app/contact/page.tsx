@@ -40,9 +40,9 @@ export const metadata = {
 
 const ContactPage = () => {
   return (
-    <section className="relative isolated bg-slate-700 text-slate-100 flex-1 flex flex-col justify-center items-center">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 divide-y-2 lg:divide-y-0">
-        <div className="relative px-6 pb-12 pt-24 sm:p5-32 lg:static lg:px-8 lg:py-48">
+    <section className="relative isolated bg-slate-700 text-slate-100 flex-1 flex flex-col justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 divide-y-2 lg:divide-y-0">
+        <div className="relative px-6 pb-12 pt-24 sm:p5-32 lg:static lg:px-8 lg:py-48 flex justify-center">
           <div className="mx-auto max-w-xl lg:mx-0 lg:mx-w-lg">
             <h2 className="text-pretty text-4xl font-semibold tracking-tight sm:text-5xl text-secondary-400">
               Get in Touch
@@ -67,7 +67,9 @@ const ContactPage = () => {
             </dl>
           </div>
         </div>
-        <ContactForm />
+        <div className="flex justify-center bg-gradient-to-br from-secondary-600 to-secondary-700">
+          <ContactForm />
+        </div>
       </div>
     </section>
   );
