@@ -4,7 +4,7 @@ import { AnalyticLink } from "../Analytics/AnalyticLink";
 
 const Hero = () => {
   return (
-    <section className="container flex flex-col lg:flex-row justify-between items-center self-stretch mx-auto py-4 px-4 xl:px-0 gap-8 overflow-hidden">
+    <section className="container flex flex-col lg:flex-row justify-between items-center self-stretch mx-auto py-4 px-4 xl:px-0 gap-24 overflow-hidden">
       <div className="lg:hidden flex justify-center items-center">
         <Image
           src="/dev_hero_image_transparent.png"
@@ -26,7 +26,7 @@ const Hero = () => {
             <br /> one website at a time
           </h1>
         </div>
-        <p className="leading-relaxed flex flex-col">
+        <p className="leading-relaxed flex flex-col text-pretty">
           At J Medrano Design, we’re an LA-based web development agency on a
           mission to help small and mid-sized service-based businesses grow with
           creative online solutions. From polished front-end designs to reliable
@@ -46,12 +46,12 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="relative hidden lg:flex flex-col justify-end items-center bg-slate-200 rounded-full shadow-lg shadow-black/25 md:min-w-[250px] md:min-h-[250px] lg:min-w-[600px] lg:min-h-[600px] z-0">
+      <div className="relative hidden lg:flex flex-col justify-end items-center bg-slate-200 rounded-full shadow-lg shadow-black/25 md:min-w-[250px] md:min-h-[250px] lg:min-w-[500px] lg:min-h-[500px] z-0">
         <Image
           src="/dev_hero_image_transparent.png"
           alt="software developer with laptop"
-          width={600}
-          height={600}
+          width={500}
+          height={500}
           // lazy
           loading="lazy"
           className="md:top-[50px] md:left-[0px] lg:top-[30px] lg:left-[-30px] z-10 absolute"
