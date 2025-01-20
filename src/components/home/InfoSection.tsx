@@ -66,7 +66,7 @@ export const InfoSection: React.FC = () => {
               href="/contact"
               className="text-center bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
             >
-              Let&apos;s Chat
+              Get Your Free Consultation
             </Link>
           </div>
         </div>

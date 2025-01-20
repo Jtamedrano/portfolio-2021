@@ -34,7 +34,7 @@ const Hero = () => {
             </p>
             <AnalyticLink
               href="/contact"
-              label="Let's Chat"
+              label="Get Your Free Consultation"
               className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-8 inline-block rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300 text-center"
               eventValue="hero-cta"
               eventCategory="contact"

@@ -23,7 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   isBlank,
 }) => (
   <div className="flex-1 flex flex-col gap-4">
-    <div className="w-full h-[200px] bg-black0">
+    <div className="w-full h-[200px] relative rounded-lg overflow-hidden">
       <Image
         src={desktopImage}
         alt={title}

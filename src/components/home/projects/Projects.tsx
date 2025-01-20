@@ -92,7 +92,7 @@ const Projects = () => {
           </h3>
           <AnalyticLink
             href="/contact"
-            label="Get in Touch"
+            label="Get Your Free Consultation"
             className="bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-xl font-semibold hover:bg-secondary-800 transition-colors duration-300 w-full text-center lg:w-auto"
             eventValue="projects"
           />
