@@ -4,7 +4,7 @@ import Link from "next/link";
 export const InfoSection: React.FC = () => {
   return (
     <section className="py-8 flex justify-between self-stretch items-start">
-      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-4 flex-1 px-2 lg:px-0">
+      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-4 flex-1 px-3">
         <div className="hidden lg:flex justify-between items-center flex-1 rounded-lg lg:max-h-[500px]">
           <Image
             src="/webdev_journey.png"

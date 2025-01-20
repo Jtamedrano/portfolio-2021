@@ -81,7 +81,7 @@ const ServicesPage = () => {
   return (
     <>
       <div className="py-8">
-        <div className="container mx-auto flex flex-col gap-4 px-2 lg:px-0">
+        <div className="container mx-auto flex flex-col gap-4 px-3">
           <h1 className="text-5xl font-bold tracking-tight text-secondary-500">
             Services
           </h1>
@@ -92,7 +92,7 @@ const ServicesPage = () => {
         </div>
       </div>
       <div className="bg-slate-200 py-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 container mx-auto px-2 lg:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 container mx-auto px-3">
           {SERVICES_LIST.map((service, index) => (
             <ServiceItem
               key={`service-${index}`}

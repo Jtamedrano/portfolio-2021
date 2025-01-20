@@ -60,7 +60,7 @@ const Projects = () => {
   return (
     <section className="bg-slate-900">
       <div className="py-8 bg-slate-800">
-        <div className="container mx-auto flex flex-col gap-4 px-2">
+        <div className="container mx-auto flex flex-col gap-4 px-3">
           <h2 className="text-3xl font-bold tracking-tight text-slate-100">
             Projects
           </h2>
@@ -70,7 +70,7 @@ const Projects = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto py-8 flex flex-col lg:flex-row gap-4 px-2">
+      <div className="container mx-auto py-8 flex flex-col lg:flex-row gap-4 px-3">
         {PROJECT_LIST.map((project, index) => (
           <ProjectCard
             key={index}
@@ -86,7 +86,7 @@ const Projects = () => {
         ))}
       </div>
       <div className="bg-slate-800">
-        <div className="container mx-auto py-8 flex flex-col lg:flex-row gap-4 justify-between items-center px-2">
+        <div className="container mx-auto py-8 flex flex-col lg:flex-row gap-4 justify-between items-center px-3">
           <h3 className="text-2xl font-semibold text-slate-100">
             Have a project in mind? Let&apos;s bring it to life!
           </h3>
