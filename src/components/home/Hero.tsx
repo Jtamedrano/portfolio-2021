@@ -5,7 +5,7 @@ import { AnalyticLink } from "../Analytics/AnalyticLink";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-br from-secondary-300 to-secondary-500">
-      <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto py-4 px-4 xl:px-0 gap-12 overflow-hidden">
+      <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto lg:pt-16 py-4 px-4 xl:px-0 gap-12 overflow-hidden">
         <div className="lg:hidden flex justify-center items-center">
           <Image
             src="/dev_hero_image_transparent.png"
@@ -18,7 +18,7 @@ const Hero = () => {
           />
         </div>
         <div className="text-center lg:pl-4 lg:text-left leading-none text-gray-700 flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <h1 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-700 text-pretty">
               Supercharge Your Growth
               <br />
@@ -26,6 +26,11 @@ const Hero = () => {
                 Custom Web Innovations that Drive Profits
               </span>
             </h1>
+            <p className="text-pretty text-lg lg:text-base max-w-xl">
+              We specialize in creating custom websites and applications for
+              service-based businesses that are designed to attract, engage, and
+              convert your ideal clients.
+            </p>
           </div>
 
           <div className="flex flex-col gap-4 lg:items-start">
