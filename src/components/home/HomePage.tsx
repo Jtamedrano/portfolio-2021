@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Projects from "./projects/Projects";
 import { Stats } from "./Stats";
 import { InfoSection } from "./InfoSection";
+import { AboutMe } from "./AboutMe";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Stats />
       <InfoSection />
       <Projects />
+      <AboutMe />
     </>
   );
 }

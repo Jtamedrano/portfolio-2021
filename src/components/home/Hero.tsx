@@ -27,13 +27,7 @@ const Hero = () => {
               </span>
             </h1>
           </div>
-          {/* <p className="leading-relaxed flex flex-col text-pretty">
-          At J Medrano Design, we’re an LA-based web development agency on a
-          mission to help small and mid-sized service-based businesses grow with
-          creative online solutions. From polished front-end designs to reliable
-          back-end systems, we build websites that elevate brands and turn
-          visitors into loyal customers.
-        </p> */}
+
           <div className="flex flex-col gap-4 lg:items-start">
             <p className="font-semibold">
               Ready to take your business to the next level?
