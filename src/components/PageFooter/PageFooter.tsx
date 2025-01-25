@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { NAVIGATION } from "../../constants/nav";
 
 const PageFooter = () => {
   return (
@@ -14,15 +15,15 @@ const PageFooter = () => {
         <div className="flex flex-col gap-2 text-slate-700 text-center">
           <h3 className="font-bold text-slate-700">Site Map</h3>
           <nav className="flex flex-col gap-2 underline">
-            <Link href="/" className="hover:text-slate-300">
-              Home
-            </Link>
-            <Link href="/services" className="hover:text-slate-300">
-              Services
-            </Link>
-            <Link href="/contact" className="hover:text-slate-300">
-              Contact
-            </Link>
+            {NAVIGATION.map((nav) => (
+              <Link
+                key={nav.label}
+                href={nav.to}
+                className="hover:text-slate-300"
+              >
+                {nav.label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>

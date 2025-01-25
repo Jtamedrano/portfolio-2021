@@ -1,3 +1,4 @@
+import { PageHeader } from "../../components/PageHeader/PageHeader";
 import { ServiceItem } from "../../components/services/ServiceItem";
 
 const SERVICES_LIST = [
@@ -80,17 +81,10 @@ export const metadata = {
 const ServicesPage = () => {
   return (
     <>
-      <div className="py-8">
-        <div className="container mx-auto flex flex-col gap-4 px-3">
-          <h1 className="text-5xl font-bold tracking-tight text-secondary-500">
-            Services
-          </h1>
-          <p className="text-lg font-light text-slate-600">
-            Explore the range of services I offer to help you achieve your web
-            development goals.
-          </p>
-        </div>
-      </div>
+      <PageHeader
+        title="Services"
+        description="Explore the range of services I offer to help you achieve your web development goals."
+      />
       <div className="bg-slate-200 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 container mx-auto px-3">
           {SERVICES_LIST.map((service, index) => (
