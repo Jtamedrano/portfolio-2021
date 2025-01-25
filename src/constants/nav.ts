@@ -8,6 +8,10 @@ export const NAVIGATION = [
     to: "/services",
   },
   {
+    label: "Pricing",
+    to: "/service-bundles",
+  },
+  {
     label: "Contact",
     to: "/contact",
   },
