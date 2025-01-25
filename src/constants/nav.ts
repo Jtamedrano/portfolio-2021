@@ -12,6 +12,10 @@ export const NAVIGATION = [
     to: "/service-bundles",
   },
   {
+    label: "Blog",
+    to: "/blog",
+  },
+  {
     label: "Contact",
     to: "/contact",
   },
