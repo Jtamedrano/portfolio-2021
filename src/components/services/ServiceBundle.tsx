@@ -1,5 +1,6 @@
 import { HiCheckCircle } from "react-icons/hi2";
 import { ServiceBundle as ServiceBundleType } from "../../models/service";
+import { ServiceBundleContactButton } from "./ServiceBundleContactButton";
 
 export const ServiceBundle: React.FC<{
   bundle: ServiceBundleType;
@@ -23,7 +24,7 @@ export const ServiceBundle: React.FC<{
           </span>
         )}
       </p>
-      <p>
+      <div>
         {bundle.startingAt ? (
           <p
             className="text-sm/6 font-semibold text-gray-700"
@@ -39,10 +40,8 @@ export const ServiceBundle: React.FC<{
             Two Payment of ${bundle.price / 2} available
           </p>
         )}
-      </p>
-      <button className="mt-10 rounded-md bg-secondary-600 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-secondary-500 transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-secondary-400 focus-visible:outline-offset-2">
-        Request {bundle.title}
-      </button>
+      </div>
+      <ServiceBundleContactButton serviceBundleId={bundle.id} />
       <p className="mt-10 text-sm/6 font-semibold text-gray-900">
         {bundle.description}
       </p>

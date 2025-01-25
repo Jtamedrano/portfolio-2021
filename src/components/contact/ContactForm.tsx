@@ -2,26 +2,8 @@
 
 import React from "react";
 import { logEvent } from "../../utilities/logEvent";
-
-interface FormGroupProps {
-  name: string;
-  label: string;
-  required?: boolean;
-}
-
-interface FormFieldProps
-  extends React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  > {
-  value: string;
-  name: string;
-  label: string;
-  placeholder: string;
-  type: string;
-  required?: boolean;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import { FormInputField } from "./FormInputField";
+import { FormGroup } from "./FormGroup";
 
 interface FormState {
   name: string;
@@ -56,48 +38,6 @@ const services = [
   "Automated Workflows",
   "Other",
 ];
-
-const FormGroup: React.FC<React.PropsWithChildren<FormGroupProps>> = ({
-  name,
-  label,
-  required,
-  children,
-}) => {
-  return (
-    <div>
-      <div className="text-sm/6 font-semibold text-gray-300">
-        <label htmlFor={name}>{label}</label> {required && <span>*</span>}
-      </div>
-      <div className="mt-2.5">{children}</div>
-    </div>
-  );
-};
-
-const FormField: React.FC<FormFieldProps> = ({
-  value,
-  name,
-  label,
-  placeholder,
-  type,
-  required,
-  handleChange,
-  ...rest
-}) => {
-  return (
-    <FormGroup name={name} label={label} required={required}>
-      <input
-        {...rest}
-        value={value}
-        name={name}
-        placeholder={placeholder}
-        type={type}
-        required={required}
-        onChange={handleChange}
-        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-secondary-400"
-      />
-    </FormGroup>
-  );
-};
 
 const BASIN_API = "https://usebasin.com/f/";
 
@@ -173,7 +113,7 @@ export const ContactForm = () => {
         )}
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
-            <FormField
+            <FormInputField
               value={formState.name}
               name="name"
               label="Name"
@@ -186,7 +126,7 @@ export const ContactForm = () => {
             />
           </div>
           <div>
-            <FormField
+            <FormInputField
               value={formState.email}
               name="email"
               label="Email"
@@ -199,7 +139,7 @@ export const ContactForm = () => {
             />
           </div>
           <div>
-            <FormField
+            <FormInputField
               value={formState.phoneNumber}
               name="phoneNumber"
               label="Phone Number"
@@ -212,7 +152,7 @@ export const ContactForm = () => {
             />
           </div>
           <div>
-            <FormField
+            <FormInputField
               value={formState.companyName}
               name="companyName"
               label="Company Name"
@@ -224,7 +164,7 @@ export const ContactForm = () => {
             />
           </div>
           <div>
-            <FormField
+            <FormInputField
               value={formState.website}
               name="website"
               label="Website"
