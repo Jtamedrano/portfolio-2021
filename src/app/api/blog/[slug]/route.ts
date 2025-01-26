@@ -1,8 +1,7 @@
 import axios from "axios";
 import { NextRequest } from "next/server";
 
-const strapiUrl =
-  process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337/api";
+const strapiUrl = process.env.API_URL || "http://127.0.0.1:1337/api";
 
 export async function GET(req: NextRequest) {
   const requestUrl = new URL(req.url);
@@ -21,10 +20,6 @@ export async function GET(req: NextRequest) {
       });
 
     const blog = res?.data?.[0];
-
-    console.log("blog post", {
-      data: res?.data,
-    });
 
     return new Response(JSON.stringify(blog), { status: 200 });
   } catch (error) {

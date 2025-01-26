@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const strapiUrl = process.env.STRAPI_URL || "http://127.0.0.1:1337/api";
+const strapiUrl = process.env.API_URL || "http://127.0.0.1:1337/api";
 
 export async function GET(req: Request) {
   try {

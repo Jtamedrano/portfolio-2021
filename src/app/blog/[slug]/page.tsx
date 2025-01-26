@@ -33,7 +33,9 @@ export async function generateMetadata({
   return {
     title: blog.title + " | J Medrano Design",
     description: blog.metaDescription,
-    keywords: blog.keywords,
+    keywords: (blog.keywords ?? []).join(", "),
+    canonical: `https://jtamedrano.com/blog/${blog.slug}`,
+    robots: "index, follow",
   };
 }
 
