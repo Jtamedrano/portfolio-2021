@@ -10,7 +10,8 @@ export const logEvent = (
   label: string,
   value: string
 ) => {
-  if (window?.gtag) {
+  const isProduction = process.env.NODE_ENV === "production";
+  if (window?.gtag && isProduction) {
     window.gtag("event", action, {
       event_category: category,
       event_label: label,

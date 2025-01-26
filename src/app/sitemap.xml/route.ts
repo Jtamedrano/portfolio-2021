@@ -15,6 +15,16 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: "/blog",
+      lastmod: "2025-01-24",
+      priority: 0.8,
+    },
+    {
+      loc: "/service-bundles",
+      lastmod: "2025-01-24",
+      priority: 0.8,
+    },
+    {
       loc: "/services",
       lastmod: "2025-01-03",
       priority: 0.8,

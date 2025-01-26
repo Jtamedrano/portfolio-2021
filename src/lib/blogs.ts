@@ -1,0 +1,36 @@
+import axios from "axios";
+
+const strapiUrl =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:1337/api";
+
+export const fetchBlogs = async () => {
+  try {
+    const res = await axios
+      .get(`${strapiUrl}/blog-posts`)
+      .then((res) => res.data)
+      .catch((error) => {
+        throw new Error("Failed to fetch");
+      });
+
+    return res.data;
+  } catch (error) {
+    throw new Error("Error fetching blog posts");
+  }
+};
+
+export const fetchBlogBySlug = async (slug: string) => {
+  try {
+    const res = await axios
+      .get(`${strapiUrl}/blog-posts?filters[slug][$eq]=${slug}`)
+      .then((res) => res.data)
+      .catch((error) => {
+        throw new Error("Failed to fetch blog posts");
+      });
+
+    const blog = res?.data?.[0];
+
+    return blog;
+  } catch (error) {
+    throw new Error("Error fetching blog post");
+  }
+};
