@@ -1,32 +1,13 @@
 import { Metadata } from "next";
 import { Breadcrumb } from "../../../components/Breadcrumb/Breadcrumb";
 import { RichTextRenderer } from "../../../components/RichTextRenderer/RichTextRenderer";
-
-const fetchBlogBySlug = async (slug: string) => {
-  const blog = await fetch(`http://localhost:3000/api/blog/${slug}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => {
-      if (res && res.status !== 200) {
-        throw new Error("Failed to fetch blog post");
-      }
-
-      return res.json();
-    })
-    .catch((error) => {
-      console.error("Error fetching blog post", error);
-    });
-
-  return blog;
-};
+import { fetchBlogBySlug, fetchBlogs } from "../../../lib/blogs";
+import { Blog } from "../../../models/cms";
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const blog = await fetchBlogBySlug(slug);
@@ -39,8 +20,22 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export async function generateStaticParams() {
+  const res = await fetchBlogs();
+
+  const slugs = (res ?? []).map((blog: Blog) => ({
+    slug: blog.slug,
+  }));
+
+  return slugs;
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const blog = await fetchBlogBySlug(slug);
 
   return (

@@ -1,27 +1,7 @@
 import Link from "next/link";
 import { PageHeader } from "../../components/PageHeader/PageHeader";
 import { HiClock } from "react-icons/hi2";
-
-const fetchBlogs = async () => {
-  const blogs = await fetch("http://localhost:3000/api/blog", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => {
-      if (res !== undefined && res.status !== 200) {
-        throw new Error("Failed to fetch blog posts");
-      }
-
-      return res.json();
-    })
-    .catch((error) => {
-      console.error("Error fetching blog posts", error);
-    });
-
-  return blogs.data;
-};
+import { fetchBlogs } from "../../lib/blogs";
 
 const keywords = [
   "Custom Web Development",
@@ -44,7 +24,6 @@ export const metadata = {
   description:
     "Explore expert insights and case studies on custom web development, scalable solutions, and technology trends. Discover how J Medrano Design empowers small businesses with tailored web solutions using React, Next.js, and Strapi CMS. Schedule a free consultation today!",
   keywords: keywords.join(", "),
-  canonical: "https://jtamedrano.com/blog",
   robots: "index, follow",
 };
 
