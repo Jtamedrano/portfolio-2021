@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Breadcrumb } from "../../../components/Breadcrumb/Breadcrumb";
 import { RichTextRenderer } from "../../../components/RichTextRenderer/RichTextRenderer";
 
@@ -26,7 +27,7 @@ export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const blog = await fetchBlogBySlug(slug);
 
@@ -34,7 +35,6 @@ export async function generateMetadata({
     title: blog.title + " | J Medrano Design",
     description: blog.metaDescription,
     keywords: (blog.keywords ?? []).join(", "),
-    canonical: `https://jtamedrano.com/blog/${blog.slug}`,
     robots: "index, follow",
   };
 }
