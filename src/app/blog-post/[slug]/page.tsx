@@ -47,7 +47,7 @@ export default async function Page({
               items={[
                 { label: "Home", href: "/" },
                 { label: "Blog", href: "/blog" },
-                { label: blog.title, href: `/blog/${blog.slug}` },
+                { label: blog.title, href: `/blog-post/${blog.slug}` },
               ]}
             />
             <h1 className="text-4xl font-bold text-secondary-700">
