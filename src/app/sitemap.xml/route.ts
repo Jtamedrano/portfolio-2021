@@ -1,3 +1,5 @@
+import { fetchBlogs } from "../../lib/blogs";
+
 export const runtime = "edge";
 
 const baseUrl = "https://jtamedrano.com";
@@ -31,7 +33,19 @@ export async function GET() {
     },
   ];
 
-  const urls = [...staticRoutes]
+  const blogs = await fetchBlogs();
+
+  const blogRoutes = blogs.map((blog) => {
+    const lastmod = new Date(blog.publishedAt).toISOString().split("T")[0];
+
+    return {
+      loc: `/blog/${blog.slug}`,
+      lastmod,
+      priority: 0.6,
+    };
+  });
+
+  const urls = [...staticRoutes, ...blogRoutes]
     .map(
       (route) => `
 	<url>

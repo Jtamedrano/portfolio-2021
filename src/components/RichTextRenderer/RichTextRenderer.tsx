@@ -32,7 +32,7 @@ type RichTextList = {
 
 type RichTextSection = RichTextParagraph | RichTextHeading | RichTextList;
 
-type RichText = RichTextSection[];
+export type RichText = RichTextSection[];
 
 export const RichTextTextLeaf: React.FC<{ section: RichTextText }> = ({
   section,

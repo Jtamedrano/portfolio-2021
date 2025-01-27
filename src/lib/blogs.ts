@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Blog, CMSResponse } from "../models/cms";
 
 const strapiUrl =
   process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:1337/api";
@@ -6,7 +7,7 @@ const strapiUrl =
 export const fetchBlogs = async () => {
   try {
     const res = await axios
-      .get(`${strapiUrl}/blog-posts`)
+      .get<CMSResponse<Blog[]>>(`${strapiUrl}/blog-posts`)
       .then((res) => res.data)
       .catch((error) => {
         throw new Error("Failed to fetch");
