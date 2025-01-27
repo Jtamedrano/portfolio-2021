@@ -1,13 +1,13 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { Blog, CMSResponse } from "../models/cms";
 
 const strapiUrl =
   process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:1337/api";
 
-export const fetchBlogs = async () => {
+export const fetchBlogs = async (config?: AxiosRequestConfig) => {
   try {
     const res = await axios
-      .get<CMSResponse<Blog[]>>(`${strapiUrl}/blog-posts`)
+      .get<CMSResponse<Blog[]>>(`${strapiUrl}/blog-posts`, config)
       .then((res) => res.data)
       .catch((error) => {
         throw new Error("Failed to fetch");

@@ -21,7 +21,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const res = await fetchBlogs();
+  const res = await fetchBlogs({ fetchOptions: { cache: "no-cache" } });
 
   const slugs = (res ?? []).map((blog: Blog) => ({
     slug: blog.slug,

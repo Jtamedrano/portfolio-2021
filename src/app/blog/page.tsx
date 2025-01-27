@@ -29,7 +29,7 @@ export const metadata = {
 };
 
 export default async function BlogsPage() {
-  const blogs = await fetchBlogs();
+  const blogs = await fetchBlogs({ fetchOptions: { cache: "no-cache" } });
 
   const blogArray = Array(blogs.length < 6 ? 6 : blogs.length)
     .fill(null)
