@@ -39,7 +39,7 @@ export async function GET() {
     const lastmod = new Date(blog.publishedAt).toISOString().split("T")[0];
 
     return {
-      loc: `/blog/${blog.slug}`,
+      loc: `/blog-post/${blog.slug}`,
       lastmod,
       priority: 0.6,
     };
