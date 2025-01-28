@@ -1,3 +1,4 @@
+import { LOCATIONS } from "../../constants/nav";
 import { fetchBlogs } from "../../lib/blogs";
 
 export const runtime = "edge";
@@ -45,7 +46,15 @@ export async function GET() {
     };
   });
 
-  const urls = [...staticRoutes, ...blogRoutes]
+  const locationRoutes = LOCATIONS.map((location) => {
+    return {
+      loc: `/locations/${location.slug}`,
+      lastmod: "2025-01-27",
+      priority: 0.6,
+    };
+  });
+
+  const urls = [...staticRoutes, ...blogRoutes, ...locationRoutes]
     .map(
       (route) => `
 	<url>
