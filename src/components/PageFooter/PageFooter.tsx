@@ -19,8 +19,8 @@ const PageFooter = () => {
             <h3 className="font-bold text-slate-700">Service Areas</h3>
             <nav className="grid grid-cols-1 md:grid-cols-2 gap-2 underline">
               {LOCATIONS.map((location) => (
-                <Link key={location} href={`/locations/${location}`}>
-                  {location}
+                <Link key={location.city} href={`/locations/${location.id}`}>
+                  {location.city}, {location.state}
                 </Link>
               ))}
             </nav>
