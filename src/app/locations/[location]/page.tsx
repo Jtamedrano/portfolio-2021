@@ -6,9 +6,43 @@ import { LOCATIONS } from "../../../constants/nav";
 import style from "../../../styles/location.module.css";
 import { HiBriefcase, HiCodeBracket, HiWrench } from "react-icons/hi2";
 
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ location: string }>;
+}) => {
+  const { location } = await params;
+  const locationData = LOCATIONS.find((loc) => loc.slug === location);
+
+  if (!locationData) {
+    return {
+      title: "Location Not Found | J Medrano Design",
+      description:
+        "Sorry, the page you're looking for cannot be found. We serve a variety of locations in California, including Anaheim, Los Angeles, and Orange County. Contact us today to learn more about our web design services.",
+    };
+  }
+
+  const locationName = `${locationData.city}, ${locationData.state}`;
+
+  return {
+    title: `Top Web Design & Development in ${locationName} | J Medrano Design`,
+    description: `Discover exceptional web design and development services in ${locationName} with J Medrano Design. Specializing in custom websites and applications for service-based businesses, we offer free consultations and a free hero section redesign. Enhance your online presence with scalable, secure, and visually appealing solutions. Contact us today!`,
+    openGraph: {
+      title: `Top Web Design & Development in ${locationName} | J Medrano Design`,
+      description: `Discover exceptional web design and development services in ${locationName} with J Medrano Design. Specializing in custom websites and applications for service-based businesses, we offer free consultations and a free hero section redesign. Enhance your online presence with scalable, secure, and visually appealing solutions. Contact us today!`,
+      images: [
+        {
+          url: "https://jmedranodesign.com/location-header.png",
+          alt: `Web Design Services in ${locationName} | J Medrano Design`,
+        },
+      ],
+    },
+  };
+};
+
 export const generateStaticParams = async () => {
   return LOCATIONS.map((location) => ({
-    location: location.id,
+    location: location.slug,
   }));
 };
 
@@ -19,7 +53,7 @@ const LocationPage = async ({
 }) => {
   const { location } = await params;
 
-  const locationData = LOCATIONS.find((loc) => loc.id === location);
+  const locationData = LOCATIONS.find((loc) => loc.slug === location);
 
   if (!locationData) {
     return {
@@ -38,9 +72,7 @@ const LocationPage = async ({
           <Image
             src="/location-header.png"
             alt={`Web Design Services in {locationName}`}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
             className="object-cover w-auto h-auto opacity-15 grayscale"
           />
         }
