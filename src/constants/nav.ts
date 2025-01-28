@@ -20,3 +20,16 @@ export const NAVIGATION = [
     to: "/contact",
   },
 ];
+
+export const LOCATIONS = [
+  "Anaheim, CA",
+  "Los Angeles, CA",
+  "Orange County, CA",
+  "San Diego, CA",
+  "Fontana, CA",
+  "Pasadena, CA",
+  "Riverside, CA",
+  "Rancho Cucamonga, CA",
+  "San Bernardino, CA",
+  "Ontario, CA",
+];
