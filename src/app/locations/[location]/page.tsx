@@ -5,12 +5,13 @@ import PageSectionContainer from "../../../components/PageContainer/PageContaine
 import { LOCATIONS } from "../../../constants/nav";
 import style from "../../../styles/location.module.css";
 import { HiBriefcase, HiCodeBracket, HiWrench } from "react-icons/hi2";
+import { Metadata } from "next";
 
 export const generateMetadata = async ({
   params,
 }: {
   params: Promise<{ location: string }>;
-}) => {
+}): Promise<Metadata> => {
   const { location } = await params;
   const locationData = LOCATIONS.find((loc) => loc.slug === location);
 
@@ -24,9 +25,55 @@ export const generateMetadata = async ({
 
   const locationName = `${locationData.city}, ${locationData.state}`;
 
+  const locationKeywords = [
+    "web design",
+    "{locationName} web design",
+    "web design {locationName}",
+    "web design in {locationName}",
+    "website design",
+    "{locationName} website design",
+    "website design {locationName}",
+    "website design in {locationName}",
+    "web design company",
+    "{locationName} web design company",
+    "web design company in {locationName}",
+    "internet marketing",
+    "{locationName} internet marketing",
+    "internet marketing {locationName}",
+    "best web design",
+    "{locationName} best web design",
+    "best web design {locationName}",
+    "best web design in {locationName}",
+    "SEO services in {locationName}",
+  ];
+
+  const serviceKeywords = [
+    "custom website design",
+    "custom web design",
+    "responsive web design",
+    "responsive design",
+    "user-friendly design",
+    "web design",
+    "web development",
+    "website design",
+    "service-based business solutions",
+    "small business websites",
+    "enterprise applications",
+    "free website design consultation",
+    "scalable web solutions",
+    "SEO services",
+    "local SEO",
+    "SEO optimization",
+    "SEO strategies",
+    "SEO solutions",
+  ];
+
   return {
     title: `Top Web Design & Development in ${locationName} | J Medrano Design`,
     description: `Discover exceptional web design and development services in ${locationName} with J Medrano Design. Specializing in custom websites and applications for service-based businesses, we offer free consultations and a free hero section redesign. Enhance your online presence with scalable, secure, and visually appealing solutions. Contact us today!`,
+    keywords: Array.from(
+      new Set([...locationKeywords, ...serviceKeywords])
+    ).join(", "),
     openGraph: {
       title: `Top Web Design & Development in ${locationName} | J Medrano Design`,
       description: `Discover exceptional web design and development services in ${locationName} with J Medrano Design. Specializing in custom websites and applications for service-based businesses, we offer free consultations and a free hero section redesign. Enhance your online presence with scalable, secure, and visually appealing solutions. Contact us today!`,
@@ -36,6 +83,8 @@ export const generateMetadata = async ({
           alt: `Web Design Services in ${locationName} | J Medrano Design`,
         },
       ],
+      type: "website",
+      siteName: "J Medrano Design",
     },
   };
 };
