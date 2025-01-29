@@ -3,7 +3,7 @@ import { fetchBlogs, serverFetchBlogs } from "../../lib/blogs";
 
 export const runtime = "edge";
 
-const baseUrl = "https://jtamedrano.com";
+const baseUrl = "https://www.jtamedrano.com";
 
 export async function GET() {
   const staticRoutes = [
