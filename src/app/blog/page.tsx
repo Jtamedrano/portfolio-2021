@@ -38,6 +38,11 @@ export default async function BlogsPage() {
         const featuredImageUrl = blog.featuredImage
           ? fetchSanityImgUrl(blog.featuredImage)?.width(500).height(150).url()
           : null;
+
+        if (!blog || !blog.slug?.current) {
+          return null;
+        }
+
         return (
           <div
             key={blog._id}
@@ -48,7 +53,7 @@ export default async function BlogsPage() {
                 src={featuredImageUrl}
                 width={500}
                 height={150}
-                alt={blog.title}
+                alt={blog.title || " "}
               />
             )}
             <Link
