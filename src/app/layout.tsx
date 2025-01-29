@@ -3,6 +3,7 @@ import NavMenu from "../components/nav/nav";
 import PageFooter from "../components/PageFooter/PageFooter";
 import "../styles/globals.css";
 import { GoogleAnalytics } from "../components/Analytics/GoogleAnalytics";
+import { SanityLive } from "../lib/sanity/live";
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
@@ -23,6 +24,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
           {children}
         </main>
         <PageFooter />
+        <SanityLive />
       </body>
     </html>
   );

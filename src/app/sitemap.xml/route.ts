@@ -1,5 +1,5 @@
 import { LOCATIONS } from "../../constants/nav";
-import { fetchBlogs } from "../../lib/blogs";
+import { fetchBlogs, serverFetchBlogs } from "../../lib/blogs";
 
 export const runtime = "edge";
 
@@ -34,17 +34,30 @@ export async function GET() {
     },
   ];
 
-  const blogs = await fetchBlogs();
+  const blogs = await serverFetchBlogs();
 
-  const blogRoutes = blogs.map((blog) => {
-    const lastmod = new Date(blog.publishedAt).toISOString().split("T")[0];
+  const blogRoutes = blogs.reduce<
+    {
+      loc: string;
+      lastmod: string;
+      priority: number;
+    }[]
+  >((acc, blog) => {
+    if (!blog.slug?.current) {
+      return acc;
+    }
 
-    return {
-      loc: `/blog-post/${blog.slug}`,
-      lastmod,
-      priority: 0.6,
-    };
-  });
+    const lastmod = new Date(blog._updatedAt).toISOString().split("T")[0];
+
+    return [
+      ...acc,
+      {
+        loc: `/blog-post/${blog.slug?.current}`,
+        lastmod,
+        priority: 0.6,
+      },
+    ];
+  }, []);
 
   const locationRoutes = LOCATIONS.map((location) => {
     return {
