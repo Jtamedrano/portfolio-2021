@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { PageHeader } from "../../components/PageHeader/PageHeader";
 import { HiClock } from "react-icons/hi2";
-import { fetchBlogs } from "../../lib/blogs";
+import { fetchBlogs, fetchSanityImgUrl } from "../../lib/blogs";
 import { Suspense } from "react";
+import Image from "next/image";
 
 const keywords = [
   "Custom Web Development",
@@ -29,52 +30,45 @@ export const metadata = {
 };
 
 export default async function BlogsPage() {
-  const blogs = await fetchBlogs({ fetchOptions: { cache: "no-cache" } });
-
-  const blogArray = Array(blogs.length < 6 ? 6 : blogs.length)
-    .fill(null)
-    .map((_, index) => {
-      return blogs[index];
-    });
+  const blogs = await fetchBlogs();
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      {blogArray.map((blog, index) =>
-        blog ? (
+      {blogs.map((blog, index) => {
+        const featuredImageUrl = blog.featuredImage
+          ? fetchSanityImgUrl(blog.featuredImage)?.width(500).height(150).url()
+          : null;
+        return (
           <div
-            key={blog.id}
+            key={blog._id}
             className="bg-white rounded-lg shadow-sm p-6 flex flex-col gap-4"
           >
+            {featuredImageUrl && (
+              <Image
+                src={featuredImageUrl}
+                width={500}
+                height={150}
+                alt={blog.title}
+              />
+            )}
             <Link
-              href={`/blog-post/${blog.slug}`}
+              href={`/blog-post/${blog.slug.current}`}
               className="text-2xl font-bold text-secondary-700 hover:text-secondary-600 transition-colors duration-300 hover:underline"
             >
               {blog.title}
             </Link>
-            <p className="text-gray-500 mt-2 text-sm line-clamp-5">
+            <p className="text-gray-500 mt-2 text-sm line-clamp-4">
               {blog.excerpt}
             </p>
             <Link
-              href={`/blog-post/${blog.slug}`}
+              href={`/blog-post/${blog.slug.current}`}
               className="text-secondary-600 hover:text-secondary-500 transition-colors duration-300 hover:underline"
             >
               Read More
             </Link>
           </div>
-        ) : (
-          <div
-            key={`coming-soon-${index}`}
-            className="bg-gray-200 rounded-lg shadow-sm p-6 flex flex-col items-center justify-center gap-4"
-          >
-            {/* Coming Soon */}
-            <p className="text-2xl font-bold text-secondary-700">Coming Soon</p>
-            <HiClock className="text-4xl text-gray-500" />
-            <p className="text-gray-500 mt-2 text-sm">
-              Check back soon for more blog posts.
-            </p>
-          </div>
-        )
-      )}
+        );
+      })}
     </div>
   );
 }
