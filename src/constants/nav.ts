@@ -21,18 +21,6 @@ export const NAVIGATION = [
   },
 ];
 
-// export const LOCATIONS = [
-//   "Anaheim, CA",
-//   "Los Angeles, CA",
-//   "Orange County, CA",
-//   "San Diego, CA",
-//   "Fontana, CA",
-//   "Pasadena, CA",
-//   "Riverside, CA",
-//   "Rancho Cucamonga, CA",
-//   "San Bernardino, CA",
-//   "Ontario, CA",
-// ];
 export const LOCATIONS = [
   {
     id: "anaheim",
@@ -93,5 +81,17 @@ export const LOCATIONS = [
     city: "Ontario",
     state: "CA",
     slug: "web-design-in-ontario",
+  },
+  {
+    id: "pasadena",
+    city: "Pasadena",
+    state: "CA",
+    slug: "web-design-in-pasadena",
+  },
+  {
+    id: "long-beach",
+    city: "Long Beach",
+    state: "CA",
+    slug: "web-design-in-long-beach",
   },
 ];
