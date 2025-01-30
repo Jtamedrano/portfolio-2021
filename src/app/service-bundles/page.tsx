@@ -34,9 +34,12 @@ const brandSolutions = [
 ];
 
 export const metadata = {
-  title: "Service Bundles | J Medrano Design",
+  title:
+    "Affordable Web Design Packages for Small Businesses | J Medrano Design",
   description:
-    "Explore J Medrano Design's tailored service bundles, offering custom website design, maintenance, and optimization solutions for small to medium-sized businesses. Discover the perfect package to elevate your business online with expert support and innovative technology.",
+    "Get a professional website without breaking the bank. Our website design bundles include hosting, maintenance, and SEO to help your service-based business thrive. Explore our affordable pricing today!",
+  keywords:
+    "web design, web development, custom website design, website packages, website bundles, affordable web design, small business web design, web design for contractors, web design for real estate agents, web design for service businesses",
 };
 
 export default function ServiceBundlesPage() {

@@ -21,10 +21,9 @@ const keywords = [
 ];
 
 export const metadata = {
-  title:
-    "J Medrano Design Blog | Insights on Custom Web Development and Technology",
+  title: "Web Design & SEO Tips for Small Businesses | J Medrano Design Blog",
   description:
-    "Explore expert insights and case studies on custom web development, scalable solutions, and technology trends. Discover how J Medrano Design empowers small businesses with tailored web solutions using React, Next.js, and Strapi CMS. Schedule a free consultation today!",
+    "Stay ahead with expert web design, SEO, and marketing insights tailored for small business owners. Learn how to grow your online presence with proven strategies. Read more now!",
   keywords: keywords.join(", "),
   robots: "index, follow",
 };
