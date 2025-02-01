@@ -42,6 +42,15 @@ export default async function BlogsPage() {
           return null;
         }
 
+        const publishedDate = new Date(blog._updatedAt).toLocaleDateString(
+          "en-US",
+          {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }
+        );
+
         return (
           <div
             key={blog._id}
@@ -57,19 +66,26 @@ export default async function BlogsPage() {
             )}
             <Link
               href={`/blog-post/${blog.slug.current}`}
-              className="text-2xl font-bold text-secondary-700 hover:text-secondary-600 transition-colors duration-300 hover:underline"
+              className="text-2xl font-bold text-secondary-700 hover:text-secondary-600 transition-colors duration-300 hover:underline line-clamp-2"
             >
               {blog.title}
             </Link>
             <p className="text-gray-500 mt-2 text-sm line-clamp-4">
               {blog.excerpt}
             </p>
-            <Link
-              href={`/blog-post/${blog.slug.current}`}
-              className="text-secondary-600 hover:text-secondary-500 transition-colors duration-300 hover:underline"
-            >
-              Read More
-            </Link>
+            <div className="flex items-center text-secondary-600 text-sm">
+              <HiClock className="mr-2" />
+              <p className="text-secondary-600 flex-1" title={publishedDate}>
+                {publishedDate}
+              </p>
+
+              <Link
+                href={`/blog-post/${blog.slug.current}`}
+                className="text-secondary-600 hover:text-secondary-500 transition-colors duration-300 hover:underline"
+              >
+                Read More
+              </Link>
+            </div>
           </div>
         );
       })}

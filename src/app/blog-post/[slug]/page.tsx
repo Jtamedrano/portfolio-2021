@@ -121,7 +121,12 @@ export default async function Page({
               <h1 className="text-4xl font-bold text-secondary-700">
                 {blog.title}
               </h1>
-              <p className="text-gray-500 text-lg">By: {blog.author?.name}</p>
+              <div className="flex justify-between items-center">
+                <p className="text-gray-500 text-lg">By: {blog.author?.name}</p>
+                <p className="text-gray-500 text-lg">
+                  {new Date(blog._updatedAt).toLocaleDateString()}
+                </p>
+              </div>
               <p className="text-gray-500 text-sm">{blog.excerpt}</p>
             </div>
           </div>

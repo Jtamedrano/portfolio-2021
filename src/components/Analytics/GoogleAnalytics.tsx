@@ -10,7 +10,7 @@ export const GoogleAnalytics = () => {
   const isDev = process.env.NODE_ENV === "development";
 
   useEffect(() => {
-    if (window?.gtag) {
+    if (window?.gtag && gamid && !isDev) {
       window.gtag("config", gamid, {
         page_path: pathname,
         page_location: window.location.href,

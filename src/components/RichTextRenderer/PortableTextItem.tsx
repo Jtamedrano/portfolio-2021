@@ -55,6 +55,11 @@ const components: PortableTextComponents = {
       </h4>
     ),
     normal: ({ children }) => <p className="text-base/7 mb-4">{children}</p>,
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-4 border-secondary-500 pl-4 my-4">
+        {children}
+      </blockquote>
+    ),
   },
   hardBreak: () => <br />,
   list: ({ value, children }) => {
