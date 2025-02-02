@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="text-center lg:pl-4 lg:text-left leading-none text-gray-700 flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-700 text-pretty">
-              Supercharge Your Growth
+              Supercharge Your Business&apos;s Growth
               <br />
               <span className="text-pretty text-2xl lg:text-3xl font-semibold">
                 Custom Web Innovations that Drive Profits
