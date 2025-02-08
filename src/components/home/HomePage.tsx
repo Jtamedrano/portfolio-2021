@@ -13,7 +13,7 @@ export default function HomePage() {
       <Banner title="Introducing Our New Service Bundles - Tailored for Your Business Growth!">
         <AnalyticLink
           href="/service-bundles"
-          label="Learn More"
+          label="Check Out Our Bundles"
           className="text-lg lg:text-base text-blue-700 bg-transparent py-2 px-8 inline-block rounded-full font-semibold hover:text-blue-800 hover:underline transition-colors duration-300 text-center"
           eventValue="service-bundles-cta"
           eventCategory="service-bundles"

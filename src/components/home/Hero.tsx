@@ -8,19 +8,18 @@ const Hero = () => {
       <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto lg:pt-16 py-4 px-4 xl:px-0 gap-12 overflow-hidden">
         <div className="lg:hidden flex justify-center items-center">
           <Image
-            src="/dev_hero_image_transparent.png"
+            src="/dev_hero_image_transparent_phone.png"
             alt="software developer with laptop"
             width={300}
             height={300}
-            // lazy
-            loading="lazy"
+            loading="eager"
             className="object-contain"
           />
         </div>
         <div className="text-center lg:pl-4 lg:text-left leading-none text-gray-700 flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-700 text-pretty">
-              Supercharge Your Growth
+              Supercharge Your Business&apos;s Growth
               <br />
               <span className="text-pretty text-2xl lg:text-3xl font-semibold">
                 Custom Web Innovations that Drive Profits
@@ -51,10 +50,10 @@ const Hero = () => {
             <Image
               src="/dev_hero_image_transparent.png"
               alt="software developer with laptop"
-              // lazy
-              loading="lazy"
-              fill
+              width={400}
+              height={400}
               className="w-full h-full"
+              loading="eager"
               style={{
                 objectFit: "contain",
               }}
