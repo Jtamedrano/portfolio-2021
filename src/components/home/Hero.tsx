@@ -8,12 +8,11 @@ const Hero = () => {
       <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto lg:pt-16 py-4 px-4 xl:px-0 gap-12 overflow-hidden">
         <div className="lg:hidden flex justify-center items-center">
           <Image
-            src="/dev_hero_image_transparent.png"
+            src="/dev_hero_image_transparent_phone.png"
             alt="software developer with laptop"
             width={300}
             height={300}
-            // lazy
-            loading="lazy"
+            loading="eager"
             className="object-contain"
           />
         </div>
@@ -51,10 +50,10 @@ const Hero = () => {
             <Image
               src="/dev_hero_image_transparent.png"
               alt="software developer with laptop"
-              // lazy
-              loading="lazy"
-              fill
+              width={400}
+              height={400}
               className="w-full h-full"
+              loading="eager"
               style={{
                 objectFit: "contain",
               }}
