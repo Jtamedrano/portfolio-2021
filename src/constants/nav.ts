@@ -430,4 +430,36 @@ export const locationContent: Record<string, LocationContent> = {
     ctaMessage:
       "Looking to strengthen your online presence in Long Beach? Reach out to us today to create a website that stands out.",
   },
+
+  "web-design-in-rancho-cucamonga": {
+    title: "Innovative Web Design Services in Rancho Cucamonga, CA",
+    intro:
+      "At J Medrano Design, we specialize in crafting bespoke web solutions tailored to Rancho Cucamonga's dynamic business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
+    importance:
+      "In Rancho Cucamonga's competitive market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a diverse and tech-savvy audience.",
+    whyNeeded:
+      "Rancho Cucamonga is a hub for logistics, manufacturing, and healthcare industries. To stand out in these sectors, businesses need innovative websites that reflect their unique value propositions and appeal to both local and global clients.",
+    seoBenefits:
+      "Implementing targeted local SEO strategies, such as optimizing for 'Leading Web Design Services in Rancho Cucamonga, CA,' can improve your search visibility, attract local clientele, and drive business growth.",
+    services: {
+      customDesign:
+        "We develop unique websites that capture your brand's essence and resonate with Rancho Cucamonga's diverse audience.",
+      responsiveDesign:
+        "Our designs ensure optimal performance across all devices, catering to the tech-savvy and mobile-oriented users in Rancho Cucamonga.",
+      userExperience:
+        "Prioritizing intuitive navigation and swift load times, we create engaging experiences that keep visitors returning.",
+      specialOffers:
+        "Exclusive to Rancho Cucamonga clients: Receive a complimentary website audit to identify opportunities for enhancement.",
+    },
+    whyChoose: {
+      expertise:
+        "Our skilled team leverages advanced technologies to deliver high-quality web solutions tailored to your needs.",
+      localCommitment:
+        "Being locally based, we have deep insights into Rancho Cucamonga's market trends and customer preferences.",
+      scalability:
+        "Our websites are built to grow with your business, ensuring long-term success and adaptability.",
+    },
+    ctaMessage:
+      "Looking to strengthen your online presence in Rancho Cucamonga? Reach out to us today to create a website that stands out.",
+  },
 };
