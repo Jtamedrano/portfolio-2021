@@ -8,8 +8,10 @@ export const GoogleAnalytics = () => {
   const pathname = usePathname();
   const gamid = process.env.NEXT_PUBLIC_GA_MID;
   const isDev = process.env.NODE_ENV === "development";
+  const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
   useEffect(() => {
+    if (!window) return;
     if (window?.gtag && gamid && !isDev) {
       window.gtag("config", gamid, {
         page_path: pathname,
@@ -17,7 +19,31 @@ export const GoogleAnalytics = () => {
         page_title: document.title,
       });
     }
-  }, [pathname]);
+    if (clarityId && !isDev) {
+      (function (
+        c: { [key: string]: any },
+        l,
+        a,
+        r,
+        i,
+        t?: HTMLScriptElement,
+        y?: HTMLElement
+      ) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r) as HTMLScriptElement;
+        t.async = true;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0] as HTMLElement;
+        if (y?.parentNode) {
+          y.parentNode.insertBefore(t, y);
+        }
+      })(window, document, "clarity", "script", clarityId);
+    }
+  }, [pathname, gamid, isDev, clarityId]);
 
   return (
     <head>
