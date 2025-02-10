@@ -54,7 +54,7 @@ export default async function BlogsPage() {
         return (
           <div
             key={blog._id}
-            className="bg-white rounded-lg shadow-sm p-6 flex flex-col gap-4"
+            className="bg-slate-600 rounded-lg shadow-sm p-6 flex flex-col gap-4 border border-slate-500"
           >
             {featuredImageUrl && (
               <Image
@@ -66,22 +66,22 @@ export default async function BlogsPage() {
             )}
             <Link
               href={`/blog-post/${blog.slug.current}`}
-              className="text-2xl font-bold text-secondary-700 hover:text-secondary-600 transition-colors duration-300 hover:underline line-clamp-2"
+              className="text-2xl font-bold text-blue-400 hover:text-blue-500 transition-colors duration-300 hover:underline line-clamp-2"
             >
               {blog.title}
             </Link>
-            <p className="text-gray-500 mt-2 text-sm line-clamp-4">
+            <p className="text-gray-200 mt-2 text-sm line-clamp-4">
               {blog.excerpt}
             </p>
-            <div className="flex items-center text-secondary-600 text-sm">
+            <div className="flex items-center text-secondary-200 text-sm">
               <HiClock className="mr-2" />
-              <p className="text-secondary-600 flex-1" title={publishedDate}>
+              <p className="text-secondary-200 flex-1" title={publishedDate}>
                 {publishedDate}
               </p>
 
               <Link
                 href={`/blog-post/${blog.slug.current}`}
-                className="text-secondary-600 hover:text-secondary-500 transition-colors duration-300 hover:underline"
+                className="text-secondary-200 underline hover:text-blue-500 transition-colors duration-300 hover:underline"
               >
                 Read More
               </Link>

@@ -70,7 +70,7 @@ const Projects = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto py-8 flex flex-col lg:flex-row gap-4 px-3">
+      <div className="container mx-auto py-20 flex flex-col lg:flex-row gap-4 px-3">
         {PROJECT_LIST.map((project, index) => (
           <ProjectCard
             key={index}

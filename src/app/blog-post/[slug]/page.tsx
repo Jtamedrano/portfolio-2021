@@ -94,7 +94,7 @@ export default async function Page({
 
   return (
     <>
-      <div>
+      <div className="bg-slate-900">
         <div className="container mx-auto pt-12 px-4 sm:px-6 lg:px-8">
           <div className="space-y-8 max-w-5xl mx-auto">
             <Breadcrumb
@@ -118,32 +118,32 @@ export default async function Page({
               />
             )}
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold text-secondary-700">
+              <h1 className="text-4xl font-bold text-secondary-500">
                 {blog.title}
               </h1>
-              <div className="flex justify-between items-center">
-                <p className="text-gray-500 text-lg">By: {blog.author?.name}</p>
-                <p className="text-gray-500 text-lg">
+              <div className="flex justify-between items-center text-gray-200">
+                <p className=" text-lg">By: {blog.author?.name}</p>
+                <p className="text-lg">
                   {new Date(blog._updatedAt).toLocaleDateString()}
                 </p>
               </div>
-              <p className="text-gray-500 text-sm">{blog.excerpt}</p>
+              <p className="text-sm">{blog.excerpt}</p>
             </div>
           </div>
-          <hr className="my-8 border-t border-gray-200" />
         </div>
+        <hr className="mt-8 border-t border-gray-200/50" />
       </div>
-      <div>
+      <div className="bg-slate-800">
         <div className="container mx-auto pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <PortableRichText items={blog.body} />
-            <div className="flex flex-col gap-3 lg:items-start">
-              <p className="text-2xl text-secondary-700 font-bold">
+            <div className="flex flex-col gap-3 lg:items-start py-12">
+              <p className="text-2xl text-secondary-500 font-bold">
                 Ask how you can get a free hero section redesign!
               </p>
               <Link
                 href="/contact"
-                className="text-center bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
+                className="text-center bg-yellow-500 text-slate-800 py-2 px-4 rounded-full text-lg font-semibold hover:bg-yellow-600 transition-colors duration-300"
               >
                 Get Your Free Consultation
               </Link>

@@ -1,34 +1,36 @@
-import Image from "next/image";
 import React from "react";
 import { AnalyticLink } from "../Analytics/AnalyticLink";
+import { Anton } from "next/font/google";
 
+import cx from "classnames";
+import Image from "next/image";
+
+const anton = Anton({
+  weight: ["400"],
+  preload: true,
+  fallback: ["sans-serif"],
+  subsets: ["latin", "latin-ext"],
+});
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-secondary-300 to-secondary-500">
-      <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto lg:pt-16 py-4 px-4 xl:px-0 gap-12 overflow-hidden">
-        <div className="lg:hidden flex justify-center items-center">
-          <Image
-            src="/dev_hero_image_transparent_phone.png"
-            alt="software developer with laptop"
-            width={300}
-            height={300}
-            loading="eager"
-            className="object-contain"
-          />
-        </div>
-        <div className="text-center lg:pl-4 lg:text-left leading-none text-gray-700 flex flex-col gap-6">
+    <section className="bg-gradient-to-b from-secondary-800 to-slate-900 text-slate-100 dark:text-slate-100">
+      <div className="container flex flex-col lg:flex-row justify-center lg:justify-start items-center self-stretch mx-auto px-4 py-20 xl:px-0 gap-24 overflow-hidden">
+        <div className="text-center lg:pl-4 lg:text-left leading-none flex flex-col gap-8 flex-1 max-w-4xl">
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-700 text-pretty">
-              Supercharge Your Business&apos;s Growth
-              <br />
-              <span className="text-pretty text-2xl lg:text-3xl font-semibold">
-                Custom Web Innovations that Drive Profits
-              </span>
-            </h1>
-            <p className="text-pretty text-lg lg:text-base max-w-xl">
-              We specialize in creating custom websites and applications for
-              service-based businesses that are designed to attract, engage, and
-              convert your ideal clients.
+            <div className="">
+              <h1
+                className={cx(
+                  "text-3xl lg:text-7xl uppercase text-slate-50",
+                  anton.className
+                )}
+              >
+                Auto Capture Quality Leads with our Custom Website Forms
+              </h1>
+            </div>
+            <p className="text-pretty text-text-xl leading-7 font-semibold max-w-3xl">
+              Don&apos;t worry about the tech stuff—we&apos;ll build you an
+              easy-to-use site that automatically captures leads, helping your
+              business grow within the first three months.
             </p>
           </div>
 
@@ -36,29 +38,26 @@ const Hero = () => {
             <p className="font-semibold">
               Ready to take your business to the next level?
             </p>
-            <AnalyticLink
-              href="/contact"
-              label="Get Your Free Consultation"
-              className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-8 inline-block rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300 text-center"
-              eventValue="hero-cta"
-              eventCategory="contact"
-            />
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-2 justify-center lg:justify-start items-center w-full">
+              <AnalyticLink
+                href="/contact"
+                label="Get Your Free Consultation"
+                className="bg-yellow-500 text-slate-900 text-lg lg:text-base py-2 px-8 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 text-center border-2 border-yellow-500 flex-1 inline-flex justify-center w-full"
+                eventValue="hero-cta"
+                eventCategory="contact"
+              />
+              <AnalyticLink
+                href="tel:+19096361186"
+                label="Call Now"
+                className="text-lg lg:text-base text-yellow-500 bg-transparent py-2 px-8 rounded-full font-semibold transition-colors duration-300 text-center border-2 border-yellow-500 hover:bg-yellow-500 hover:text-slate-900 flex-1 inline-flex justify-center w-full"
+                eventValue="hero-cta"
+                eventCategory="call"
+              />
+            </div>
           </div>
         </div>
-        <div className="relative hidden lg:flex flex-col justify-end items-center md:min-w-[250px] md:min-h-[250px] lg:min-w-[400px] lg:min-h-[400px] z-0">
-          <div className="absolute w-full h-full md:top-[50px] md:left-[0px] lg:top-[30px] lg:left-[-30px] z-10">
-            <Image
-              src="/dev_hero_image_transparent.png"
-              alt="software developer with laptop"
-              width={400}
-              height={400}
-              className="w-full h-full"
-              loading="eager"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </div>
+        <div className="relative w-full flex-1 h-[400px] lg:h-[750px] overflow-hidden m-4 rounded-3xl shadow-md shadow-black/75">
+          <Image src="/owner-on-call.jpg" alt="Owner on Call" fill />
         </div>
       </div>
     </section>

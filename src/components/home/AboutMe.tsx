@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export const AboutMe = () => {
   return (
-    <section className="bg-gradient-to-br from-secondary-300 to-secondary-400">
+    <section className="bg-gradient-to-b from-secondary-900 to-slate-900 shadow-inner shadow-black/50">
       <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto py-8 px-4 xl:px-0 gap-12 overflow-hidden">
         <div className="flex-1 space-y-4">
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-700 text-pretty">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-400 text-pretty">
             About J Medrano Design
           </h2>
           <p className="leading-relaxed flex flex-col text-pretty">
@@ -24,13 +24,13 @@ export const AboutMe = () => {
           </p>
         </div>
         <div className="flex-1 w-full">
-          <div className="relative h-96">
+          <div className="relative h-96 overflow-hidden rounded-lg shadow-lg shadow-black/75">
             <Image
               src="/portrait.jpg"
               alt="J Medrano Design"
               fill
               loading="lazy"
-              className="object-cover rounded-lg object-top"
+              className="object-cover object-top"
             />
           </div>
         </div>

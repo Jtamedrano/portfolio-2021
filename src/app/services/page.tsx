@@ -84,9 +84,9 @@ const ServicesPage = () => {
     <>
       <PageHeader
         title="Services"
-        description="Explore the range of services I offer to help you achieve your web development goals."
+        description="Explore the range of services we offer to help you achieve your web development goals. From custom website design to enterprise application development, we have you covered."
       />
-      <div className="bg-slate-200 py-4">
+      <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 container mx-auto px-3">
           {SERVICES_LIST.map((service, index) => (
             <ServiceItem

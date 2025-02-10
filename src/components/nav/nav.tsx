@@ -13,7 +13,7 @@ const NavMenu = () => {
         <span className="sr-only">J Medrano Design</span>
         <Image src="/Logo.svg" alt="Logo" width={100} height={43} />
       </Link>
-      <ul className="hidden lg:flex gap-12 capitalize text-slate-800 items-center">
+      <ul className="hidden lg:flex gap-12 capitalize text-slate-200 items-center">
         {NAVIGATION.map((navItem) => (
           <NavItem key={navItem.label} label={navItem.label} to={navItem.to} />
         ))}

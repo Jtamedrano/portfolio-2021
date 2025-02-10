@@ -49,22 +49,22 @@ export default function ServiceBundlesPage() {
         title="Discover Our Tailored Service Bundles"
         description="At J Medrano Design, we understand that every business has unique needs. That's why we've crafted specialized service bundles to help you achieve your goals efficiently and affordably. Whether you're just starting out or looking to scale, our bundles offer the perfect solution."
       />
-      <div className="bg-slate-200 py-12 px-3 xl:px-0 flex-1 flow-root">
+      <div className="bg-gradient-to-b from-secondary-900 to-slate-900 py-12 px-3 xl:px-0 flex-1 flow-root">
         <div className="isolate container grid grid-cols-1 lg:grid-cols-3 gap-y-16 divide-y divide-gray-100 sm:mx-auto lg:divide-x lg:divide-y-0">
           {BUNDLES.map((bundle) => (
             <ServiceBundle key={`bundle-${bundle.id}`} bundle={bundle} />
           ))}
         </div>
       </div>
-      <div className="bg-gradient-to-br from-secondary-200 to-secondary-300 py-12">
+      <div className=" py-12">
         <div className="container flex flex-col justify-center self-stretch mx-auto py-8 px-4 xl:px-0 gap-12">
-          <h3 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-700 text-pretty">
+          <h3 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-secondary-400 text-pretty">
             Why Choose J Medrano Design?
           </h3>
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12">
             {brandSolutions.map((solution, index) => (
               <li key={`solution-${index}`} className="flex flex-col gap-4">
-                <h4 className="text-2xl lg:text-3xl font-semibold text-pretty">
+                <h4 className="text-2xl lg:text-3xl font-semibold text-pretty text-secondary-400">
                   {solution.title}
                 </h4>
                 <p className="text-lg lg:text-xl text-pretty">
@@ -85,7 +85,7 @@ export default function ServiceBundlesPage() {
             <AnalyticLink
               href="/contact"
               label="Get Started"
-              className="bg-secondary-700 text-slate-100 text-lg lg:text-base py-2 px-8 inline-block rounded-full font-semibold hover:bg-secondary-800 transition-colors duration-300 text-center"
+              className="bg-yellow-500 text-slate-900 text-lg lg:text-base py-2 px-8 inline-block rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 text-center"
               eventValue="cta"
               eventCategory="contact"
             />

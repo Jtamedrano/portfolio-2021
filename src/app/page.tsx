@@ -3,11 +3,32 @@ import HomePage from "../components/home/HomePage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Custom Websites for Small Businesses | J Medrano Design",
+  title: "High-Converting Websites for Small Businesses | J Medrano",
+
+  // Description (~150–160 characters)
+  // Showcases results (up to 15% conversions), emphasizes local region, ends with a CTA
   description:
-    "Get a high-performing, custom website tailored for your small business. J Medrano Design specializes in web design, development, and SEO for service-based businesses like real estate agents, pressure washers, and contractors. Get a free consultation today!",
-  keywords:
-    "web design, web development, digital marketing, web design agency, web development agency, web design company, web development company, web design services, web development services, digital marketing services, web design Inland Empire, web development Inland Empire",
+    "Boost conversions by up to 15% with custom websites, SEO, and lead generation for small businesses in the Inland Empire. Book a free consultation!",
+
+  // Keywords (optional: Google typically ignores these, but may help on other engines)
+  keywords: [
+    "Custom Websites",
+    "Lead Generation",
+    "SEO Services",
+    "Small Business Marketing",
+    "Digital Marketing",
+    "CRM Integration",
+    "high-converting websites",
+    "web design",
+    "SEO",
+    "lead generation",
+    "small businesses",
+    "Inland Empire",
+    "CRM integrations",
+    "digital marketing",
+  ],
+
+  // Allows search engines to index and follow
   robots: "index, follow",
 };
 

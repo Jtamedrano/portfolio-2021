@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         alt={title}
         width={400}
         height={200}
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-full object-top"
         loading="lazy"
       />
     </div>

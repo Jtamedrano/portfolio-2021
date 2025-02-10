@@ -23,7 +23,7 @@ export const GoogleAnalytics = () => {
     if (clarityId && !isDev) {
       Clarity.init(clarityId);
     }
-  }, [pathname, gamid, isDev, clarityId]);
+  }, [pathname]);
 
   return (
     <head>

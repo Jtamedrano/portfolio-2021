@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface StatItemProps {
@@ -14,17 +15,45 @@ const StatItem: React.FC<StatItemProps> = ({ title, value }) => {
   );
 };
 
-export const Stats = () => {
+const logos = [
+  {
+    src: "/poloMassageLogo.png",
+    alt: "Polo Massage Logo",
+  },
+  {
+    src: "/radicalPressureWashingLogo.png",
+    alt: "Radical Pressure Washing Logo",
+  },
+  {
+    src: "/radicalPropertyManagementLogo.png",
+    alt: "Radical Property Management Logo",
+  },
+  {
+    src: "/familyRealEstateLogo.png",
+    alt: "Family Real Estate Network Logo",
+  },
+];
+
+export const LogoQuilt = () => {
   return (
-    <section className="bg-gray-300">
-      <div className="container mx-auto py-8 px-3 flex flex-col gap-4">
-        <h2 className="text-3xl font-semibold text-slate-800">Current Stats</h2>
-        <div className="flex flex-col gap-4 md:flex-row md:gap-4">
-          <StatItem title="Time In Enterprise" value="3 Years" />
-          <StatItem title="Time Freelancing" value="4 Years" />
-          <StatItem title="Websites Worked On" value="7 Websites" />
-          <StatItem title="Apps Worked On" value="4 Apps" />
+    <section className="">
+      <div className="container mx-auto py-12 px-3 flex flex-col gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {logos.map((logo, index) => (
+            <div key={index} className="flex justify-center items-center">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={100}
+                height={100}
+                className="object-contain"
+              />
+            </div>
+          ))}
         </div>
+        <h2 className="text-xl font-bold text-slate-500 text-center">
+          Trusted by These Local Businesses
+        </h2>
       </div>
     </section>
   );

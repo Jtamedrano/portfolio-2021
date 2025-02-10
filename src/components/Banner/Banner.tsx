@@ -13,9 +13,7 @@ export const Banner: React.FC<React.PropsWithChildren<BannerProps>> = ({
   children,
 }) => {
   return (
-    <section
-      className={cs("bg-gradient-to-br from-blue-300 to-blue-400", className)}
-    >
+    <section className={cs("bg-secondary-500", className)}>
       <div className="container flex flex-col lg:flex-row justify-center items-center self-stretch mx-auto py-4 px-4 xl:px-0 gap-x-12 overflow-hidden">
         <div className="flex-1 space-y-4">
           <h2 className="font-bold tracking-tight uppercase text-pretty text-center lg:text-left">

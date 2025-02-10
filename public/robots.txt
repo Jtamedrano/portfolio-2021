@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /api
-Disallow: /contact
 Allow: /
 
 Sitemap: https://www.jtamedrano.com/sitemap.xml

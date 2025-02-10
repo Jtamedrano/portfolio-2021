@@ -35,22 +35,22 @@ const ImageComponent: React.FC<any> = ({ value, isInline }) => {
 const components: PortableTextComponents = {
   block: {
     h1: ({ children }) => (
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 my-8">
+      <h1 className="text-4xl font-bold text-secondary-500 dark:text-gray-100 my-8">
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 my-3">
+      <h2 className="text-3xl font-bold text-secondary-400 dark:text-gray-200 my-4 mt-4">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-2xl font-bold text-gray-700 dark:text-gray-300 my-2">
+      <h3 className="text-2xl font-bold text-secondary-300 dark:text-gray-300 my-2 mt-4">
         {children}
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-xl font-bold text-gray-600 dark:text-gray-400 my-1">
+      <h4 className="text-xl font-bold text-secondary-200 dark:text-gray-400 my-1 mt-4">
         {children}
       </h4>
     ),

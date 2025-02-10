@@ -16,7 +16,8 @@ export const FormGroup: React.FC<React.PropsWithChildren<FormGroupProps>> = ({
   return (
     <div>
       <div className={cx("text-sm/6 font-semibold text-gray-300", className)}>
-        <label htmlFor={name}>{label}</label> {required && <span>*</span>}
+        <label htmlFor={name}>{label}</label>{" "}
+        {required && <span className="text-red-700">*</span>}
       </div>
       <div className="mt-2.5">{children}</div>
     </div>

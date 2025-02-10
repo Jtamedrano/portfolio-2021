@@ -15,7 +15,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         <h1 className="text-5xl font-bold tracking-tight text-secondary-500">
           {title}
         </h1>
-        <p className="text-lg text-slate-600">{description}</p>
+        <p className="text-lg text-slate-200">{description}</p>
       </div>
     </div>
   );

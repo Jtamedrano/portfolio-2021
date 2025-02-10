@@ -1,42 +1,27 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HomePageForm } from "./HomePageForm";
 
 export const InfoSection: React.FC = () => {
   return (
     <section className="py-8 flex justify-between self-stretch items-start">
-      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-4 flex-1 px-3">
-        <div className="hidden lg:flex justify-between items-center flex-1 rounded-lg lg:max-h-[500px]">
-          <Image
-            src="/webdev_journey.png"
-            className="flex-1 self-stretch object-cover w-auto h-auto"
-            width={632}
-            height={368}
-            alt="Web Development Journey"
-            loading="lazy"
-          />
+      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-4 flex-1 px-3 py-10">
+        <div className="relative flex justify-center items-center flex-1">
+          {/* Sample Form */}
+          <HomePageForm />
         </div>
-        <div className="lg:hidden flex justify-center items-center max-h-[200px]">
-          <Image
-            src="/webdev_journey.png"
-            className="flex-1 self-stretch object-cover w-auto h-auto"
-            width={632}
-            height={200}
-            alt="Web Development Journey"
-            loading="lazy"
-          />
-        </div>
-        <div className="flex flex-col gap-4 flex-1 text-slate-700">
+        <div className="flex flex-col justify-center gap-4 flex-1 text-slate-200">
           <div className="flex flex-col gap-3">
-            <h3 className="text-3xl font-semibold text-slate-800">
-              Design / Development / Deployment
+            <h3 className="text-4xl font-bold text-secondary-300">
+              How we get businesses to increase their web traffic and lead
+              conversion
             </h3>
-            <p>
+            <p className="text-lg/8">
               From initial concept to live deployment, I provide a seamless
               process that ensures your website is tailored to your vision and
               built for success.
             </p>
           </div>
-          <ul className="list-disc list-inside leading-7">
+          <ul className="list-disc list-inside leading-8 text-xl flex flex-col gap-2">
             <li>
               <strong>Custom Design:</strong> Crafted to reflect your brand and
               engage your audience.
@@ -58,17 +43,6 @@ export const InfoSection: React.FC = () => {
               ongoing support for smooth operation.
             </li>
           </ul>
-          <div className="flex flex-col gap-3 lg:items-start">
-            <p className="text-2xl text-secondary-700 font-bold">
-              Ask how you can get a free hero section redesign!
-            </p>
-            <Link
-              href="/contact"
-              className="text-center bg-secondary-700 text-slate-100 py-2 px-4 rounded-full text-lg font-semibold hover:bg-secondary-800 transition-colors duration-300"
-            >
-              Get Your Free Consultation
-            </Link>
-          </div>
         </div>
       </div>
     </section>
