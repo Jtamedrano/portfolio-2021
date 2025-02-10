@@ -112,6 +112,7 @@ export const HomePageForm: React.FC = () => {
             onChange={(v) =>
               setFormPageOne((prev) => ({ ...prev, service: v }))
             }
+            as="div"
           >
             <ListboxButton
               className="text-slate-700 w-full p-2 rounded-lg border border-slate-300 bg-slate-100 text-left"
