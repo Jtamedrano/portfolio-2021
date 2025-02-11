@@ -4,7 +4,7 @@ import { HomePageForm } from "./HomePageForm";
 export const InfoSection: React.FC = () => {
   return (
     <section className="py-8 flex justify-between self-stretch items-start">
-      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-4 flex-1 px-3 py-10">
+      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-8 flex-1 px-3 py-10">
         <div className="relative flex justify-center items-center flex-1">
           {/* Sample Form */}
           <HomePageForm />

@@ -23,17 +23,6 @@ export const AboutMe = () => {
             at a time.
           </p>
         </div>
-        <div className="flex-1 w-full">
-          <div className="relative h-96 overflow-hidden rounded-lg shadow-lg shadow-black/75">
-            <Image
-              src="/portrait.jpg"
-              alt="J Medrano Design"
-              fill
-              loading="lazy"
-              className="object-cover object-top"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ export const HomePageForm: React.FC = () => {
   };
 
   return (
-    <div className="w-3/4 rounded-lg p-8 bg-slate-800 text-slate-200 flex flex-col gap-4 border border-slate-700 shadow-lg shadow-black/75">
+    <div className="rounded-lg p-8 bg-slate-800 text-slate-200 flex flex-col gap-4 border border-slate-700 shadow-lg shadow-black/75 w-full">
       <h2 className="text-4xl font-semibold text-secondary-400 text-center capitalize">
         See how our auto capture lead form works
       </h2>
