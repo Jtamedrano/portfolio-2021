@@ -12,6 +12,16 @@ export const metadata: Metadata = {
 
   // Keywords (optional: Google typically ignores these, but may help on other engines)
   keywords: [
+    "small business website design services",
+    "web development",
+    "website dev",
+    "design web design",
+    "website design for small business",
+    "web design for small businesses",
+    "website development company",
+    "web development services",
+    "web design services",
+    "web development agency",
     "Custom Websites",
     "Lead Generation",
     "SEO Services",
