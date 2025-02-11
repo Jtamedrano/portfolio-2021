@@ -17,10 +17,10 @@ export const MobileNav = () => {
         <button
           type="button"
           onClick={() => setShowMenu(!showMenu)}
-          className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-900"
+          className="-m-2.5 items-center justify-center rounded-md p-2.5 text-slate-500"
         >
           <span className="sr-only">Open main menu</span>
-          <HiBars3 className="size-6" />
+          <HiBars3 className="size-10" />
         </button>
       </div>
       <Dialog
