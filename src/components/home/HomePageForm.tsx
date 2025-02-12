@@ -78,7 +78,6 @@ export const HomePageForm: React.FC = () => {
           name="name"
           label="Name"
           placeholder="Your Name"
-          disabled
           handleChange={handleChange}
           value={formPageOne.fullName}
           containerClassName="text-xl"
