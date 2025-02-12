@@ -69,9 +69,8 @@ export const generateMetadata = async ({
   ];
 
   return {
-    title: `Best Web Design in ${locationName} - Custom Websites | J Medrano Design`,
-    description:
-      "Looking for expert web design in ${locationName}? J Medrano Design creates high-converting, SEO-friendly websites for small businesses. Get a free consultation and website audit today!",
+    title: `Custom Web Design in ${locationName} | J Medrano Design`,
+    description: `"Looking for web design in ${locationName}? J Medrano Design creates high-converting, SEO-friendly websites for small to medium sized businesses businesses. Get a free consultation and website audit today!`,
     keywords: Array.from(
       new Set([...locationKeywords, ...serviceKeywords])
     ).join(", "),
