@@ -1,5 +1,5 @@
 import { PortableText, PortableTextComponents } from "next-sanity";
-import { BlogPost } from "../../models/sanity-schema";
+import { BlogPost, BlogPostBody } from "../../models/sanity-schema";
 import { getImageDimensions } from "@sanity/asset-utils";
 import urlBuilder from "@sanity/image-url";
 import { fetchSanityImgUrl } from "../../lib/blogs";
@@ -35,26 +35,26 @@ const ImageComponent: React.FC<any> = ({ value, isInline }) => {
 const components: PortableTextComponents = {
   block: {
     h1: ({ children }) => (
-      <h1 className="text-4xl font-bold text-secondary-500 dark:text-gray-100 my-8">
+      <h1 className="text-5xl font-bold text-secondary-500 dark:text-gray-100 my-8">
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-3xl font-bold text-secondary-400 dark:text-gray-200 my-4 mt-4">
+      <h2 className="text-4xl font-bold text-secondary-400 dark:text-gray-200 my-8">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-2xl font-bold text-secondary-300 dark:text-gray-300 my-2 mt-4">
+      <h3 className="text-3xl font-bold text-secondary-300 dark:text-gray-300 my-4 mt-8">
         {children}
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-xl font-bold text-secondary-200 dark:text-gray-400 my-1 mt-4">
+      <h4 className="text-2xl font-bold text-secondary-200 dark:text-gray-400 my-1 mt-4">
         {children}
       </h4>
     ),
-    normal: ({ children }) => <p className="text-base/7 mb-4">{children}</p>,
+    normal: ({ children }) => <p className="text-base/8 mb-4">{children}</p>,
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-secondary-500 pl-4 my-4">
         {children}
@@ -62,28 +62,31 @@ const components: PortableTextComponents = {
     ),
   },
   hardBreak: () => <br />,
-  list: ({ value, children }) => {
-    if (value.listItem === "number") {
-      return <ol className="list-decimal list-inside leading-7">{children}</ol>;
-    }
-    return <ul className="list-disc list-inside leading-7">{children}</ul>;
+  list: {
+    number: ({ children }) => (
+      <ol className="list-decimal list-inside leading-8 px-8 my-4">
+        {children}
+      </ol>
+    ),
+    bullet: ({ children }) => (
+      <ul className="list-disc list-inside leading-8 px-8 my-4">{children}</ul>
+    ),
   },
-  listItem: ({ children }) => <li>{children}</li>,
+  listItem: {
+    number: ({ children }) => <li>{children}</li>,
+    bullet: ({ children }) => <li>{children}</li>,
+  },
   types: {
     image: ImageComponent,
   },
 };
 
 export const PortableRichText: React.FC<{
-  items: BlogPost["body"];
+  items: BlogPostBody;
 }> = ({ items }) => {
   return (
     <>
-      {items?.map((item, index) => {
-        return (
-          <PortableText key={index} value={item} components={components} />
-        );
-      })}
+      <PortableText value={items} components={components} />
     </>
   );
 };

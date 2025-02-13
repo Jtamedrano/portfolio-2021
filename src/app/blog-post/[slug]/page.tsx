@@ -136,7 +136,7 @@ export default async function Page({
       <div className="bg-slate-800">
         <div className="container mx-auto pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <PortableRichText items={blog.body} />
+            <PortableRichText items={blog.body ?? []} />
             <div className="flex flex-col gap-3 lg:items-start py-12">
               <p className="text-2xl text-secondary-500 font-bold">
                 Ask how you can get a free hero section redesign!
