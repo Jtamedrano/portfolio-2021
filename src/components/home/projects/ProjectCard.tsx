@@ -27,8 +27,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <Image
         src={desktopImage}
         alt={title}
-        width={400}
-        height={200}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
         className="object-cover w-full h-full object-top"
         loading="lazy"
       />

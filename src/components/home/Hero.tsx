@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="">
               <h1
                 className={cx(
-                  "text-3xl lg:text-7xl uppercase text-slate-50",
+                  "text-5xl lg:text-7xl uppercase text-slate-50",
                   anton.className
                 )}
               >
