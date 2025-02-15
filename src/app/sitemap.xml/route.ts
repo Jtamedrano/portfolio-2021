@@ -9,27 +9,22 @@ export async function GET() {
   const staticRoutes = [
     {
       loc: "/",
-      lastmod: "2025-01-03",
+      lastmod: "2025-02-14",
       priority: 1.0,
     },
     {
       loc: "/contact",
-      lastmod: "2025-01-03",
+      lastmod: "2025-02-14",
       priority: 0.8,
     },
     {
       loc: "/blog",
-      lastmod: "2025-01-24",
-      priority: 0.8,
-    },
-    {
-      loc: "/service-bundles",
-      lastmod: "2025-01-24",
+      lastmod: "2025-02-14",
       priority: 0.8,
     },
     {
       loc: "/services",
-      lastmod: "2025-01-03",
+      lastmod: "2025-02-14",
       priority: 0.8,
     },
   ];
@@ -62,8 +57,8 @@ export async function GET() {
   const locationRoutes = LOCATIONS.map((location) => {
     return {
       loc: `/locations/${location.slug}`,
-      lastmod: "2025-01-27",
-      priority: 0.6,
+      lastmod: "2025-02-14",
+      priority: 0.8,
     };
   });
 
@@ -74,6 +69,7 @@ export async function GET() {
 		<loc>${baseUrl}${route.loc}</loc>
 		<lastmod>${route.lastmod}</lastmod>
 		<priority>${route.priority}</priority>
+    
 	</url>
 	`
     )
