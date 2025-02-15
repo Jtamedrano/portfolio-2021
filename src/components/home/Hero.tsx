@@ -10,8 +10,8 @@ const Hero = () => {
         <div className="text-center lg:pl-4 leading-none flex flex-col gap-8 flex-1 max-w-4xl">
           <div className="flex flex-col gap-4">
             <div className="">
-              <h1 className="text-5xl lg:text-7xl uppercase text-slate-50 font-display">
-                Websites built to stand out and convert visitors to customers
+              <h1 className="text-5xl lg:text-7xl text-slate-50 font-display">
+                WEBSITES BUILT TO STAND OUT AND CONVERT VISITORS TO CUSTOMERS
               </h1>
             </div>
             <p className="text-pretty text-text-xl leading-7 font-semibold max-w-3xl">
