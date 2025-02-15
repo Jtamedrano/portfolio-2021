@@ -6,6 +6,7 @@ interface ServiceItemProps {
   description: string;
   keyFeatures: string[];
   image: string;
+  search: string;
 }
 
 export const ServiceItem: React.FC<ServiceItemProps> = ({
@@ -14,8 +15,9 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
   image,
   keyFeatures,
   title,
+  search,
 }) => {
-  const encodedTitle = encodeURIComponent(title);
+  const encodedTitle = search;
 
   return (
     <div className={cx("flex flex-col gap-8 py-4", className)}>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { HomePageForm } from "./HomePageForm";
 
 export const InfoSection: React.FC = () => {
