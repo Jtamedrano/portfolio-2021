@@ -1,4 +1,3 @@
-import cx from "classnames";
 import Image from "next/image";
 import { AnalyticLink } from "../../../components/Analytics/AnalyticLink";
 import PageSectionContainer from "../../../components/PageContainer/PageContainer";
@@ -17,7 +16,7 @@ export const generateMetadata = async ({
 
   if (!locationData) {
     return {
-      title: "Location Not Found | J Medrano Design",
+      title: "Location Not Found | J Medrano Design LLC",
       description:
         "Sorry, the page you're looking for cannot be found. We serve a variety of locations in California, including Anaheim, Los Angeles, and Orange County. Contact us today to learn more about our web design services.",
     };
@@ -66,25 +65,26 @@ export const generateMetadata = async ({
     "SEO optimization",
     "SEO strategies",
     "SEO solutions",
+    "Home Service Businesses",
   ];
 
   return {
-    title: `Custom Web Design in ${locationName} | J Medrano Design`,
-    description: `"Looking for web design in ${locationName}? J Medrano Design creates high-converting, SEO-friendly websites for small to medium sized businesses businesses. Get a free consultation and website audit today!`,
+    title: `Web Design for Home Service Businesses in ${locationName} | J Medrano Design LLC`,
+    description: `"Looking for web design in ${locationName}? J Medrano Design LLC creates high-converting, SEO-friendly websites for Home Service Businesses. Get a free consultation and website audit today!`,
     keywords: Array.from(
       new Set([...locationKeywords, ...serviceKeywords])
     ).join(", "),
     openGraph: {
-      title: `Top Web Design & Development in ${locationName} | J Medrano Design`,
-      description: `Discover exceptional web design and development services in ${locationName} with J Medrano Design. Specializing in custom websites and applications for service-based businesses, we offer free consultations and a free hero section redesign. Enhance your online presence with scalable, secure, and visually appealing solutions. Contact us today!`,
+      title: `Web Design for Home Service Businesses in ${locationName} | J Medrano Design LLC`,
+      description: `Data driven web design and development services in ${locationName} with J Medrano Design LLC. Specializing in custom websites and applications for Home Service Businesses. Enhance your online presence with scalable, secure, and visually appealing web solution. Contact us today!`,
       images: [
         {
           url: "https://jmedranodesign.com/location-header.png",
-          alt: `Web Design Services in ${locationName} | J Medrano Design`,
+          alt: `Web Design for Home Service Businesses in ${locationName} | J Medrano Design LLC`,
         },
       ],
       type: "website",
-      siteName: "J Medrano Design",
+      siteName: "J Medrano Design LLC",
     },
   };
 };
@@ -160,7 +160,8 @@ const LocationPage = async ({
             Attract more local customers actively looking for your services.
           </li>
           <li>
-            Increase both website traffic and foot traffic to your business.
+            Increase both website traffic and foot traffic to your home service
+            business.
           </li>
         </ul>
       </PageSectionContainer>
@@ -175,7 +176,7 @@ const LocationPage = async ({
             Our Web Design Services in {locationName}
           </h2>
           <p className="max-w-5xl mx-auto">
-            At J Medrano Design, we offer a variety of web design services
+            At J Medrano Design LLC, we offer a variety of web design services
             tailored to the needs of businesses in {locationName}. Our goal is
             to create a website that is as unique as your business, ensuring it
             stands out in the competitive digital landscape.
@@ -213,10 +214,10 @@ const LocationPage = async ({
       <PageSectionContainer className="py-16 text-slate-700">
         <div className="text-center mb-8 lg:text-left">
           <h2 className="text-2xl font-bold text-secondary-700 mb-2">
-            Why Choose J Medrano Design for Web Services in {locationName}
+            Why Choose J Medrano Design LLC for Web Services in {locationName}
           </h2>
           <p className="text-lg">
-            When it comes to web design in {locationName}, J Medrano Design
+            When it comes to web design in {locationName}, J Medrano Design LLC
             stands out. We understand the challenges businesses face in
             today&apos;s digital world, and we&apos;re here to help you overcome
             them.

@@ -33,7 +33,7 @@ export const MobileNav = () => {
         <DialogPanel className="fixed inset-y-0 right-0 z-50 overflow-y-auto bg-secondary-200/95 px-6 py-6 w-full sm:max-w-sm sm:ring-1 sm:ring-secondary-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">J Medrano Design</span>
+              <span className="sr-only">J Medrano Design LLC</span>
               <Image src="/Logo.svg" alt="Logo" width={100} height={43} />
             </Link>
             <button

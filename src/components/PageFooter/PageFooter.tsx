@@ -11,7 +11,7 @@ const PageFooter = () => {
             <Image src="/Logo.svg" alt="Logo" width={100} height={100} />
           </div>
           <p className="text-sm text-slate-100">
-            &copy; 2025 J Medrano Design, All Rights Reserved
+            &copy; 2025 J Medrano Design LLC, All Rights Reserved
           </p>
         </div>
         <div className="flex gap-8 flex-col-reverse md:flex-row">

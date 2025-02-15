@@ -72,11 +72,11 @@ const SERVICES_LIST = [
 
 export const metadata = {
   title:
-    "Website Design & SEO Services for Small Businesses | J Medrano Design",
+    "Website Design & SEO Services for Home Service Businesses | J Medrano Design LLC",
   description:
-    "Boost your business with expert web design, SEO, and online branding services. J Medrano Design helps real estate agents, contractors, and service-based businesses grow online. Get a free strategy session today!",
+    "Boost your business with expert web design, SEO, and online branding services. J Medrano Design LLC helps home service businesses grow online. Get a free strategy session today!",
   keywords:
-    "web design, web development, custom website design, website upgrades, landing page optimization, enterprise application development, CMS integration, deployment support",
+    "web design, web development, custom website design, website upgrades, landing page optimization, enterprise application development, CMS integration, deployment support, Home Service Businesses",
 };
 
 const ServicesPage = () => {

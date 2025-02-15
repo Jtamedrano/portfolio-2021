@@ -21,12 +21,15 @@ const keywords = [
 ];
 
 export const metadata = {
-  title: "Web Design & SEO Tips for Small Businesses | J Medrano Design Blog",
+  title:
+    "Small Business Web Design, SEO, and Marketing Insights | J Medrano Design LLC",
   description:
     "Stay ahead with expert web design, SEO, and marketing insights tailored for small business owners. Learn how to grow your online presence with proven strategies. Read more now!",
   keywords: keywords.join(", "),
   robots: "index, follow",
 };
+
+export const dynamic = "force-dynamic";
 
 export default async function BlogsPage() {
   const blogs = await fetchBlogs();

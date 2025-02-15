@@ -31,9 +31,9 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({
 };
 
 export const metadata = {
-  title: "Contact | J Medrano Design",
+  title: "Contact Us & Request a Quote | J Medrano Design LLC",
   description:
-    "Get in touch with J Medrano Design to discuss your web development project. Fill out the form or contact us at (909) 636-1186 or email us at jtamedrano@gmail.com to get started.",
+    "Get in touch with J Medrano Design LLC to discuss your web development project. Fill out the form or contact us at (909) 636-1186 or email us at info@jtamedrano.com to get started.",
   keywords:
     "web design, web development, digital marketing, web design agency, web development agency, web design company, web development company, web design services, web development services, digital marketing services, web design Inland Empire, web development Inland Empire",
 };

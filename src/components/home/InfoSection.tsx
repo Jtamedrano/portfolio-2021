@@ -21,7 +21,7 @@ export const InfoSection: React.FC = () => {
               built for success.
             </p>
           </div>
-          <ul className="list-disc list-inside leading-8 text-xl flex flex-col gap-2">
+          <ul className="list-disc list-inside leading-8 text-base flex flex-col gap-2">
             <li>
               <strong>Custom Design:</strong> Crafted to reflect your brand and
               engage your audience.

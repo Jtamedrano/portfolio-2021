@@ -10,7 +10,7 @@ const NavMenu = () => {
   return (
     <nav className="container mx-auto flex justify-between items-center gap-4 px-4">
       <Link className="text-2xl font-bold text-primary" href="/">
-        <span className="sr-only">J Medrano Design</span>
+        <span className="sr-only">J Medrano Design LLC</span>
         <Image src="/Logo.svg" alt="Logo" width={100} height={43} />
       </Link>
       <ul className="hidden lg:flex gap-12 capitalize text-slate-200 items-center">

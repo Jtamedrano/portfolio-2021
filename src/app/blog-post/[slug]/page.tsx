@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   if (!blog) {
     return {
-      title: "Blog Post Not Found | J Medrano Design",
+      title: "Blog Post Not Found | J Medrano Design LLC",
       description: "Blog post not found.",
       keywords: "blog, post, not found",
       robots: "noindex, nofollow",
@@ -40,7 +40,7 @@ export async function generateMetadata({
     : null;
 
   return {
-    title: blog.title + " | J Medrano Design",
+    title: blog.title + " | J Medrano Design LLC",
     description: blog.seoDescription,
     keywords: (blog.seoKeywords ?? []).join(", "),
     robots: "index, follow",

@@ -8,10 +8,6 @@ export const NAVIGATION = [
     to: "/services",
   },
   {
-    label: "Pricing",
-    to: "/service-bundles",
-  },
-  {
     label: "Blog",
     to: "/blog",
   },
@@ -114,9 +110,9 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-fontana": {
     title: "Web Design Services in Fontana, CA",
     intro:
-      "Welcome to J Medrano Design, your trusted partner in crafting high-quality web solutions tailored for small to medium-sized businesses in Fontana. Our team specializes in creating websites that drive engagement and conversions.",
+      "Welcome to J Medrano Design LLC, your trusted partner in crafting high-quality web solutions tailored for home service business in Fontana. Our team specializes in creating websites that drive engagement and conversions.",
     importance:
-      "In today’s fast-paced digital world, a professional website is essential. Small and medium-sized businesses in Fontana need a website that establishes credibility and fosters trust within the local community.",
+      "In today’s fast-paced digital world, a professional website is essential. Home service businesses in Fontana need a website that establishes credibility and fosters trust within the local community.",
     whyNeeded:
       "A strong local presence is key to success. By focusing on web design that resonates with Fontana’s unique audience, your business can stand out, connect with potential customers, and cultivate long-term relationships.",
     seoBenefits:
@@ -135,7 +131,7 @@ export const locationContent: Record<string, LocationContent> = {
       expertise:
         "We leverage the latest web technologies, including React and Next.js, to build high-performance websites that deliver outstanding results.",
       localCommitment:
-        "As a company rooted in Southern California, we understand the needs of businesses in Fontana and create designs that appeal to the local audience.",
+        "As a company rooted in Southern California, we understand the needs of home service businesses in Fontana and create designs that appeal to the local audience.",
       scalability:
         "Our websites are built for growth, ensuring they adapt to your business’s evolving needs while maintaining security and reliability.",
     },
@@ -146,9 +142,9 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-riverside": {
     title: "Customized Web Design Solutions in Riverside, CA",
     intro:
-      "Welcome to J Medrano Design, your partner in creating personalized web solutions for Riverside's vibrant business community. We focus on crafting websites that engage visitors and drive business success.",
+      "Welcome to J Medrano Design LLC, your partner in creating personalized web solutions for Riverside's vibrant business community. We focus on crafting websites that engage visitors and drive business success.",
     importance:
-      "In today's digital age, Riverside businesses need a strong online presence to remain competitive. A well-designed website serves as a cornerstone for building credibility and reaching a broader audience.",
+      "In today's digital age, Riverside home service businesses need a strong online presence to remain competitive. A well-designed website serves as a cornerstone for building credibility and reaching a broader audience.",
     whyNeeded:
       "Riverside's diverse economy, encompassing sectors like healthcare, education, and manufacturing, requires tailored web solutions. Our designs cater to the specific needs of these industries, enhancing your market reach.",
     seoBenefits:
@@ -178,7 +174,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-anaheim": {
     title: "Tailored Web Design Services in Anaheim, CA",
     intro:
-      "At J Medrano Design, we specialize in creating customized web solutions for Anaheim's diverse business community. Our goal is to develop websites that captivate visitors and drive business growth.",
+      "At J Medrano Design LLC, we specialize in creating customized web solutions for Anaheim's diverse business community. Our goal is to develop websites that captivate visitors and drive business growth.",
     importance:
       "In Anaheim's vibrant market, a compelling online presence is essential. A professionally designed website not only enhances credibility but also connects businesses with the local community, fostering trust and engagement.",
     whyNeeded:
@@ -210,7 +206,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-los-angeles": {
     title: "Innovative Web Design Services in Los Angeles, CA",
     intro:
-      "At J Medrano Design, we specialize in crafting bespoke web solutions for Los Angeles's dynamic and diverse business landscape. Our mission is to create websites that captivate audiences and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in crafting bespoke web solutions for Los Angeles's dynamic and diverse business landscape. Our mission is to create websites that captivate audiences and drive measurable growth.",
     importance:
       "In the bustling metropolis of Los Angeles, a compelling online presence is vital. A professionally designed website enhances your brand's credibility and connects you with a broad and varied audience.",
     whyNeeded:
@@ -242,7 +238,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-orange-county": {
     title: "Customized Web Design Services in Orange County, CA",
     intro:
-      "At J Medrano Design, we specialize in delivering bespoke web solutions tailored to Orange County's diverse and thriving business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in delivering bespoke web solutions tailored to Orange County's diverse and thriving business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
     importance:
       "In Orange County's competitive market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a broad and varied audience.",
     whyNeeded:
@@ -274,7 +270,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-san-diego": {
     title: "Innovative Web Design Services in San Diego, CA",
     intro:
-      "At J Medrano Design, we specialize in crafting bespoke web solutions tailored to San Diego's dynamic business environment. Our mission is to create websites that captivate audiences and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in crafting bespoke web solutions tailored to San Diego's dynamic business environment. Our mission is to create websites that captivate audiences and drive measurable growth.",
     importance:
       "In San Diego's competitive market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a diverse and tech-savvy audience.",
     whyNeeded:
@@ -306,7 +302,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-pasadena": {
     title: "Tailored Web Design Services in Pasadena, CA",
     intro:
-      "At J Medrano Design, we specialize in creating customized web solutions for Pasadena's innovative business community. Our goal is to develop websites that engage visitors and drive tangible results.",
+      "At J Medrano Design LLC, we specialize in creating customized web solutions for Pasadena's innovative business community. Our goal is to develop websites that engage visitors and drive tangible results.",
     importance:
       "In Pasadena's competitive market, a strong online presence is crucial. A well-designed website enhances your brand's credibility and connects you with a discerning and educated audience.",
     whyNeeded:
@@ -338,7 +334,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-san-bernardino": {
     title: "Professional Web Design Services in San Bernardino, CA",
     intro:
-      "At J Medrano Design, we specialize in delivering customized web solutions tailored to San Bernardino's diverse business community. Our mission is to create websites that engage visitors and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in delivering customized web solutions tailored to San Bernardino's diverse business community. Our mission is to create websites that engage visitors and drive measurable growth.",
     importance:
       "In San Bernardino's evolving market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a broad and varied audience.",
     whyNeeded:
@@ -370,7 +366,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-ontario": {
     title: "Customized Web Design Services in Ontario, CA",
     intro:
-      "At J Medrano Design, we specialize in delivering bespoke web solutions tailored to Ontario's dynamic business environment. Our mission is to create websites that captivate audiences and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in delivering bespoke web solutions tailored to Ontario's dynamic business environment. Our mission is to create websites that captivate audiences and drive measurable growth.",
     importance:
       "In Ontario's competitive market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a diverse and tech-savvy audience.",
     whyNeeded:
@@ -402,7 +398,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-long-beach": {
     title: "Innovative Web Design Services in Long Beach, CA",
     intro:
-      "At J Medrano Design, we specialize in crafting bespoke web solutions tailored to Long Beach's dynamic and diverse business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in crafting bespoke web solutions tailored to Long Beach's dynamic and diverse business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
     importance:
       "In Long Beach's competitive market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a broad and varied audience.",
     whyNeeded:
@@ -434,7 +430,7 @@ export const locationContent: Record<string, LocationContent> = {
   "web-design-in-rancho-cucamonga": {
     title: "Innovative Web Design Services in Rancho Cucamonga, CA",
     intro:
-      "At J Medrano Design, we specialize in crafting bespoke web solutions tailored to Rancho Cucamonga's dynamic business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
+      "At J Medrano Design LLC, we specialize in crafting bespoke web solutions tailored to Rancho Cucamonga's dynamic business community. Our mission is to create websites that captivate audiences and drive measurable growth.",
     importance:
       "In Rancho Cucamonga's competitive market, a compelling online presence is essential. A professionally designed website enhances your brand's credibility and connects you with a diverse and tech-savvy audience.",
     whyNeeded:
