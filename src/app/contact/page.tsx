@@ -34,12 +34,13 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({
   );
 };
 
-export const generateMetadata = async ({
-  searchParams,
-}: {
-  searchParams: URLSearchParams;
-}) => {
-  const service = searchParams.get("service");
+type props = {
+  params: undefined;
+  searchParams: Promise<{ [key: string]: string | undefined }>;
+};
+
+export const generateMetadata = async ({ searchParams }: props) => {
+  const service = (await searchParams).service;
 
   const foundService = SERVICES_LIST.find((s) => s.search === service);
 
