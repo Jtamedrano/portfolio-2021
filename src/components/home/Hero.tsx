@@ -10,11 +10,7 @@ const Hero = () => {
         <div className="text-center lg:pl-4 leading-none flex flex-col gap-8 flex-1 max-w-4xl">
           <div className="flex flex-col gap-4">
             <div className="">
-              <h1
-                className={cx(
-                  "text-5xl lg:text-7xl uppercase text-slate-50 font-display"
-                )}
-              >
+              <h1 className="text-5xl lg:text-7xl uppercase text-slate-50 font-display">
                 Websites built to stand out and convert visitors to customers
               </h1>
             </div>
