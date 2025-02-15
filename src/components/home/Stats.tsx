@@ -48,7 +48,7 @@ export const LogoQuilt = () => {
                 src={logo.src}
                 alt={logo.alt}
                 fill
-                priority
+                loading="lazy"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 className="object-contain"
               />
