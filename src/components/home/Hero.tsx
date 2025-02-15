@@ -1,15 +1,8 @@
 import React from "react";
 import { AnalyticLink } from "../Analytics/AnalyticLink";
-import { Anton } from "next/font/google";
 
 import cx from "classnames";
 
-const anton = Anton({
-  weight: ["400"],
-  preload: true,
-  fallback: ["sans-serif"],
-  subsets: ["latin", "latin-ext"],
-});
 const Hero = () => {
   return (
     <section className="bg-gradient-to-b from-secondary-800 to-slate-900 text-slate-100 dark:text-slate-100">
@@ -19,8 +12,7 @@ const Hero = () => {
             <div className="">
               <h1
                 className={cx(
-                  "text-5xl lg:text-7xl uppercase text-slate-50",
-                  anton.className
+                  "text-5xl lg:text-7xl uppercase text-slate-50 font-display"
                 )}
               >
                 Websites built to stand out and convert visitors to customers

@@ -4,7 +4,7 @@ import PageFooter from "../components/PageFooter/PageFooter";
 import "../styles/globals.css";
 import { GoogleAnalytics } from "../components/Analytics/GoogleAnalytics";
 import { SanityLive } from "../lib/sanity/live";
-import { Fira_Sans } from "next/font/google";
+import { Anton, Fira_Sans } from "next/font/google";
 
 const firaSans = Fira_Sans({
   display: "swap",
@@ -14,7 +14,15 @@ const firaSans = Fira_Sans({
   preload: true,
   fallback: ["sans-serif"],
   subsets: ["latin", "latin-ext"],
-  variable: "--sans",
+  variable: "--font-sans",
+});
+
+const anton = Anton({
+  weight: ["400"],
+  preload: true,
+  fallback: ["sans-serif"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-display",
 });
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
@@ -23,8 +31,9 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
       <GoogleAnalytics />
       <body
         className={cx(
-          firaSans.className,
-          "antialiased min-h-screen relative transition-colors duration-500 flex flex-col --font-sans"
+          firaSans.variable,
+          anton.variable,
+          "antialiased min-h-screen relative transition-colors duration-500 flex flex-col font-sans"
         )}
         style={{
           maxWidth: "100vw",
