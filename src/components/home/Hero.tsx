@@ -14,7 +14,7 @@ const Hero = () => {
                 WEBSITES BUILT TO STAND OUT AND CONVERT VISITORS TO CUSTOMERS
               </h1>
             </div>
-            <p className="text-pretty text-xl leading-7 font-semibold max-w-3xl">
+            <p className="text-pretty leading-7 font-semibold max-w-3xl">
               Don&apos;t worry about the tech stuff—we&apos;ll build you an
               easy-to-use site that automatically captures leads, helping your
               business grow within the first three months within launch.
