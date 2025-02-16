@@ -8,12 +8,12 @@ import { Anton, Fira_Sans } from "next/font/google";
 
 const firaSans = Fira_Sans({
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
   adjustFontFallback: true,
   preload: true,
   fallback: ["sans-serif"],
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   variable: "--font-sans",
 });
 
@@ -21,9 +21,8 @@ const anton = Anton({
   weight: ["400"],
   preload: true,
   fallback: ["sans-serif"],
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   variable: "--font-display",
-  display: "swap",
 });
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {

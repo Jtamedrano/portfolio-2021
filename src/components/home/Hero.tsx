@@ -1,8 +1,6 @@
 import React from "react";
 import { AnalyticLink } from "../Analytics/AnalyticLink";
 
-import cx from "classnames";
-
 const Hero = () => {
   return (
     <section className="bg-gradient-to-b from-secondary-800 to-slate-900 text-slate-100 dark:text-slate-100">

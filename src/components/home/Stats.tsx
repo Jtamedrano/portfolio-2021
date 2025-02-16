@@ -1,20 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-interface StatItemProps {
-  title: string;
-  value: string;
-}
-
-const StatItem: React.FC<StatItemProps> = ({ title, value }) => {
-  return (
-    <div className="bg-white p-4 rounded-lg flex-1 flex flex-col gap-2">
-      <h3 className="text-sm font-bold text-slate-800">{title}</h3>
-      <p className="text-lg font-bold text-slate-600">{value}</p>
-    </div>
-  );
-};
-
 const logos = [
   {
     src: "/poloMassageLogo.png",
