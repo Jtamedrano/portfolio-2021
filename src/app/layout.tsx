@@ -23,6 +23,7 @@ const anton = Anton({
   fallback: ["sans-serif"],
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
 });
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
