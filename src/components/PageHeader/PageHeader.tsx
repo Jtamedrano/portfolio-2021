@@ -11,11 +11,13 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 }) => {
   return (
     <div className="py-8">
-      <div className="container mx-auto flex flex-col gap-4 px-3 py-6">
+      <div className="container mx-auto flex flex-col gap-4 px-4 sm:px-6 py-6">
         <h1 className="text-5xl font-bold tracking-tight text-secondary-500">
           {title}
         </h1>
-        <p className="text-lg text-slate-200">{description}</p>
+        {!!description && (
+          <p className="text-lg text-slate-200">{description}</p>
+        )}
       </div>
     </div>
   );

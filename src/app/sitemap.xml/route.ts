@@ -27,6 +27,11 @@ export async function GET() {
       lastmod: "2025-02-14",
       priority: 0.8,
     },
+    {
+      loc: "/services/websites-for-landscapers",
+      lastmod: "2025-02-18",
+      priority: 0.8,
+    },
   ];
 
   const blogs = await serverFetchBlogs();

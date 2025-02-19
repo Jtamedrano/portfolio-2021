@@ -5,7 +5,16 @@ export const NAVIGATION = [
   },
   {
     label: "Services",
+    flyoutLabel: "General Services",
     to: "/services",
+    flyoutItems: [
+      {
+        label: "Website For Landscapers",
+        to: "/services/websites-for-landscapers",
+        description:
+          "We design websites for landscapers that showcase their work, attract new clients, and grow their business.",
+      },
+    ],
   },
   {
     label: "Blog",

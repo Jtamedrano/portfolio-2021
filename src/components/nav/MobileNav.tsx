@@ -49,14 +49,29 @@ export const MobileNav = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {NAVIGATION.map((navItem) => (
-                  <Link
-                    key={navItem.label}
-                    href={navItem.to}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-secondary-300/95 transition-colors duration-300"
-                    onClick={() => setShowMenu(false)}
-                  >
-                    {navItem.label}
-                  </Link>
+                  <div key={navItem.label}>
+                    <Link
+                      href={navItem.to}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-secondary-300/95 transition-colors duration-300"
+                      onClick={() => setShowMenu(false)}
+                    >
+                      {navItem.label}
+                    </Link>
+                    {navItem.flyoutItems && navItem.flyoutItems.length > 0 && (
+                      <div className="shadow-inner">
+                        {navItem.flyoutItems.map((flyoutItem) => (
+                          <Link
+                            key={flyoutItem.to}
+                            href={flyoutItem.to}
+                            className="block px-4 py-2 text-base/7 font-semibold text-gray-900 hover:bg-secondary-300/95 transition-colors duration-300 bg-secondary-400"
+                            onClick={() => setShowMenu(false)}
+                          >
+                            - {flyoutItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
               <div className="py-6">

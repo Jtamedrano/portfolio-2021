@@ -15,7 +15,13 @@ const NavMenu = () => {
       </Link>
       <ul className="hidden lg:flex gap-12 capitalize text-slate-200 items-center">
         {NAVIGATION.map((navItem) => (
-          <NavItem key={navItem.label} label={navItem.label} to={navItem.to} />
+          <NavItem
+            key={navItem.label}
+            label={navItem.label}
+            to={navItem.to}
+            flyoutItems={navItem.flyoutItems}
+            flyoutLabel={navItem.flyoutLabel}
+          />
         ))}
         <li>
           <AnalyticLink
