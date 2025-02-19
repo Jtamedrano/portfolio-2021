@@ -144,13 +144,13 @@ const LocationPage = async ({
         </div>
       </PageSectionContainer>
 
-      <PageSectionContainer className="py-16 text-slate-700">
-        <h2 className="text-2xl font-bold text-secondary-700 mb-2">
+      <PageSectionContainer className="py-16 text-slate-300">
+        <h2 className="text-2xl font-bold text-secondary-500 mb-2">
           Why Business in {locationData.city} Need a Professional Website
         </h2>
         <p className="text-lg mb-4">{locationDetails.importance}</p>
         <p className="text-lg mb-4">{locationDetails.whyNeeded}</p>
-        <h3 className="text-xl font-bold text-secondary-700 mb-2">
+        <h3 className="text-xl font-bold text-secondary-500 mb-2">
           Benefits of Local SEO
         </h3>
         <p className="text-lg mb-2">{locationDetails.seoBenefits}</p>
@@ -211,9 +211,9 @@ const LocationPage = async ({
           </div>
         </div>
       </PageSectionContainer>
-      <PageSectionContainer className="py-16 text-slate-700">
+      <PageSectionContainer className="py-16 text-slate-300">
         <div className="text-center mb-8 lg:text-left">
-          <h2 className="text-2xl font-bold text-secondary-700 mb-2">
+          <h2 className="text-2xl font-bold text-secondary-500 mb-2">
             Why Choose J Medrano Design LLC for Web Services in {locationName}
           </h2>
           <p className="text-lg">
@@ -225,15 +225,15 @@ const LocationPage = async ({
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-12 text-center">
           <div className="flex flex-col items-center gap-4">
-            <HiCodeBracket className="text-4xl text-secondary-700" />
-            <h3 className="text-xl font-bold text-secondary-700">
+            <HiCodeBracket className="text-4xl text-secondary-500" />
+            <h3 className="text-xl font-bold text-secondary-500">
               Expertise in Modern Web Design
             </h3>
             <p className="text-lg">{locationDetails.whyChoose.expertise}</p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <HiBriefcase className="text-4xl text-secondary-700" />
-            <h3 className="text-xl font-bold text-secondary-700">
+            <HiBriefcase className="text-4xl text-secondary-500" />
+            <h3 className="text-xl font-bold text-secondary-500">
               Commitment to Local Businesses
             </h3>
             <p className="text-lg">
@@ -241,8 +241,8 @@ const LocationPage = async ({
             </p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <HiWrench className="text-4xl text-secondary-700" />
-            <h3 className="text-xl font-bold text-secondary-700">
+            <HiWrench className="text-4xl text-secondary-500" />
+            <h3 className="text-xl font-bold text-secondary-500">
               Reliable and Scalable Solutions
             </h3>
             <p className="text-lg">{locationDetails.whyChoose.scalability}</p>
