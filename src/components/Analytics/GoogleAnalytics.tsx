@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { useEffect } from "react";
+import { localBusinessSchema } from "../../constants/localBusiness";
 
 const initGoogleAnalytics = async (gamid: string, pathname: string) => {
   return setTimeout(() => {
@@ -44,6 +45,12 @@ export const GoogleAnalytics = () => {
 			gtag('config', '${gamid}');
 		  `}
           </Script>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusinessSchema),
+            }}
+          />
         </>
       )}
     </head>

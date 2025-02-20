@@ -3,14 +3,11 @@ import HomePage from "../components/home/HomePage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "High-Converting Websites for Small Businesses | J Medrano",
+  title: "Custom Websites for Home Service Businesses | J Medrano Design LLC",
 
-  // Description (~150–160 characters)
-  // Showcases results (up to 15% conversions), emphasizes local region, ends with a CTA
   description:
-    "Boost conversions by up to 15% with custom websites, SEO, and lead generation for small businesses in the Inland Empire. Book a free consultation!",
+    "Custom-coded websites for home service businesses to boost local SEO and get more leads.",
 
-  // Keywords (optional: Google typically ignores these, but may help on other engines)
   keywords: [
     "small business website design services",
     "web development",
@@ -49,6 +46,19 @@ export const metadata: Metadata = {
 
   // Allows search engines to index and follow
   robots: "index, follow",
+  openGraph: {
+    title: "Custom Websites for Home Service Businesses | J Medrano Design LLC",
+    description:
+      "Custom-coded websites for home service businesses to boost local SEO and get more leads.",
+    images: [
+      {
+        url: "https://jmedrano.design/images/logo.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Custom Websites for Home Service Businesses | J Medrano Design LLC",
+      },
+    ],
+  },
 };
 
 const IndexPage = () => {
