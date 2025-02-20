@@ -45,12 +45,12 @@ const components: PortableTextComponents = {
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-3xl font-bold text-secondary-300 dark:text-gray-300 my-4 mt-8">
+      <h3 className="text-3xl font-bold text-secondary-400 dark:text-gray-300 my-4 mt-8">
         {children}
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-2xl font-bold text-secondary-200 dark:text-gray-400 my-1 mt-4">
+      <h4 className="text-2xl font-bold text-secondary-400 dark:text-gray-400 my-1 mt-4">
         {children}
       </h4>
     ),

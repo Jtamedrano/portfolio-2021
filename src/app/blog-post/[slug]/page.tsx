@@ -6,8 +6,6 @@ import {
   serverFetchBlog,
   serverFetchBlogs,
 } from "../../../lib/blogs";
-import { Blog } from "../../../models/cms";
-import { PortableText } from "next-sanity";
 import { notFound } from "next/navigation";
 import { PortableRichText } from "../../../components/RichTextRenderer/PortableTextItem";
 import Image from "next/image";
@@ -94,9 +92,9 @@ export default async function Page({
 
   return (
     <>
-      <div className="bg-slate-900">
+      <div className="dark:bg-slate-900 bg-secondary-100">
         <div className="container mx-auto pt-12 px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8 max-w-5xl mx-auto">
+          <div className="space-y-8">
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
@@ -114,14 +112,15 @@ export default async function Page({
                 width={1200}
                 height={630}
                 layout="responsive"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg max-w-[1200px] w-full mx-auto"
+                sizes="(max-width: 1200px) 100vw, 1200px"
               />
             )}
             <div className="space-y-4">
               <h1 className="text-4xl font-bold text-secondary-500">
                 {blog.title}
               </h1>
-              <div className="flex justify-between items-center text-gray-200">
+              <div className="flex justify-between items-center dark:text-gray-200">
                 <p className=" text-lg">By: {blog.author?.name}</p>
                 <p className="text-lg">
                   {new Date(blog._updatedAt).toLocaleDateString()}
@@ -131,11 +130,11 @@ export default async function Page({
             </div>
           </div>
         </div>
-        <hr className="mt-8 border-t border-gray-200/50" />
+        <hr className="mt-8 border-t dark:border-gray-200/50 border-gray-500/50" />
       </div>
-      <div className="bg-slate-800">
+      <div className="dark:bg-slate-800 ">
         <div className="container mx-auto pb-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
+          <div className="mx-auto">
             <PortableRichText items={blog.body ?? []} />
             <div className="flex flex-col gap-3 lg:items-start py-12">
               <p className="text-2xl text-secondary-500 font-bold">

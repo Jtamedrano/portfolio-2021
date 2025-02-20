@@ -7,7 +7,7 @@ interface BreadcrumbProps {
 
 export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
-    <nav className="flex space-x-2 text-sm text-gray-400">
+    <nav className="flex space-x-2 text-sm text-gray-600 dark:text-gray-400">
       {items.map((item, index) => (
         <Fragment key={item.href}>
           {index > 0 && <span>/</span>}
