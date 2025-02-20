@@ -38,22 +38,22 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex-1 h-full w-full">
-          <div className="relative w-[90%] h-full max-h-[70%] lg:max-h-[55%] rounded-lg overflow-hidden shadow-2xl z-10">
+          <div className="relative w-[90%] h-full max-h-[70%]  md:max-h-[55%] rounded-lg overflow-hidden shadow-2xl z-10">
             <Image
               src="/images/contractor-website.png"
               alt="Small business website on a browser"
               fill
               sizes="(min-width: 1024px) 25vw, 100vw"
-              className="object-cover object-top"
+              className="object-cover lg:object-top"
             />
           </div>
-          <div className="relative w-[90%] h-full max-h-[70%] lg:max-h-[55%] rounded-lg overflow-hidden shadow-2xl ml-[5%] -mt-6">
+          <div className="relative w-[90%] h-full max-h-[70%] md:max-h-[55%] rounded-lg overflow-hidden shadow-2xl ml-[5%] -mt-6">
             <Image
               src="/images/real-estate-website.png"
               alt="Real estate website on a browser"
               fill
               sizes="(min-width: 1024px) 25vw, 100vw"
-              className="object-cover object-top"
+              className="object-cover lg:object-top"
             />
           </div>
         </div>
