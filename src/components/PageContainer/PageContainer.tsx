@@ -12,7 +12,12 @@ const PageSectionContainer: React.FC<
 > = ({ children, className, containerChildren, bgClassName, bgStyle }) => {
   return (
     <section className={cx(bgClassName)} style={bgStyle}>
-      <div className={cx("container mx-auto px-4 sm:px-6 lg:px-8", className)}>
+      <div
+        className={cx(
+          "container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0",
+          className
+        )}
+      >
         {children}
       </div>
       {containerChildren}

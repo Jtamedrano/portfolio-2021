@@ -3,14 +3,14 @@ import { HomePageForm } from "./HomePageForm";
 export const InfoSection: React.FC = () => {
   return (
     <section className="py-8 flex justify-between self-stretch items-start">
-      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-8 flex-1 px-3 py-10">
+      <div className="container mx-auto flex flex-col lg:flex-row items-stretch gap-24 flex-1 px-3 py-10">
         <div className="relative flex justify-center items-center flex-1">
           {/* Sample Form */}
           <HomePageForm />
         </div>
-        <div className="flex flex-col justify-center gap-4 flex-1 text-slate-200">
+        <div className="flex flex-col justify-center gap-4 flex-1 text-slate-800 dark:text-slate-200">
           <div className="flex flex-col gap-3">
-            <h3 className="text-4xl font-bold text-secondary-300">
+            <h3 className="text-4xl font-bold text-secondary-500 dark:text-secondary-300">
               How we get businesses to increase their web traffic and lead
               conversion
             </h3>

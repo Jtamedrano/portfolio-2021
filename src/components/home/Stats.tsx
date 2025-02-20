@@ -23,7 +23,10 @@ const logos = [
 export const LogoQuilt = () => {
   return (
     <section className="">
-      <div className="container mx-auto py-12 px-3 flex flex-col gap-8">
+      <div className="container mx-auto py-20 px-3 flex flex-col gap-8">
+        <h2 className="text-xl font-bold text-secondary-500 text-center">
+          Trusted by These Local Businesses
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {logos.map((logo, index) => (
             <div
@@ -41,9 +44,6 @@ export const LogoQuilt = () => {
             </div>
           ))}
         </div>
-        <h2 className="text-xl font-bold text-slate-500 text-center">
-          Trusted by These Local Businesses
-        </h2>
       </div>
     </section>
   );

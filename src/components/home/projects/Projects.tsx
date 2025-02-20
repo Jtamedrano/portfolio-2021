@@ -58,13 +58,13 @@ const PROJECT_LIST = [
 
 const Projects = () => {
   return (
-    <section className="bg-slate-900">
-      <div className="py-8 bg-slate-800">
+    <section className=" dark:bg-slate-900">
+      <div className="py-20 bg-secondary-200 dark:bg-slate-800">
         <div className="container mx-auto flex flex-col gap-4 px-3">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-100">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-700 dark:text-slate-100">
             Projects
           </h2>
-          <p className="text-lg font-light text-slate-300">
+          <p className="text-lg font-light dark:text-slate-300">
             Here are some highlights from my recent projects. These are public
             websites that I&apos;ve built from scratch or revamped to improve.
           </p>

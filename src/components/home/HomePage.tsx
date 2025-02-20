@@ -3,14 +3,23 @@ import Hero from "./Hero";
 import Projects from "./projects/Projects";
 import { LogoQuilt } from "./Stats";
 import { InfoSection } from "./InfoSection";
+import { WhyCustomMatters } from "./WhyCustomMatters";
+import { NoCookieCutters } from "./NoCookieCutters";
+import { OurApproach } from "./OurApproach";
+import { Testimonial } from "./Testimonial";
+import { CTA } from "./CTA";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <LogoQuilt />
       <InfoSection />
-      <Projects />
+      <LogoQuilt />
+      <WhyCustomMatters />
+      <NoCookieCutters />
+      <OurApproach />
+      <Testimonial />
+      <CTA />
     </>
   );
 }

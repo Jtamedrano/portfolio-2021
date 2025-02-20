@@ -35,17 +35,17 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         className={cx(
           firaSans.variable,
           anton.variable,
-          "antialiased min-h-screen relative transition-colors duration-500 flex flex-col font-sans"
+          "antialiased min-h-screen relative transition-colors duration-500 flex flex-col font-sans scroll-smooth"
         )}
         style={{
           maxWidth: "100vw",
         }}
       >
         <ThemeProvider>
-          <header className="py-4 sticky top-0 z-50 dark:bg-slate-900 shadow-md shadow-black/25">
+          <header className="py-4 sticky top-0 z-50 dark:bg-slate-900 bg-gray-50">
             <NavMenu />
           </header>
-          <main className="bg-slate-900 text-slate-100 flex-1 flex flex-col">
+          <main className="flex-1 flex flex-col dark:bg-slate-900 dark:text-slate-100 bg-gray-50 text-slate-900">
             {children}
           </main>
           <PageFooter />

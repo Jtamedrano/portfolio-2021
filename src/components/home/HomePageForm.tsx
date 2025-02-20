@@ -63,10 +63,14 @@ export const HomePageForm: React.FC = () => {
   };
 
   return (
-    <div className="rounded-lg p-8 bg-slate-800 text-slate-200 flex flex-col gap-4 border border-slate-700 shadow-lg shadow-black/75 w-full">
-      <h2 className="text-4xl font-semibold text-secondary-400 text-center capitalize">
+    <div className="rounded-lg p-8 bg-gray-100  dark:bg-slate-800 dark:text-slate-200 flex flex-col gap-8 border dark:border-slate-700 shadow-lg w-full">
+      <h2 className="text-3xl font-semibold text-secondary-500 text-center capitalize">
         See how our auto capture lead form works
       </h2>
+      <p className="text-center">
+        We would love to show you how custom websites with lead capture forms
+        can improve your businesses lead conversion rate by at least 10%.
+      </p>
       <form
         className="flex flex-col gap-4"
         onSubmit={handleSubmit}
@@ -114,13 +118,15 @@ export const HomePageForm: React.FC = () => {
             as="div"
           >
             <ListboxButton
-              className="text-slate-700 w-full p-2 rounded-lg border border-slate-300 bg-slate-100 text-left"
+              className="text-slate-700 w-full p-2 rounded-lg bg-white border border-slate-300 text-left"
               aria-label="Select a service"
             >
-              {formPageOne.service || "Select a service"}
+              {formPageOne.service || (
+                <span className="text-gray-400">Select a service</span>
+              )}
             </ListboxButton>
             <ListboxOptions
-              className="border border-slate-300 bg-slate-200 rounded-lg shadow-md empty:invisible divide-y-2 divide-slate-300"
+              className="border border-slate-300 rounded-lg shadow-md empty:invisible divide-y-2 bg-white divide-slate-300"
               anchor="bottom start"
             >
               {services.map((service) => (
