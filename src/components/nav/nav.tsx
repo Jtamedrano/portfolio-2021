@@ -5,6 +5,7 @@ import { AnalyticLink } from "../Analytics/AnalyticLink";
 import { NavItem } from "./NavItem";
 import { MobileNav } from "./MobileNav";
 import { NAVIGATION } from "../../constants/nav";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NavMenu = () => {
   return (
@@ -13,7 +14,7 @@ const NavMenu = () => {
         <span className="sr-only">J Medrano Design LLC</span>
         <Image src="/Logo.svg" alt="Logo" width={100} height={43} />
       </Link>
-      <ul className="hidden lg:flex gap-12 capitalize text-slate-200 items-center">
+      <ul className="hidden lg:flex gap-12 capitalize dark:text-slate-200 items-center">
         {NAVIGATION.map((navItem) => (
           <NavItem
             key={navItem.label}
@@ -31,6 +32,9 @@ const NavMenu = () => {
             eventValue="nav"
             eventCategory="call_now"
           />
+        </li>
+        <li>
+          <ThemeToggle />
         </li>
       </ul>
       <MobileNav />

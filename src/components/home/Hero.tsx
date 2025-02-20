@@ -4,18 +4,17 @@ import { AnalyticLink } from "../Analytics/AnalyticLink";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-b from-secondary-800 to-slate-900 text-slate-100 dark:text-slate-100">
-      <div className="container flex flex-col justify-center items-center self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 gap-24 overflow-hidden">
+      <div className="container self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 flex flex-col justify-center items-center gap-24 overflow-hidden">
         <div className="text-center lg:pl-4 leading-none flex flex-col gap-8 flex-1 max-w-4xl">
-          <div className="flex flex-col gap-4">
-            <div className="">
-              <h1 className="text-4xl md:text-5xl lg:text-7xl text-slate-50 font-display">
-                WEBSITES BUILT TO STAND OUT AND CONVERT VISITORS TO CUSTOMERS
-              </h1>
-            </div>
+          <div className="flex flex-col gap-4 items-center lg:items-start">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl text-slate-50 font-display">
+              YOUR WEBSITE HAS ONE JOB: GET YOU MORE CUSTOMERS. WE BUILD IT THAT
+              WAY
+            </h1>
             <p className="text-pretty leading-7 font-semibold max-w-3xl">
-              Don&apos;t worry about the tech stuff—we&apos;ll build you an
-              easy-to-use site that automatically captures leads, helping your
-              business grow within the first three months within launch.
+              We custom-code every site based on market research, delivering
+              faster load times and higher conversions than do-it-yourself
+              website builders.
             </p>
           </div>
 
