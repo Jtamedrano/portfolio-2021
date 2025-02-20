@@ -144,7 +144,7 @@ const LocationPage = async ({
         </div>
       </PageSectionContainer>
 
-      <PageSectionContainer className="py-16 text-slate-300">
+      <PageSectionContainer className="py-16 dark:text-slate-300">
         <h2 className="text-2xl font-bold text-secondary-500 mb-2">
           Why Business in {locationData.city} Need a Professional Website
         </h2>
@@ -211,7 +211,7 @@ const LocationPage = async ({
           </div>
         </div>
       </PageSectionContainer>
-      <PageSectionContainer className="py-16 text-slate-300">
+      <PageSectionContainer className="py-16 dark:text-slate-300">
         <div className="text-center mb-8 lg:text-left">
           <h2 className="text-2xl font-bold text-secondary-500 mb-2">
             Why Choose J Medrano Design LLC for Web Services in {locationName}

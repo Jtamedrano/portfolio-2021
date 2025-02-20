@@ -1,5 +1,6 @@
 "use client";
 
+import cx from "classnames";
 import React from "react";
 import { FormInputField } from "../contact/FormInputField";
 import { FormGroup } from "../contact/FormGroup";
@@ -26,7 +27,11 @@ const INITIAL_STATE = {
   service: "",
 };
 
-export const HomePageForm: React.FC = () => {
+interface HomePageFormProps {
+  className?: string;
+}
+
+export const HomePageForm: React.FC<HomePageFormProps> = ({ className }) => {
   const [formPageOne, setFormPageOne] = React.useState<{
     fullName: string;
     email: string;
@@ -63,7 +68,12 @@ export const HomePageForm: React.FC = () => {
   };
 
   return (
-    <div className="rounded-lg p-8 bg-gray-100  dark:bg-slate-800 dark:text-slate-200 flex flex-col gap-8 border dark:border-slate-700 shadow-lg w-full">
+    <div
+      className={cx(
+        "rounded-lg p-8 bg-gray-100  dark:bg-slate-800 dark:text-slate-200 flex flex-col gap-8 border dark:border-slate-700 shadow-lg w-full",
+        className
+      )}
+    >
       <h2 className="text-3xl font-semibold text-secondary-500 text-center capitalize">
         See how our auto capture lead form works
       </h2>
