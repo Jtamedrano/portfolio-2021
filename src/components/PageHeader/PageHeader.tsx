@@ -16,7 +16,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           {title}
         </h1>
         {!!description && (
-          <p className="text-lg text-slate-200">{description}</p>
+          <p className="text-lg dark:text-slate-200">{description}</p>
         )}
       </div>
     </div>

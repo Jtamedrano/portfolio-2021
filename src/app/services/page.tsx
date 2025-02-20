@@ -18,7 +18,7 @@ const ServicesPage = () => {
         title="Services"
         description="Explore the range of services we offer to help you achieve your web development goals. From custom website design to enterprise application development, we have you covered."
       />
-      <div className="py-8">
+      <div className="py-8 bg-gray-100">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 container mx-auto px-3">
           {SERVICES_LIST.map((service, index) => (
             <ServiceItem

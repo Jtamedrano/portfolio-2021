@@ -125,7 +125,7 @@ export default function LandscaperPage() {
       <PageHeader title="Website Design for Landscape Businesses" />
       <PageSectionContainer
         className="leading-7 py-20 flex flex-col lg:flex-row gap-20"
-        bgClassName="bg-slate-800"
+        bgClassName="bg-gray-100 dark:bg-slate-800"
       >
         <div className="relative lg:flex-1 h-96 lg:h-auto w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg shadow-black/25">
           <Image
@@ -162,7 +162,7 @@ export default function LandscaperPage() {
       </PageSectionContainer>
       <PageSectionContainer
         className="space-y-8 leading-7 py-20"
-        bgClassName="bg-gradient-to-b from-slate-800 to-slate-900"
+        bgClassName="bg-gradient-to-b dark:from-slate-800 dark:to-slate-900 from-gray-100 to-secondary-100"
       >
         <h2 className="text-3xl font-semibold text-secondary-400">
           The Importance of a Custom Website for Your Landscaping Business
@@ -179,7 +179,10 @@ export default function LandscaperPage() {
           ))}
         </div>
       </PageSectionContainer>
-      <PageSectionContainer className="space-y-8 leading-7 py-20">
+      <PageSectionContainer
+        bgClassName="bg-secondary-100 dark:bg-slate-900"
+        className="space-y-8 leading-7 py-20"
+      >
         <h2 className="text-3xl font-semibold text-secondary-400">
           Key Features of Our Landscape Business Websites
         </h2>
@@ -193,7 +196,7 @@ export default function LandscaperPage() {
             <div key={index} className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-secondary-500 rounded-lg">
-                  <feature.icon className="size-6 text-slate-900" />
+                  <feature.icon className="size-6 text-secondary-100 dark:text-slate-900" />
                 </div>
                 <h3 className=" text-2xl font-semibold text-secondary-400">
                   {feature.title}
@@ -204,7 +207,10 @@ export default function LandscaperPage() {
           ))}
         </div>
       </PageSectionContainer>
-      <PageSectionContainer className="space-y-8 leading-7 py-20">
+      <PageSectionContainer
+        bgClassName="bg-gray-100 dark:bg-slate-900"
+        className="space-y-8 leading-7 py-20"
+      >
         <h2 className="text-3xl font-semibold text-secondary-400">
           The Process: How We Build Your Website
         </h2>
@@ -217,9 +223,9 @@ export default function LandscaperPage() {
           {processSteps.map((step, index) => (
             <div
               key={index}
-              className="space-y-4 p-8 bg-slate-800 rounded-lg shadow-lg shadow-black/50"
+              className="space-y-4 p-8 bg-secondary-300 dark:bg-slate-800 rounded-lg shadow-lg"
             >
-              <h3 className="text-2xl font-semibold text-secondary-400">
+              <h3 className="text-2xl font-semibold dark:text-secondary-400 text-secondary-700">
                 {step.title}
               </h3>
               <p>{step.description}</p>
@@ -253,35 +259,43 @@ export default function LandscaperPage() {
           />
         </div>
       </PageSectionContainer>
-      <PageSectionContainer className="space-y-8 leading-7 py-20">
+      <PageSectionContainer
+        bgClassName="bg-gray-100 dark:bg-slate-800"
+        className="space-y-8 leading-7 py-20"
+      >
         <h2 className="text-3xl font-semibold text-secondary-400">
           Get a Website That Helps Your Landscaping Business Thrive
         </h2>
         <p className="text-lg">
           Your website should be more than just an online presence—it should be
           a lead-generating machine that helps grow your landscaping business.
-          At J Medrano Design, we specialize in website design for landscape
+          At J Medrano Design, we specialize in website design for home service
           companies, ensuring you get a site that not only looks great but also
           drives results.
         </p>
         <p className="text-lg">
-          If you’re ready to elevate your online presence and attract more
-          clients, contact us today for a free consultation. Let’s build a
+          If you&apos;re ready to elevate your online presence and attract more
+          clients, contact us today for a free consultation. Let&apos;s build a
           website that turns visitors into customers and helps your landscaping
           business flourish.
         </p>
       </PageSectionContainer>
-      <PageSectionContainer className="space-y-8 leading-7 py-10">
-        <h2 className="text-3xl font-semibold text-secondary-400">
+      <PageSectionContainer
+        bgClassName="bg-secondary-400 dark:bg-slate-900"
+        className="leading-7 py-20 flex flex-col lg:flex-row items-center gap-12"
+      >
+        <h2 className="text-3xl font-semibold dark:text-secondary-400 text-secondary-700 flex-1">
           Start growing your business today! Contact J Medrano Design to get
           started.
         </h2>
-        <Link
-          href="/contact"
-          className="bg-yellow-500 text-slate-900 text-lg lg:text-base py-2 px-8 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300 text-center border-2 border-yellow-500 flex-1 inline-flex justify-center w-full lg:w-fit"
-        >
-          Request a Free Consultation
-        </Link>
+        <div className="w-max h-fit">
+          <Link
+            href="/contact"
+            className="bg-yellow-500 text-slate-900 text-lg lg:text-base py-2 px-8 rounded-full font-semibold hover:bg-yellow-400 transition-colors duration-300 text-center border-2 border-yellow-500 flex justify-center w-full lg:w-fit"
+          >
+            Request a Free Consultation
+          </Link>
+        </div>
       </PageSectionContainer>
     </>
   );

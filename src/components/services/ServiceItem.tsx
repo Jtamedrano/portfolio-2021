@@ -21,13 +21,13 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({
 
   return (
     <div className={cx("flex flex-col gap-8 py-4", className)}>
-      <div className="h-[300px] rounded-lg overflow-hidden shadow-lg shadow-black/75">
+      <div className="h-[300px] rounded-lg overflow-hidden shadow-lg">
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </div>
       <div className="flex flex-col gap-4 flex-1">
         <div className="flex flex-col gap-2 flex-1">
           <h2 className="text-2xl font-bold text-secondary-400">{title}</h2>
-          <p className="text-slate-200">{description}</p>
+          <p className="text-base/7 dark:text-slate-200">{description}</p>
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="text-2xl font-semibold text-secondary-500">
