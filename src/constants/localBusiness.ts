@@ -11,7 +11,7 @@ export const localBusinessSchema = {
     streetAddress: "4872 Stits Cir",
     addressLocality: "Jurupa Valley",
     addressRegion: "CA",
-    postalCode: "92377",
+    postalCode: "91752",
     addressCountry: "US",
   },
   priceRange: "$$",
