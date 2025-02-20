@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-b dark:from-secondary-800 dark:to-slate-900 dark:text-slate-100">
-      <div className="container self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 flex flex-col lg:flex-row justify-center lg:justify-start items-center gap-24 h-[90vh] lg:h-[78vh]">
+      <div className="container self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center gap-24 h-[90vh] lg:h-[78vh]">
         <div className="text-center lg:text-left lg:pl-8 leading-none flex flex-col gap-8 flex-1">
           <div className="flex flex-col gap-4 items-center lg:items-start">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display">
@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 h-full">
+        <div className="flex-1 h-full w-full">
           <div className="relative w-[90%] h-full max-h-[55%] rounded-lg overflow-hidden shadow-2xl z-10">
             <Image
               src="/images/contractor-website.png"
