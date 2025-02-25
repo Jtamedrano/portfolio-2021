@@ -75,11 +75,11 @@ export const HomePageForm: React.FC<HomePageFormProps> = ({ className }) => {
       )}
     >
       <h2 className="text-3xl font-semibold text-secondary-500 text-center capitalize">
-        See how our auto capture lead form works
+        Get A Free Website Consultation
       </h2>
       <p className="text-center">
-        We would love to show you how custom websites with lead capture forms
-        can improve your businesses lead conversion rate by at least 10%.
+        We would love to show you how custom website design can improve your
+        businesses lead conversion rate and web traffic.
       </p>
       <form
         className="flex flex-col gap-4"

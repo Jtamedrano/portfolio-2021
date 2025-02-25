@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-b dark:from-secondary-800 dark:to-slate-900 dark:text-slate-100">
-      <div className="container self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center gap-24 h-[90vh] lg:h-[78vh]">
+      <div className="container self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center gap-12 md:gap-24 h-[90vh] lg:h-[78vh]">
         <div className="text-center lg:text-left lg:pl-8 leading-none flex flex-col gap-8 flex-1">
           <div className="flex flex-col gap-4 items-center lg:items-start">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display">
@@ -38,22 +38,22 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex-1 h-full w-full">
-          <div className="relative w-[90%] h-full min-h-[50px] max-h-[70%]  md:max-h-[55%] rounded-lg overflow-hidden shadow-2xl z-10">
+          <div className="relative w-[90%] min-h-[50px] max-h-[50%] md:min-h-0 md:max-h-[55%] rounded-lg overflow-hidden shadow-2xl z-10 aspect-video">
             <Image
               src="/images/contractor-website.png"
               alt="Small business website on a browser"
               fill
               sizes="(min-width: 1024px) 25vw, 100vw"
-              className="object-cover lg:object-top"
+              className="object-cover lg:object-top rounded-lg shadow-2xl"
             />
           </div>
-          <div className="relative w-[90%] h-full min-h-[50px] max-h-[70%] md:max-h-[55%] rounded-lg overflow-hidden shadow-2xl ml-[5%] -mt-6">
+          <div className="relative w-[90%] h-full min-h-[50px] max-h-[50%] md:min-h-0 md:max-h-[55%] ml-[5%] -mt-6 bg-transparent aspect-video">
             <Image
               src="/images/real-estate-website.png"
               alt="Real estate website on a browser"
               fill
               sizes="(min-width: 1024px) 25vw, 100vw"
-              className="object-cover lg:object-top"
+              className="object-cover lg:object-top rounded-lg shadow-2xl"
             />
           </div>
         </div>
