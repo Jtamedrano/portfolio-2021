@@ -4,32 +4,34 @@ import { fetchBlogs, serverFetchBlogs } from "../../lib/blogs";
 export const runtime = "edge";
 
 const baseUrl = "https://www.jtamedrano.com";
+const defaultChangeFreq = "weekly";
 
 export async function GET() {
+  const newRenderDate = new Date().toISOString().split("T")[0];
   const staticRoutes = [
     {
       loc: "/",
-      lastmod: "2025-02-14",
+      lastmod: newRenderDate,
       priority: 1.0,
     },
     {
       loc: "/contact",
-      lastmod: "2025-02-14",
+      lastmod: newRenderDate,
       priority: 0.8,
     },
     {
       loc: "/blog",
-      lastmod: "2025-02-14",
+      lastmod: newRenderDate,
       priority: 0.8,
     },
     {
       loc: "/services",
-      lastmod: "2025-02-14",
+      lastmod: newRenderDate,
       priority: 0.8,
     },
     {
       loc: "/services/websites-for-landscapers",
-      lastmod: "2025-02-18",
+      lastmod: newRenderDate,
       priority: 0.8,
     },
   ];
@@ -62,7 +64,7 @@ export async function GET() {
   const locationRoutes = LOCATIONS.map((location) => {
     return {
       loc: `/locations/${location.slug}`,
-      lastmod: "2025-02-14",
+      lastmod: newRenderDate,
       priority: 0.8,
     };
   });
@@ -74,20 +76,19 @@ export async function GET() {
 		<loc>${baseUrl}${route.loc}</loc>
 		<lastmod>${route.lastmod}</lastmod>
 		<priority>${route.priority}</priority>
-    
+    <changefreq>${defaultChangeFreq}</changefreq>
 	</url>
 	`
     )
     .join("");
 
   const sitemap = `
-	<?xml version="1.0" encoding="UTF-8"?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 		${urls}
 	</urlset>
 	`;
 
-  return new Response(sitemap.trim(), {
+  return new Response(sitemap, {
     status: 200,
     headers: {
       "Content-Type": "application/xml",
