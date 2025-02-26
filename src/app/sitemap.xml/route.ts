@@ -30,6 +30,11 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: "/services/websites-for-contractors",
+      lastmod: newRenderDate,
+      priority: 0.8,
+    },
+    {
       loc: "/services/websites-for-landscapers",
       lastmod: newRenderDate,
       priority: 0.8,

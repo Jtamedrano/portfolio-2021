@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container self-stretch mx-auto px-4 pt-20 pb-12 xl:px-0 flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center gap-12 md:gap-24 h-[90vh] lg:h-[78vh]">
         <div className="text-center lg:text-left lg:pl-8 leading-none flex flex-col gap-8 flex-1">
           <div className="flex flex-col gap-4 items-center lg:items-start">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-nowrap">
               YOUR WEBSITE HAS ONE JOB
               <br />
               GET YOU MORE CUSTOMERS
@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 h-full w-full">
+        <div className="flex-1 h-full w-full relative">
           <div className="relative w-[90%] min-h-[50px] max-h-[50%] md:min-h-0 md:max-h-[55%] rounded-lg overflow-hidden shadow-2xl z-10 aspect-video">
             <Image
               src="/images/contractor-website.png"
