@@ -9,10 +9,16 @@ export const NAVIGATION = [
     to: "/services",
     flyoutItems: [
       {
+        label: "Website For Contractors",
+        to: "/services/websites-for-contractors",
+        description:
+          "Websites for Builders, Electricians, Plumbers, Roofers, and other contractors.",
+      },
+      {
         label: "Website For Landscapers",
         to: "/services/websites-for-landscapers",
         description:
-          "We design websites for landscapers that showcase their work, attract new clients, and grow their business.",
+          "Websites for Landscapers, Gardeners, Lawn Care, and Outdoor Services.",
       },
     ],
   },
