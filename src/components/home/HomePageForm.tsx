@@ -89,7 +89,7 @@ export const HomePageForm: React.FC<HomePageFormProps> = ({ className }) => {
         <FormInputField
           autoComplete="name"
           type="text"
-          name="name"
+          name="fullName"
           label="Name"
           placeholder="Your Name"
           handleChange={handleChange}

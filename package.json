@@ -5,7 +5,7 @@
   "description": "Jesse Medrano",
   "author": "jtamedrano",
   "engines": {
-    "node": "18.x"
+    "node": "23.x"
   },
   "keywords": [
     "next"
